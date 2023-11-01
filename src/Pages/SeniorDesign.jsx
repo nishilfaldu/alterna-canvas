@@ -8,9 +8,7 @@ function SeniorDesign() {
     <h1 className="text-red-500">
       Senior Design
     </h1>
-    <div
-    // style={{ marginLeft: 100 }}
-    >
+    <div className="mx-16 p-2">
       <CourseTabs/>
     </div>
     </>

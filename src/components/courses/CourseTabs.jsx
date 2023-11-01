@@ -6,19 +6,39 @@ import { useMemo } from "react";
 export function CourseTabs() {
   const tabItems = useMemo(() => [
     {
-      label: "Tab 1",
+      label: "Syllabus",
       key: 1,
-      children: "Content of tab 1",
+      children: <div>Syllabus</div>,
     },
     {
-      label: "Tab 2",
+      label: "Modules",
       key: 2,
-      children: "Content of tab 2",
+      children: <div>Modules</div>,
     },
     {
-      label: "Tab 3",
+      label: "Grades",
       key: 3,
-      children: "Content of tab 3",
+      children: <div>Grades</div>,
+    },
+    {
+      label: "Assignments",
+      key: 4,
+      children: <div>Assignments</div>,
+    },
+    {
+      label: "Files",
+      key: 5,
+      children: <div>Files</div>,
+    },
+    {
+      label: "Grades",
+      key: 6,
+      children: <div>Grades</div>,
+    },
+    {
+      label: "Zoom",
+      key: 7,
+      children: <div>Zoom</div>,
     },
   ], []);
 
@@ -30,10 +50,9 @@ export function CourseTabs() {
         centered
         style={{
           marginBottom: 32,
-          // width: 1000,
         }}
         items={tabItems}
-      />
+      />      
     </section>
   );
 }
