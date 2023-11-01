@@ -3,7 +3,7 @@ import { useMemo } from "react";
 
 
 
-export function CourseTabs() {
+function CourseTabs() {
   const tabItems = useMemo(() => [
     {
       label: "Syllabus",
@@ -47,7 +47,6 @@ export function CourseTabs() {
       <Tabs
         defaultActiveKey="1"
         size="large"
-        centered
         style={{
           marginBottom: 32,
         }}
