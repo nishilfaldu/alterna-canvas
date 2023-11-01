@@ -1,5 +1,6 @@
-import { Tree } from "antd";
+import { Table, Tree } from "antd";
 import AWS from "aws-sdk";
+import PropTypes from "prop-types";
 import { useState } from "react";
 
 import { createFolderToFileMap, createTreeStructure } from "../../scripts/tree";
@@ -8,8 +9,23 @@ import { createFolderToFileMap, createTreeStructure } from "../../scripts/tree";
 
 const { DirectoryTree } = Tree;
 
-export function Files(props) {
+const columns = [
+  {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+  },
+  {
+    title: "Actions",
+    dataIndex: "action",
+    key: "action",
+  },
+];
+
+function Files({ courseName }) {
   const [treeData, setTreeData] = useState();
+  const [dataSource, setDataSource] = useState();
+  const [folderToFileMap, setFolderToFileMap] = useState();
 
   AWS.config.update({
     // eslint-disable-next-line no-undef
@@ -31,10 +47,11 @@ export function Files(props) {
     try {
       const data = await s3.listObjectsV2(params).promise();
       const files = data.Contents.map(file => file.Key);
-      console.log(files);
+
       const folderToFileMap = createFolderToFileMap(files);
       const treeData = createTreeStructure(folderToFileMap);
       setTreeData(treeData);
+      setFolderToFileMap(folderToFileMap);
 
       return treeData;
     } catch (error) {
@@ -42,10 +59,16 @@ export function Files(props) {
     }
   }
 
-  listFiles(props.courseName, null);
+  listFiles(courseName, null);
 
 
   const onSelect = (keys, info) => {
+    const dataSource = folderToFileMap.get(keys[0]).map(file => ({
+      key: file,
+      name: file,
+      action: "Hello, World!",
+    }));
+    setDataSource(dataSource);
     console.log("Trigger Select", keys, info);
   };
   const onExpand = (keys, info) => {
@@ -53,12 +76,29 @@ export function Files(props) {
   };
 
   return (
-    <DirectoryTree
-      multiple
-      defaultExpandAll
-      onSelect={onSelect}
-      onExpand={onExpand}
-      treeData={treeData}
-    />
+    <div className="flex flex-row">
+      <DirectoryTree
+        height={500}
+        multiple
+        defaultExpandAll
+        onSelect={onSelect}
+        onExpand={onExpand}
+        treeData={treeData}
+        className="w-1/4"
+      />
+      <Table
+      size="large"
+      className="w-full"
+        dataSource={dataSource}
+        columns={columns}
+      />
+    </div>
+    
   );
 }
+
+Files.propTypes = {
+  courseName: PropTypes.string,
+};
+
+export default Files;

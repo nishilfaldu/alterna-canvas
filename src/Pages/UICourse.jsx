@@ -1,4 +1,4 @@
-import { Files } from "../components/courses/Files";
+import Files from "../components/courses/Files";
 
 
 

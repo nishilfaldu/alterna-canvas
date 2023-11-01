@@ -24,12 +24,12 @@ export function createTreeStructure(folderToFileMap) {
         treeData.push({
             title: folderName,
             key: folderName,
-            children: 
-                fileList.map(file => ({
-                    title: file,
-                    key: `${folderName}-${file}`,
-                    isLeaf: true,
-                })),
+            children: [],
+                // fileList.map(file => ({
+                //     title: file,
+                //     key: `${folderName}-${file}`,
+                //     isLeaf: true,
+                // })),
         });
     }
 
