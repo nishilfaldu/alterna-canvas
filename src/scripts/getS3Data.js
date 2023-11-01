@@ -18,17 +18,18 @@ export async function listFiles(courseName, folderType) {
   const params = {
     // eslint-disable-next-line no-undef
     Bucket: process.env.VITE_BUCKET_NAME,
-    Prefix: `courses/${courseName}/${folderType}/`, // Optional: Only list files in a specific directory
+    Prefix: folderType ? `courses/${courseName}/${folderType}/` : `courses/${courseName}/`, // Optional: Only list files in a specific directory
   };
 
   try {
     const data = await s3.listObjectsV2(params).promise();
     const files = data.Contents.map(file => file.Key);
-    console.log("Files:", files);
+
+    return files;
   } catch (error) {
     console.error("Error listing files:", error);
   }
 }
 
 // usage of function
-// listFiles("computer_graphics", "presentations");
+// listFiles("computer_graphics", null);
