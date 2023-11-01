@@ -12,7 +12,6 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "antd": "^5.10.3",
-<<<<<<< HEAD
     "bootstrap": "^5.3.2",
     "aws-sdk": "^2.1485.0",
     "dotenv": "^16.3.1",
