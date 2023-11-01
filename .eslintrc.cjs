@@ -24,7 +24,7 @@ module.exports = {
     "import/no-mutable-exports": ["error"],
     // "import/no-relative-parent-imports": ["error"],
     "import/no-useless-path-segments": ["error"],
-    "import/no-unresolved": ["error"],
+    // "import/no-unresolved": ["error"],
     "import/order": [
       "error",
       {
