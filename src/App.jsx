@@ -1,35 +1,40 @@
 import "./App.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
+import NavBar from "./components/navbar";
 import Account from "./Pages/Account";
 import Announcements from "./Pages/Announcements";
+import Course from "./Pages/Course";
 import Dashboard from "./Pages/Dashboard";
 import Garden from "./Pages/Garden";
-import Graphics from "./Pages/Graphics";
-import NoPage from "./Pages/NoPage";
-import SeniorDesign from "./Pages/SeniorDesign";
 import ToDo from "./Pages/ToDo";
-import UICourse from "./Pages/UICourse";
 
 
 
 function App() {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route index element={<Dashboard />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/announcements" element={<Announcements />} />
-          <Route path="/garden" element={<Garden />} />
-          <Route path="/graphics" element={<Graphics />} />
-          <Route path="/seniordesign" element={<SeniorDesign />} />
-          <Route path="/todo" element={<ToDo />} />
-          <Route path="/uicourse" element={<UICourse />} />
-          <Route path="*" element={<NoPage />} />
-        </Routes>
-      </Router>
+      <NavBar />
+      <Container className="my-3">
+        <Router>
+          <Routes>
+            <Route index element={<Dashboard />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/announcements" element={<Announcements />} />
+            <Route path="/garden" element={<Garden />} />
+            <Route path="/todo" element={<ToDo />} />
+            <Route path="/course/:id" element={<Course />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Router>
+      </Container>
     </>
   );
 }
