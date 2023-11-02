@@ -106,3 +106,5 @@ next-env.d.ts
 # Generated
 generated/*
 !generated/.keep
+
+.env
