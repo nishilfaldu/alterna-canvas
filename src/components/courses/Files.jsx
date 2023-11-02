@@ -1,8 +1,10 @@
-import { Table, Tree } from "antd";
+import { DownloadOutlined } from "@ant-design/icons";
+import { Button, Table, Tree } from "antd";
 import AWS from "aws-sdk";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
+import { handleDownload } from "../../scripts/downloadFile";
 import { createFolderToFileMap, createTreeStructure } from "../../scripts/tree";
 
 
@@ -37,7 +39,9 @@ function Files({ courseName }) {
   });
 
   async function listFiles(courseName, folderType) {
-    const s3 = new AWS.S3();
+    const s3 = new AWS.S3({
+      signatureVersion: "v4",
+    });
     const params = {
       // eslint-disable-next-line no-undef
       Bucket: import.meta.env.VITE_BUCKET_NAME,
@@ -62,18 +66,18 @@ function Files({ courseName }) {
   listFiles(courseName, null);
 
 
-  const onSelect = (keys, info) => {
+  const onSelect = keys => {
     const dataSource = folderToFileMap.get(keys[0]).map(file => ({
       key: file,
       name: file,
-      action: "Hello, World!",
+      action: <Button icon={<DownloadOutlined />} onClick={() => handleDownload(courseName, keys[0], file)}></Button>,
     }));
     setDataSource(dataSource);
-    console.log("Trigger Select", keys, info);
+    // console.log("Trigger Select", keys, info);
   };
-  const onExpand = (keys, info) => {
-    console.log("Trigger Expand", keys, info);
-  };
+  // const onExpand = keys => {
+  //   // console.log("Trigger Expand", keys, info);
+  // };
 
   return (
     <div className="flex flex-row">
@@ -82,13 +86,13 @@ function Files({ courseName }) {
         multiple
         defaultExpandAll
         onSelect={onSelect}
-        onExpand={onExpand}
+        // onExpand={onExpand}
         treeData={treeData}
         className="w-1/4"
       />
       <Table
-      size="large"
-      className="w-full"
+        size="large"
+        className="w-full"
         dataSource={dataSource}
         columns={columns}
       />

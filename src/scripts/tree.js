@@ -13,13 +13,14 @@ export const createFolderToFileMap = fileList => {
             map.set(folderName, []);
         }
     }
-
+    
     return map;
 };
 
 export function createTreeStructure(folderToFileMap) {
     let treeData = [];
 
+    // eslint-disable-next-line no-unused-vars
     for (let [folderName, fileList] of folderToFileMap) {
         treeData.push({
             title: folderName,
