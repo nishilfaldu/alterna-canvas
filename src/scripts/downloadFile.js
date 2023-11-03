@@ -1,19 +1,8 @@
-import AWS from "aws-sdk";
+import { s3Obj } from "../storage/s3";
 
 
 
 export function handleDownload(courseName, folderType, fileName) {
-    AWS.config.update({
-        // eslint-disable-next-line no-undef
-        accessKeyId: import.meta.env.VITE_ACCESS_KEY_ID,
-        // eslint-disable-next-line no-undef
-        secretAccessKey: import.meta.env.VITE_SECRET_ACCESS_KEY,
-        // eslint-disable-next-line no-undef
-        region: import.meta.env.VITE_REGION,
-    });
-
-    const s3 = new AWS.S3();
-
     const params = {
       Bucket: import.meta.env.VITE_BUCKET_NAME,
       Key: `courses/${courseName}/${folderType}/${fileName}`,
@@ -43,7 +32,7 @@ export function handleDownload(courseName, folderType, fileName) {
         document.body.removeChild(link);
       }
 
-      s3.getObject(params, (err, data) => {
+      s3Obj.getObject(params, (err, data) => {
         if (err) {
           console.log(err, err.stack);
         } else {

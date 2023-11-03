@@ -1,35 +1,24 @@
-import AWS from "aws-sdk";
-import "dotenv/config";
+import { createFolderToFileMap, createTreeStructure } from "./tree";
+import { s3Obj } from "../storage/s3";
 
 
 
-AWS.config.update({
-  // eslint-disable-next-line no-undef
-  accessKeyId: process.env.VITE_ACCESS_KEY_ID,
-  // eslint-disable-next-line no-undef
-  secretAccessKey: process.env.VITE_SECRET_ACCESS_KEY,
-  // eslint-disable-next-line no-undef
-  region: process.env.VITE_REGION,
-});
-
-const s3 = new AWS.S3();
-
-export async function listFiles(courseName, folderType) {
+export async function listFiles(courseID, folderType) {
   const params = {
-    // eslint-disable-next-line no-undef
-    Bucket: process.env.VITE_BUCKET_NAME,
-    Prefix: folderType ? `courses/${courseName}/${folderType}/` : `courses/${courseName}/`, // Optional: Only list files in a specific directory
+    Bucket: import.meta.env.VITE_BUCKET_NAME,
+    Prefix: folderType ? `courses/${courseID}/${folderType}/` : `courses/${courseID}/`, // Optional: Only list files in a specific directory
   };
 
   try {
-    const data = await s3.listObjectsV2(params).promise();
+    const data = await s3Obj.listObjectsV2(params).promise();
     const files = data.Contents.map(file => file.Key);
 
-    return files;
+    const folderToFileMap = createFolderToFileMap(files);
+    const treeData = createTreeStructure(folderToFileMap);
+
+
+    return { treeData: treeData, folderToFileMap: folderToFileMap };
   } catch (error) {
     console.error("Error listing files:", error);
   }
 }
-
-// usage of function
-// listFiles("computer_graphics", null);
