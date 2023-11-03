@@ -24,7 +24,7 @@ const columns = [
   },
 ];
 
-function Files({ courseName }) {
+function Files({ courseID }) {
   const [treeData, setTreeData] = useState();
   const [dataSource, setDataSource] = useState();
   const [folderToFileMap, setFolderToFileMap] = useState();
@@ -38,14 +38,14 @@ function Files({ courseName }) {
     region: import.meta.env.VITE_REGION,
   });
 
-  async function listFiles(courseName, folderType) {
+  async function listFiles(courseID, folderType) {
     const s3 = new AWS.S3({
       signatureVersion: "v4",
     });
     const params = {
       // eslint-disable-next-line no-undef
       Bucket: import.meta.env.VITE_BUCKET_NAME,
-      Prefix: folderType ? `courses/${courseName}/${folderType}/` : `courses/${courseName}/`, // Optional: Only list files in a specific directory
+      Prefix: folderType ? `courses/${courseID}/${folderType}/` : `courses/${courseID}/`, // Optional: Only list files in a specific directory
     };
   
     try {
@@ -63,14 +63,14 @@ function Files({ courseName }) {
     }
   }
 
-  listFiles(courseName, null);
+  listFiles(courseID, null);
 
 
   const onSelect = keys => {
     const dataSource = folderToFileMap.get(keys[0]).map(file => ({
       key: file,
       name: file,
-      action: <Button icon={<DownloadOutlined />} onClick={() => handleDownload(courseName, keys[0], file)}></Button>,
+      action: <Button icon={<DownloadOutlined />} onClick={() => handleDownload(courseID, keys[0], file)}></Button>,
     }));
     setDataSource(dataSource);
     // console.log("Trigger Select", keys, info);
@@ -102,7 +102,7 @@ function Files({ courseName }) {
 }
 
 Files.propTypes = {
-  courseName: PropTypes.string,
+  courseID: PropTypes.string,
 };
 
 export default Files;
