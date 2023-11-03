@@ -18,23 +18,8 @@ const Assignments = ({ courseID }) => {
     fetchData();
   }, [courseID]);
 
-  const data = [
-    {
-      title: "Ant Design Title 1",
-    },
-    {
-      title: "Ant Design Title 2",
-    },
-    {
-      title: "Ant Design Title 3",
-    },
-    {
-      title: "Ant Design Title 4",
-    },
-  ];
 
-
-  const items = [
+  const assignmentsSubmitted = [
     {
       key: "1",
       label: "Assignments Submitted",
@@ -54,15 +39,44 @@ const Assignments = ({ courseID }) => {
     },
   ];
 
+  const assignmentsNotSubmitted = [
+    {
+      key: "1",
+      label: "Assignments Not Submitted",
+      children: <List
+      itemLayout="horizontal"
+      dataSource={assignments?.map(assignment => ({ title: assignment }))}
+      renderItem={(item, index) => (
+        <List.Item>
+          <List.Item.Meta
+            avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index}/>}
+            title={<a href="https://ant.design">{item.title}</a>}
+            description={`This is Assignment ${index + 1}`}
+          />
+        </List.Item>
+      )}
+    />,
+    },
+  ];
+
   return (
-    <>
+    <div className="flex flex-col gap-y-4">
+      <p>Assignments for course with id: {courseID}</p>
+
     <Collapse
         defaultActiveKey={["1"]}
         expandIconPosition="start"
-        items={items}
+        items={assignmentsNotSubmitted}
       />
-      <p>Assignments for course with id: {courseID}</p>
-    </>
+
+      <Collapse
+        defaultActiveKey={["1"]}
+        expandIconPosition="start"
+        items={assignmentsSubmitted}
+      />
+    </div>
+
+    
   );
 };
 
