@@ -1,14 +1,17 @@
 import { FileOutlined } from "@ant-design/icons";
-import { Collapse, List } from "antd";
+import { Collapse, List, Modal } from "antd";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
+import UploadFile from "./files/UploadFile";
 import users from "../../data/users.json";
 import { listFiles } from "../../scripts/getS3Data";
 
 
 
 const Assignments = ({ courseID }) => {
+  const [modal, contextHolder] = Modal.useModal();
+
   const [assignments, setAssignments] = useState();
   useEffect(() => {
     async function fetchData() {
@@ -31,7 +34,7 @@ const Assignments = ({ courseID }) => {
         <List.Item>
           <List.Item.Meta
             avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index}/>}
-            title={<a href="https://ant.design">{item.title}</a>}
+            title={<a>{item.title}</a>}
             description={`This is Assignment ${index + 1}`}
           />
         </List.Item>
@@ -40,18 +43,34 @@ const Assignments = ({ courseID }) => {
     },
   ];
 
+  const openSubmissionModal = useCallback((title, description) => {
+    const { destroy, update } = modal.info();
+    update({
+      title: title,
+      content: <><p>{description}</p><UploadFile courseID={courseID} folderType="assignments" fileName={title}/></>,
+      closable: true,
+      cancelText: "Cancel",
+      icon: null,
+      okButtonProps: { style: { backgroundColor: "blue" } },
+      okCancel: true,
+      okText: "OK",
+      onCancel: destroy,
+    });
+  }, [modal, courseID]);
+
   const assignmentsNotSubmitted = [
     {
       key: "1",
       label: "Assignments Not Submitted",
       children: <List
       itemLayout="horizontal"
-      dataSource={users[0].assignmentsNotSubmitted?.map(assignment => ({ title: assignment.name }))}
+      dataSource={users[0].assignmentsNotSubmitted?.map(
+        assignment => ({ title: assignment.name, description: assignment.description }))}
       renderItem={(item, index) => (
         <List.Item>
           <List.Item.Meta
             avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index}/>}
-            title={<a href="https://ant.design">{item.title}</a>}
+            title={<a onClick={() => openSubmissionModal(item.title, item.description)}>{item.title}</a>}
             description={`This is Assignment ${index + 1}`}
           />
         </List.Item>
@@ -75,6 +94,7 @@ const Assignments = ({ courseID }) => {
         expandIconPosition="start"
         items={assignmentsSubmitted}
       />
+      {contextHolder}
     </div>
 
     

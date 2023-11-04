@@ -5,17 +5,17 @@
             {
                 "name": "Assignement A",
                 "dueDate": "2023-04-05",
-                "description": "This is sample description"
+                "description": "This is sample description A"
             },
             {
                 "name": "Assignement B",
                 "dueDate": "2023-04-06",
-                "description": "This is sample description"
+                "description": "This is sample description B"
             },
             {
                 "name": "Assignement C",
                 "dueDate": "2023-04-07",
-                "description": "This is sample description"
+                "description": "This is sample description C"
             }
         ]
     },
