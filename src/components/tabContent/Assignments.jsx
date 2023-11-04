@@ -3,6 +3,7 @@ import { Collapse, List } from "antd";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
+import users from "../../data/users.json";
 import { listFiles } from "../../scripts/getS3Data";
 
 
@@ -45,7 +46,7 @@ const Assignments = ({ courseID }) => {
       label: "Assignments Not Submitted",
       children: <List
       itemLayout="horizontal"
-      dataSource={assignments?.map(assignment => ({ title: assignment }))}
+      dataSource={users[0].assignmentsNotSubmitted?.map(assignment => ({ title: assignment.name }))}
       renderItem={(item, index) => (
         <List.Item>
           <List.Item.Meta
