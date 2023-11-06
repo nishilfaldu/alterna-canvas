@@ -22,3 +22,24 @@ export async function listFiles(courseID, folderType) {
     console.error("Error listing files:", error);
   }
 }
+
+/**
+ * @param filePath A string representing the path of the file to get (e.g. "courses/ui/course_info/syllabus.html")
+ * @returns The content of the file as a string or null if the file was not found
+*/
+export const getFileContent = async filePath => {
+  const params = {
+    Bucket: import.meta.env.VITE_BUCKET_NAME,
+    Key: filePath,
+  }; 
+
+  try {
+    const data = await s3Obj.getObject(params).promise();
+
+    return data.Body.toString();
+  } catch (error) {
+    console.error(`Error getting file at ${filePath}: `, error);
+
+    return null;
+  }
+};
