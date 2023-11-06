@@ -1,23 +1,18 @@
-import { Link } from "react-router-dom";
+import CourseCard from "../components/dashboardComponents/CourseCard";
+import "../styles/dashboard.css";
 
 
 
-function Dashboard() {
+const Dashboard = () => {
   return (
-    <>
+    <div>
       <h1>Dashboard</h1>
-      {/* I added these Link elements to make it easier to navigate during development. Remove them when developing the Dashboard. -- Emma */}
-      <p>
-        <Link to="/course/ui">User Interface</Link>
-      </p>
-      <p>
-        <Link to="/course/computer_graphics">Computer Graphics</Link>
-      </p>
-      <p>
-        <Link to="/course/senior_design">Senior Design</Link>
-      </p>
-    </>
+      <hr style={{ width: "90%" }} />
+      <CourseCard />
+    </div>
   );
-}
+};
 
 export default Dashboard;
+
+
