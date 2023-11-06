@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Student 1",
+        "assignmentsNotSubmitted": [
+            {
+                "name": "Assignement A",
+                "dueDate": "2023-04-05",
+                "description": "This is sample description A"
+            },
+            {
+                "name": "Assignement B",
+                "dueDate": "2023-04-06",
+                "description": "This is sample description B"
+            },
+            {
+                "name": "Assignement C",
+                "dueDate": "2023-04-07",
+                "description": "This is sample description C"
+            }
+        ]
+    },
+    {
+        "name": "Student 2",
+        "assignmentsNotSubmitted": [
+            {
+                "name": "Assignement D",
+                "dueDate": "2023-04-05",
+                "description": "This is sample description"
+            },
+            {
+                "name": "Assignement E",
+                "dueDate": "2023-04-06",
+                "description": "This is sample description"
+            },
+            {
+                "name": "Assignement F",
+                "dueDate": "2023-04-07",
+                "description": "This is sample description"
+            }
+        ]
+    },
+    {
+        "name": "Student 3",
+        "assignmentsNotSubmitted": [
+            {
+                "name": "Assignement G",
+                "dueDate": "2023-04-05",
+                "description": "This is sample description"
+            },
+            {
+                "name": "Assignement H",
+                "dueDate": "2023-04-06",
+                "description": "This is sample description"
+            },
+            {
+                "name": "Assignement I",
+                "dueDate": "2023-04-07",
+                "description": "This is sample description"
+            }
+        ]
+    }
+]
