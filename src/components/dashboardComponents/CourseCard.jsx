@@ -2,7 +2,6 @@ import { Card } from "antd";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import "../../styles/dashboard.css";
 import coursePicture from "../../assets/images/coursePic.jpg";
 
 
@@ -12,7 +11,7 @@ const { Meta } = Card;
 const CustomCard = ({ title, link }) => {
     return ( //TODO: Switch out the Link to logic
 
-        <Link to={link} className="text-decoration-dashboard-link">
+        <Link to={link} style={{ textDecoration: "none" }}>
             <Card
                 hoverable
                 style={{
@@ -35,7 +34,7 @@ CustomCard.propTypes = {
 
 const CourseCard = () => {
     return (
-        <div className="card-container-dashboard">
+        <div style={{ display: "flex" }} className="card-container-dashboard">
             <CustomCard title="User Interface" link="/course/ui" />
             <CustomCard title="Computer Graphics" link="/course/computer_graphics" />
             <CustomCard title="Senior Design" link="/course/senior_design" />
