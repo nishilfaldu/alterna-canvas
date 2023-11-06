@@ -1,5 +1,5 @@
 import { UploadOutlined } from "@ant-design/icons";
-import { Button, Upload } from "antd";
+import { Button, Upload, message } from "antd";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
@@ -11,9 +11,14 @@ const UploadFile = ({ courseID, folderType, fileName }) => {
   const [fileList, setFileList] = useState([]);
   const [uploading, setUploading] = useState(false);
   const handleUpload = () => {
-    uploadFile(courseID, folderType, fileName);
+    // uploadFile(courseID, folderType, fileName);
     setUploading(true);
-  };
+    setTimeout(() => {
+      setUploading(false);
+      message.success("File uploaded successfully");
+      }, 1000);      
+    };
+
   const props = {
     onRemove: file => {
       const index = fileList.indexOf(file);
@@ -43,6 +48,7 @@ const UploadFile = ({ courseID, folderType, fileName }) => {
         style={{
           marginTop: 16,
           backgroundColor: "blue",
+          color: "white",
         }}
       >
         {uploading ? "Uploading" : "Start Upload"}

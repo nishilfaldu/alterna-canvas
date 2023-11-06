@@ -3,6 +3,7 @@ import { Collapse, List, Modal } from "antd";
 import PropTypes from "prop-types";
 import { useCallback, useEffect, useState } from "react";
 
+import Reward from "./files/Reward";
 import UploadFile from "./files/UploadFile";
 import users from "../../data/users.json";
 import { listFiles } from "../../scripts/getS3Data";
@@ -22,7 +23,7 @@ const Assignments = ({ courseID }) => {
     fetchData();
   }, [courseID]);
 
-
+  // TODO: might need to mutate data in users.json if we want to switch assignments between collapses
   const assignmentsSubmitted = [
     {
       key: "1",
@@ -43,6 +44,20 @@ const Assignments = ({ courseID }) => {
     },
   ];
 
+  const openRewardModal = useCallback(() => {
+    const { destroy, update } = modal.info();
+    update({
+      title: "Reward",
+      content: <Reward/>,
+      closable: true,
+      okText: "Accept",
+      okButtonProps: { style: { backgroundColor: "blue" } },
+      onCancel: destroy,
+      okCancel: false,
+    });
+  }, [modal]);
+
+
   const openSubmissionModal = useCallback((title, description) => {
     const { destroy, update } = modal.info();
     update({
@@ -55,9 +70,11 @@ const Assignments = ({ courseID }) => {
       okCancel: true,
       okText: "OK",
       onCancel: destroy,
+      onOk: () => openRewardModal(),
     });
-  }, [modal, courseID]);
+  }, [modal, courseID, openRewardModal]);
 
+  
   const assignmentsNotSubmitted = [
     {
       key: "1",
