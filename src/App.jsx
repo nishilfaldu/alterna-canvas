@@ -16,8 +16,6 @@ import Dashboard from "./Pages/Dashboard";
 import Garden from "./Pages/Garden";
 import ToDo from "./Pages/ToDo";
 
-
-
 function App() {
   return (
     <>

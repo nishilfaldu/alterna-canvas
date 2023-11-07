@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Drop from "../components/Dropdown";
+
 export default function Account() {
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState("John Doe");
@@ -65,6 +67,9 @@ export default function Account() {
           </div>
         ) : (
           <div style={{ top: 200, left: 500, position: "absolute" }}>
+            <Drop></Drop>
+            <br></br>
+            <br></br>
             <h2>{name}</h2>
             <p>{contactInfo}</p>
           </div>
@@ -103,7 +108,7 @@ export default function Account() {
           </button>
         ) : (
           <button
-            style={{ top: 300, left: 500, position: "absolute" }}
+            style={{ top: 350, left: 500, position: "absolute" }}
             onClick={handleEdit}
           >
             <div>
