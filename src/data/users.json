@@ -1,61 +1,331 @@
 [
     {
-        "name": "Student 1",
-        "assignmentsNotSubmitted": [
+        "name": "Alice Johnson",
+        "username": "alice123",
+        "email": "alice@example.com",
+        "currentWaterPoints": 0,
+        "currentPlantImage": "path/to/image",
+        "courses": [
             {
-                "name": "Assignement A",
-                "dueDate": "2023-04-05",
-                "description": "This is sample description A"
+                "name": "User Interface",
+                "key": "ui",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    }
+                },
+                "files": {},
+                "zoom": {}
             },
             {
-                "name": "Assignement B",
-                "dueDate": "2023-04-06",
-                "description": "This is sample description B"
+                "name": "Senior Design",
+                "key": "senior_design",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
             },
             {
-                "name": "Assignement C",
-                "dueDate": "2023-04-07",
-                "description": "This is sample description C"
+                "name": "Computer Graphics",
+                "key": "computer_graphics",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
+            }
+        ],
+        "plants": [
+            {
+                "type": "Sunflower"
+            },
+            {
+                "type": "Rose"
+            },
+            {
+                "type": "Peach"
             }
         ]
     },
     {
-        "name": "Student 2",
-        "assignmentsNotSubmitted": [
+        "name": "Bob Anderson",
+        "username": "bob456",
+        "email": "bob@example.com",
+        "currentWaterPoints": 0,
+        "currentPlantImage": "path/to/image",
+        "courses": [
             {
-                "name": "Assignement D",
-                "dueDate": "2023-04-05",
-                "description": "This is sample description"
+                "name": "User Interface",
+                "key": "ui",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
             },
             {
-                "name": "Assignement E",
-                "dueDate": "2023-04-06",
-                "description": "This is sample description"
+                "name": "Senior Design",
+                "key": "senior_design",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
             },
             {
-                "name": "Assignement F",
-                "dueDate": "2023-04-07",
-                "description": "This is sample description"
+                "name": "Computer Graphics",
+                "key": "computer_graphics",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment D",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description"
+                            },
+                            {
+                                "name": "Assignment E",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description"
+                            },
+                            {
+                                "name": "Assignment F",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
+            }
+        ],
+        "plants": [
+            {
+                "type": "Sunflower"
+            },
+            {
+                "type": "Rose"
+            },
+            {
+                "type": "Peach"
             }
         ]
     },
     {
-        "name": "Student 3",
-        "assignmentsNotSubmitted": [
+        "name": "Eva Martinez",
+        "username": "eva789",
+        "email": "eva@example.com",
+        "currentWaterPoints": 0,
+        "currentPlantImage": "path/to/image",
+        "courses": [
             {
-                "name": "Assignement G",
-                "dueDate": "2023-04-05",
-                "description": "This is sample description"
+                "name": "User Interface",
+                "key": "ui",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
             },
             {
-                "name": "Assignement H",
-                "dueDate": "2023-04-06",
-                "description": "This is sample description"
+                "name": "Senior Design",
+                "key": "senior_design",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment A",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description A"
+                            },
+                            {
+                                "name": "Assignment B",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description B"
+                            },
+                            {
+                                "name": "Assignment C",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description C"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
             },
             {
-                "name": "Assignement I",
-                "dueDate": "2023-04-07",
-                "description": "This is sample description"
+                "name": "Computer Graphics",
+                "key": "computer_graphics",
+                "tabs": {
+                    "syllabus": {},
+                    "modules": {},
+                    "grades": {},
+                    "assignments": {
+                        "assignmentsNotSubmitted": [
+                            {
+                                "name": "Assignment G",
+                                "dueDate": "2023-04-05",
+                                "description": "This is sample description"
+                            },
+                            {
+                                "name": "Assignment H",
+                                "dueDate": "2023-04-06",
+                                "description": "This is sample description"
+                            },
+                            {
+                                "name": "Assignment I",
+                                "dueDate": "2023-04-07",
+                                "description": "This is sample description"
+                            }
+                        ]
+                    },
+                    "files": {},
+                    "zoom": {}
+                }
+            }
+        ],
+        "plants": [
+            {
+                "type": "Sunflower"
+            },
+            {
+                "type": "Rose"
+            },
+            {
+                "type": "Peach"
             }
         ]
     }
