@@ -10,10 +10,10 @@ const Dashboard = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>Dashboard</h1>
-      <hr style={{ width: "90%" }} />
+      <hr style={{ width: "80%" }} />
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
         <CourseCard />
-        <div style={{ display: "flex", flexDirection: "column", paddingTop: "20px" }}>
+        <div style={{ display: "flex", flexDirection: "column", marginRight: "0 !important", paddingTop: "20px" }}>
           <Todo />
           <Announcements />
         </div>
@@ -24,4 +24,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

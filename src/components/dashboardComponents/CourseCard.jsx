@@ -15,7 +15,7 @@ const CustomCard = ({ title, link }) => {
             <Card
                 hoverable
                 style={{
-                    width: 350,
+                    width: 250,
                     margin: "20px",
                     cursor: "pointer",
                 }}
@@ -34,10 +34,13 @@ CustomCard.propTypes = {
 
 const CourseCard = () => {
     return (
-        <div style={{ display: "flex" }} className="card-container-dashboard">
+        <div style={{ display: "flex", flexDirection: "row" }} className="card-container-dashboard">
             <CustomCard title="User Interface" link="/course/ui" />
             <CustomCard title="Computer Graphics" link="/course/computer_graphics" />
             <CustomCard title="Senior Design" link="/course/senior_design" />
+            <span style={{ color: "white" }}>HelloHelloHelloHelloHello</span>
+            {/* TODO: FIX THIS WITH FLEX  */}
+
         </div>
     );
 };
