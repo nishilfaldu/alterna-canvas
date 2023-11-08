@@ -15,8 +15,8 @@ const PlantStatus = () => {
     <Container>
       <Row>
         <Col>TODO: Add plant image here</Col>
-        <Col lg={9}>
-          <h2 style={{marginBottom: 20}}>{plantName}</h2>
+        <Col lg={8}>
+          <h2 style={{ marginBottom: 20 }}>{plantName}</h2>
           <ProgressBar
             now={(currentHealth / totalHealth) * 100}
             label={`${Math.round((currentHealth / totalHealth) * 100)}%`}
@@ -30,9 +30,9 @@ const PlantStatus = () => {
             Health: {currentHealth}/{totalHealth}{" "}
             <MdOutlineWaterDrop style={{ margin: "auto 5" }} />
           </p>
-          <div style={{ display: "flex", marginTop: 20 }}>
+          <div style={{ display: "flex", marginTop: 20, width: "100%" }}>
             <Button
-              style={{ width: 100 }}
+              style={{ width: "100%" }}
               onClick={() =>
                 console.log("TODO: add functionality to this button!")
               }
@@ -47,9 +47,7 @@ const PlantStatus = () => {
             }}
           >
             {waterAvailable} <MdOutlineWaterDrop style={{ margin: "auto 5" }} />{" "}
-            available
-          </p>
-          <p>{daysUntilWilted} days until wilted</p>
+            available, {daysUntilWilted} days until wilted</p>
         </Col>
       </Row>
     </Container>
