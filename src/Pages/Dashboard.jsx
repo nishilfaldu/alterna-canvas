@@ -1,23 +1,25 @@
-import { Link } from "react-router-dom";
+import Announcements from "../components/dashboardComponents/Announcements";
+import CourseCard from "../components/dashboardComponents/CourseCard";
+import PlantStatus from "../components/dashboardComponents/PlantStatus";
+import Todo from "../components/dashboardComponents/ToDo";
 
 
 
-function Dashboard() {
+const Dashboard = () => {
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <h1>Dashboard</h1>
-      {/* I added these Link elements to make it easier to navigate during development. Remove them when developing the Dashboard. -- Emma */}
-      <p>
-        <Link to="/course/ui">User Interface</Link>
-      </p>
-      <p>
-        <Link to="/course/computer_graphics">Computer Graphics</Link>
-      </p>
-      <p>
-        <Link to="/course/senior_design">Senior Design</Link>
-      </p>
-    </>
+      <hr style={{ width: "80%" }} />
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+        <CourseCard />
+        <div style={{ display: "flex", flexDirection: "column", marginRight: "0 !important", paddingTop: "20px" }}>
+          <Todo />
+          <Announcements />
+        </div>
+      </div>
+      <PlantStatus />
+    </div>
   );
-}
+};
 
 export default Dashboard;
