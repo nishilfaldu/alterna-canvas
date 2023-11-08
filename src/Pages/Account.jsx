@@ -37,7 +37,15 @@ export default function Account() {
 
   return (
     <>
-      <h1>Profile</h1>
+      <h2>Profile</h2>
+      <hr style={{ width: "80%" }} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+        }}
+      ></div>
       <div className="flex items-center gap-x-40">
         <div>
           <img
