@@ -107,6 +107,36 @@
             {
                 "type": "Peach"
             }
+        ],
+        "todoList": [
+            {
+                "task": "Complete Assignment A",
+                "dueDate": "2023-04-05"
+            },
+            {
+                "task": "Complete Assignment B",
+                "dueDate": "2023-04-06"
+            },
+            {
+                "task": "Complete Assignment C",
+                "dueDate": "2023-04-07"
+            },
+            {
+                "task": "Study for upcoming exams",
+                "dueDate": "2023-03-15"
+            },
+            {
+                "task": "Complete Assignment D",
+                "dueDate": "2023-04-05"
+            },
+            {
+                "task": "Complete Assignment E",
+                "dueDate": "2023-04-06"
+            },
+            {
+                "task": "Complete Assignment F",
+                "dueDate": "2023-04-07"
+            }
         ]
     },
     {
@@ -217,6 +247,36 @@
             {
                 "type": "Peach"
             }
+        ],
+        "todoList": [
+            {
+                "task": "Complete Assignment A",
+                "dueDate": "2023-04-05"
+            },
+            {
+                "task": "Complete Assignment B",
+                "dueDate": "2023-04-06"
+            },
+            {
+                "task": "Complete Assignment C",
+                "dueDate": "2023-04-07"
+            },
+            {
+                "task": "ICP: Apply to the Internatioal Co-op Program",
+                "dueDate": "2023-03-15"
+            },
+            {
+                "task": "Complete Assignment D",
+                "dueDate": "2023-04-05"
+            },
+            {
+                "task": "Complete Assignment E",
+                "dueDate": "2023-04-06"
+            },
+            {
+                "task": "Complete Assignment F",
+                "dueDate": "2023-04-07"
+            }
         ]
     },
     {
@@ -326,6 +386,32 @@
             },
             {
                 "type": "Peach"
+            }
+        ],
+        "todoList": [
+            {
+                "task": "Complete Assignment A",
+                "dueDate": "2023-04-05"
+            },
+            {
+                "task": "Complete Assignment B",
+                "dueDate": "2023-04-06"
+            },
+            {
+                "task": "Complete Assignment C",
+                "dueDate": "2023-04-07"
+            },
+            {
+                "task": "Complete Assignment D",
+                "dueDate": "2023-04-05"
+            },
+            {
+                "task": "Complete Assignment E",
+                "dueDate": "2023-04-06"
+            },
+            {
+                "task": "Complete Assignment F",
+                "dueDate": "2023-04-07"
             }
         ]
     }

@@ -1,0 +1,46 @@
+{
+    "announcements": [
+        {
+            "title": "Welcome back! Spring semester begins today!",
+            "course": "General",
+            "postedBy": "University Administration",
+            "datePosted": "2023-01-09",
+            "content": "See you in class! Have a wonderful semester!"
+        },
+        {
+            "title": "Guest Lecture on the Future of User Interface Design",
+            "course": "User Interface",
+            "postedBy": "Dr. Jilian Aurisano",
+            "datePosted": "2023-01-15",
+            "content": "Students, we have a secret surprise guest lecturer. Make sure you come to class in-person if you can!"
+        },
+        {
+            "title": "Workshop on Advanced Rendering Techniques",
+            "course": "Computer Graphics",
+            "postedBy": "Ivan Sutherland",
+            "datePosted": "2023-02-03",
+            "content": "I have rescheduled the workshop to be on the 02-26 from 9am to 11am to accomodate your midterms. Good luck and see you soon"
+        },
+        {
+            "title": "Senior Design Project Kickoff Meeting",
+            "course": "Senior Design",
+            "postedBy": "Fred Annexstein",
+            "datePosted": "2023-02-15",
+            "content": "Everyone, having an in person meeting today. Can't wait! "
+        },
+        {
+            "title": "Reminder: Midterm Exams Scheduled for Next Week",
+            "course": "General",
+            "postedBy": "University Administration",
+            "datePosted": "2023-03-05",
+            "content": "Good luck! Halfway there, you got this!"
+        },
+        {
+            "title": "Research Conference on Emerging Technologies in Computer Science",
+            "course": "User Interface",
+            "postedBy": "Dr. Jilian Aurisano",
+            "datePosted": "2023-03-18",
+            "content": "Happening today! Super excited, see you soon!"
+        }
+    ]
+}
