@@ -83,6 +83,14 @@ const Announcements = () => {
   return (
     <>
       <h2>Announcements</h2>
+      <hr style={{ width: "100%" }} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+        }}
+      />
       <br></br>
       <Collapse
         defaultActiveKey={["1"]}

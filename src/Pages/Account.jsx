@@ -1,10 +1,10 @@
-import { Select } from "antd";
-import { useEffect, useState } from "react";
+import { Select, Typography } from "antd";
+import { useEffect, useState, useMemo } from "react";
 
 import { useUser } from "../components/provider/useUser";
 import users from "../data/users.json";
 
-
+const { Paragraph } = Typography;
 
 export default function Account() {
   const { user, setUser } = useUser();
@@ -12,21 +12,40 @@ export default function Account() {
 
   useEffect(() => {
     if (user) {
-      const match = users.find(u => u.name === user);
+      const match = users.find((u) => u.name === user);
       setUserInfo(match);
     }
   }, [user]);
 
-  const handleChange = value => {
+  const handleChange = (value) => {
     localStorage.setItem("user", value);
     setUser(value);
   };
 
+  const [editableStrWithSuffix, setEditableStrWithSuffix] = useState(
+    "Write a few lines about yourself."
+  );
+
+  const [editableStrWithSuffixStartPart, editableStrWithSuffixSuffixPart] =
+    useMemo(
+      () => [
+        editableStrWithSuffix.slice(0, -12),
+        editableStrWithSuffix.slice(-12),
+      ],
+      [editableStrWithSuffix]
+    );
+
   return (
     <>
-      <h1>
-        Profile
-      </h1>
+      <h2>Profile</h2>
+      <hr style={{ width: "80%" }} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+        }}
+      ></div>
       <div className="flex items-center gap-x-40">
         <div>
           <img
@@ -41,9 +60,9 @@ export default function Account() {
             alt="Profile"
           />
         </div>
-       <div className="flex flex-col gap-y-3">
-        <Select
-            size="large"
+        <div className="flex flex-col gap-y-3">
+          <Select
+            size="medium"
             value={user}
             onChange={handleChange}
             options={[
@@ -53,10 +72,24 @@ export default function Account() {
             ]}
             style={{ width: 200 }}
           />
-          <h3>Name: {user}</h3>
-          <h3>Email: {userInfo?.email}</h3>
-          <h3>Username: {userInfo?.username}</h3>
-       </div>
+          <br></br>
+          <h4 style={{ color: "black" }}>{user}</h4>
+          <h6 style={{ color: "blue", textDecoration: "underline" }}>
+            {userInfo?.email}
+          </h6>
+          <h6>Username: {userInfo?.username}</h6>
+          <Paragraph
+            editable={{
+              onChange: setEditableStrWithSuffix,
+              text: editableStrWithSuffix,
+            }}
+            ellipsis={{
+              suffix: editableStrWithSuffixSuffixPart,
+            }}
+          >
+            {editableStrWithSuffixStartPart}
+          </Paragraph>
+        </div>
       </div>
     </>
   );
