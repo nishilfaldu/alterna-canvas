@@ -11,7 +11,7 @@ import Zoom from "./tabContent/Zoom";
 
 
 
-function CourseTabs({ courseID }) {
+function CourseTabs({ courseID, courseName }) {
   const tabItems = useMemo(
     () => [
       {
@@ -42,10 +42,10 @@ function CourseTabs({ courseID }) {
       {
         label: "Zoom",
         key: 6,
-        children: <Zoom courseID={courseID} />,
+        children: <Zoom courseName={courseName} />,
       },
     ],
-    [courseID],
+    [courseID, courseName],
   );
 
   return (
@@ -64,6 +64,7 @@ function CourseTabs({ courseID }) {
 
 CourseTabs.propTypes = {
   courseID: PropTypes.string,
+  courseName: PropTypes.string,
 };
 
 export default CourseTabs;
