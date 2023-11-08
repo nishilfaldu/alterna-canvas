@@ -8,7 +8,7 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import NavBar from "./components/navbar";
+import NavBar from "./components/NavBar";
 import Account from "./Pages/Account";
 import Announcements from "./Pages/Announcements";
 import Course from "./Pages/Course";
