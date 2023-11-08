@@ -16,18 +16,18 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "P2 Sketching and Formative Eval Checkpoint",
+                                "dueDate": "2023-11-01, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
+                                "name": "Heuristic Evaluation Submission",
+                                "dueDate": "2023-11-03, 11:59pm",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
+                                "name": "Project 2 Implementation Checkpoint",
+                                "dueDate": "2023-11-06, 11:59pm",
                                 "description": "This is sample description C"
                             }
                         ]
@@ -46,19 +46,14 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "Assignment #10 - Final Design Reports",
+                                "dueDate": "2023-11-26, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
+                                "name": "Assignment #11 - Project Advisor Assessments",
+                                "dueDate": "2023-12-03, 11:59pm",
                                 "description": "This is sample description B"
-                            },
-                            {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
-                                "description": "This is sample description C"
                             }
                         ]
                     },
@@ -76,19 +71,19 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "Assignment 3 Report",
+                                "dueDate": "2023-10-27, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
-                                "description": "This is sample description B"
+                                "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                "dueDate": "2023-11-03, 11:59pm",
+                                "description": "This is an open-book, individual quiz. Please review the lecture materials."
                             },
                             {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
-                                "description": "This is sample description C"
+                                "name": "Graduate student project milestone 1 submission",
+                                "dueDate": "2023-11-07, 11:59pm",
+                                "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
                             }
                         ]
                     },
@@ -126,18 +121,18 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "P2 Sketching and Formative Eval Checkpoint",
+                                "dueDate": "2023-11-01, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
+                                "name": "Heuristic Evaluation Submission",
+                                "dueDate": "2023-11-03, 11:59pm",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
+                                "name": "Project 2 Implementation Checkpoint",
+                                "dueDate": "2023-11-06, 11:59pm",
                                 "description": "This is sample description C"
                             }
                         ]
@@ -156,19 +151,14 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "Assignment #10 - Final Design Reports",
+                                "dueDate": "2023-11-26, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
+                                "name": "Assignment #11 - Project Advisor Assessments",
+                                "dueDate": "2023-12-03, 11:59pm",
                                 "description": "This is sample description B"
-                            },
-                            {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
-                                "description": "This is sample description C"
                             }
                         ]
                     },
@@ -186,19 +176,19 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment D",
-                                "dueDate": "2023-04-05",
-                                "description": "This is sample description"
+                                "name": "Assignment 3 Report",
+                                "dueDate": "2023-10-27, 11:59pm",
+                                "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment E",
-                                "dueDate": "2023-04-06",
-                                "description": "This is sample description"
+                                "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                "dueDate": "2023-11-03, 11:59pm",
+                                "description": "This is an open-book, individual quiz. Please review the lecture materials."
                             },
                             {
-                                "name": "Assignment F",
-                                "dueDate": "2023-04-07",
-                                "description": "This is sample description"
+                                "name": "Graduate student project milestone 1 submission",
+                                "dueDate": "2023-11-07, 11:59pm",
+                                "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
                             }
                         ]
                     },
@@ -236,18 +226,18 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "P2 Sketching and Formative Eval Checkpoint",
+                                "dueDate": "2023-11-01, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
+                                "name": "Heuristic Evaluation Submission",
+                                "dueDate": "2023-11-03, 11:59pm",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
+                                "name": "Project 2 Implementation Checkpoint",
+                                "dueDate": "2023-11-06, 11:59pm",
                                 "description": "This is sample description C"
                             }
                         ]
@@ -266,19 +256,14 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment A",
-                                "dueDate": "2023-04-05",
+                                "name": "Assignment #10 - Final Design Reports",
+                                "dueDate": "2023-11-26, 11:59pm",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment B",
-                                "dueDate": "2023-04-06",
+                                "name": "Assignment #11 - Project Advisor Assessments",
+                                "dueDate": "2023-12-03, 11:59pm",
                                 "description": "This is sample description B"
-                            },
-                            {
-                                "name": "Assignment C",
-                                "dueDate": "2023-04-07",
-                                "description": "This is sample description C"
                             }
                         ]
                     },
@@ -296,19 +281,19 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignment G",
-                                "dueDate": "2023-04-05",
-                                "description": "This is sample description"
+                                "name": "Assignment 3 Report",
+                                "dueDate": "2023-10-27, 11:59pm",
+                                "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignment H",
-                                "dueDate": "2023-04-06",
-                                "description": "This is sample description"
+                                "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                "dueDate": "2023-11-03, 11:59pm",
+                                "description": "This is an open-book, individual quiz. Please review the lecture materials."
                             },
                             {
-                                "name": "Assignment I",
-                                "dueDate": "2023-04-07",
-                                "description": "This is sample description"
+                                "name": "Graduate student project milestone 1 submission",
+                                "dueDate": "2023-11-07, 11:59pm",
+                                "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
                             }
                         ]
                     },
