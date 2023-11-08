@@ -81,7 +81,7 @@ const Assignments = ({ courseID }) => {
       label: "Assignments Not Submitted",
       children: <List
       itemLayout="horizontal"
-      dataSource={users[0].assignmentsNotSubmitted?.map(
+      dataSource={users.students[0].courses[0].tabs.assignments.assignmentsNotSubmitted?.map(
         assignment => ({ title: assignment.name, description: assignment.description }))}
       renderItem={(item, index) => (
         <List.Item>

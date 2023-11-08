@@ -4,6 +4,8 @@ import { useEffect, useState, useMemo } from "react";
 import { useUser } from "../components/provider/useUser";
 import users from "../data/users.json";
 
+
+
 const { Paragraph } = Typography;
 
 export default function Account() {
@@ -12,18 +14,18 @@ export default function Account() {
 
   useEffect(() => {
     if (user) {
-      const match = users.find((u) => u.name === user);
+      const match = users.students.find(u => u.name === user);
       setUserInfo(match);
     }
   }, [user]);
 
-  const handleChange = (value) => {
+  const handleChange = value => {
     localStorage.setItem("user", value);
     setUser(value);
   };
 
   const [editableStrWithSuffix, setEditableStrWithSuffix] = useState(
-    "Write a few lines about yourself."
+    "Write a few lines about yourself.",
   );
 
   const [editableStrWithSuffixStartPart, editableStrWithSuffixSuffixPart] =
@@ -32,7 +34,7 @@ export default function Account() {
         editableStrWithSuffix.slice(0, -12),
         editableStrWithSuffix.slice(-12),
       ],
-      [editableStrWithSuffix]
+      [editableStrWithSuffix],
     );
 
   return (
