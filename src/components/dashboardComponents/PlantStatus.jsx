@@ -28,7 +28,7 @@ const PlantStatus = () => {
             }}
           >
             Health: {currentHealth}/{totalHealth}{" "}
-            <MdOutlineWaterDrop style={{ margin: "auto 5" }} />
+            <MdOutlineWaterDrop color="cornflowerblue" style={{ margin: "auto 5" }} />
           </p>
           <div style={{ display: "flex", marginTop: 20, width: "100%" }}>
             <Button
@@ -46,7 +46,7 @@ const PlantStatus = () => {
               margin: "auto",
             }}
           >
-            {waterAvailable} <MdOutlineWaterDrop style={{ margin: "auto 5" }} />{" "}
+            {waterAvailable} <MdOutlineWaterDrop color="cornflowerblue" style={{ margin: "auto 5" }} />{" "}
             available, {daysUntilWilted} days until wilted</p>
         </Col>
       </Row>
