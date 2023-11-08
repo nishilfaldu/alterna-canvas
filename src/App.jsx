@@ -10,7 +10,6 @@ import {
 
 import NavBar from "./components/NavBar";
 import { UserProvider } from "./components/provider/Provider";
-import { UserProvider } from "./components/provider/Provider";
 import Account from "./Pages/Account";
 import Announcements from "./Pages/Announcements";
 import Course from "./Pages/Course";
@@ -26,22 +25,7 @@ function App() {
   return (
     <>
       <UserProvider>
-      <UserProvider>
       <NavBar />
-        <Container className="my-3">
-          <Router>
-            <Routes>
-              <Route index element={<Dashboard />} />
-              <Route path="/account" element={<Account />} />
-              <Route path="/announcements" element={<Announcements />} />
-              <Route path="/garden" element={<Garden />} />
-              <Route path="/todo" element={<ToDo />} />
-              <Route path="/course/:id" element={<Course />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </Router>
-        </Container>
-      </UserProvider>
         <Container className="my-3">
           <Router>
             <Routes>

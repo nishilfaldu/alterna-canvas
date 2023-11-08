@@ -1,9 +1,11 @@
 import { Select } from "antd";
 
-const onChange = (value) => {
+
+
+const onChange = value => {
   console.log(`selected ${value}`);
 };
-const onSearch = (value) => {
+const onSearch = value => {
   console.log("search:", value);
 };
 

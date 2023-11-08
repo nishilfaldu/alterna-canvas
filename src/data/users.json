@@ -16,17 +16,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -46,17 +46,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -76,17 +76,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -126,17 +126,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -156,17 +156,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -186,17 +186,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement D",
+                                "name": "Assignment D",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description"
                             },
                             {
-                                "name": "Assignement E",
+                                "name": "Assignment E",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description"
                             },
                             {
-                                "name": "Assignement F",
+                                "name": "Assignment F",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description"
                             }
@@ -236,17 +236,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -266,17 +266,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement A",
+                                "name": "Assignment A",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description A"
                             },
                             {
-                                "name": "Assignement B",
+                                "name": "Assignment B",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description B"
                             },
                             {
-                                "name": "Assignement C",
+                                "name": "Assignment C",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description C"
                             }
@@ -296,17 +296,17 @@
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
-                                "name": "Assignement G",
+                                "name": "Assignment G",
                                 "dueDate": "2023-04-05",
                                 "description": "This is sample description"
                             },
                             {
-                                "name": "Assignement H",
+                                "name": "Assignment H",
                                 "dueDate": "2023-04-06",
                                 "description": "This is sample description"
                             },
                             {
-                                "name": "Assignement I",
+                                "name": "Assignment I",
                                 "dueDate": "2023-04-07",
                                 "description": "This is sample description"
                             }
