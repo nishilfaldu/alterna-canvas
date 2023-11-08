@@ -1,6 +1,7 @@
 {
     "students": [
         {
+            "id": 1,
             "name": "Alice Johnson",
             "username": "alice123",
             "email": "alice@example.com",
@@ -106,6 +107,7 @@
             ]
         },
         {
+            "id": 2,
             "name": "Bob Anderson",
             "username": "bob456",
             "email": "bob@example.com",
@@ -211,6 +213,7 @@
             ]
         },
         {
+            "id": 3,
             "name": "Eva Martinez",
             "username": "eva789",
             "email": "eva@example.com",

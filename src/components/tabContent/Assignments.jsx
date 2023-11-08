@@ -1,5 +1,6 @@
 import { FileOutlined } from "@ant-design/icons";
 import { Collapse, List, Modal } from "antd";
+import { message } from "antd";
 import PropTypes from "prop-types";
 import { useCallback, useEffect, useState } from "react";
 
@@ -7,11 +8,15 @@ import Reward from "./files/Reward";
 import UploadFile from "./files/UploadFile";
 import users from "../../data/users.json";
 import { listFiles } from "../../scripts/getS3Data";
+import { getData } from "../../scripts/jsonHelpers";
+import { useUser } from "../provider/useUser";
 
 
 
 const Assignments = ({ courseID }) => {
   const [modal, contextHolder] = Modal.useModal();
+  const { user, setUser } = useUser();
+  const [_assignmentsNotSubmitted, setAssignmentsNotSubmitted] = useState([]);
 
   const [assignments, setAssignments] = useState();
   useEffect(() => {
@@ -22,6 +27,27 @@ const Assignments = ({ courseID }) => {
 
     fetchData();
   }, [courseID]);
+
+  useEffect(() => {
+    async function fetchData() {
+      if (!user) { message.error("User not found");
+
+        return; 
+      }
+      const names = user.split(" ");
+      const firstName = names[0];
+      const lastName = names[1];
+      // here data is an array of an object
+      const data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
+      const course = data[0]?.courses.filter(course => course.key === courseID);
+      const assignNotSubmitted = course[0].tabs.assignments.assignmentsNotSubmitted;
+      console.log(assignNotSubmitted);
+      setAssignmentsNotSubmitted(assignNotSubmitted);
+    }
+
+    fetchData();
+  }, [user, courseID]);
+
 
   // TODO: might need to mutate data in users.json if we want to switch assignments between collapses
   const assignmentsSubmitted = [
@@ -81,7 +107,7 @@ const Assignments = ({ courseID }) => {
       label: "Assignments Not Submitted",
       children: <List
       itemLayout="horizontal"
-      dataSource={users.students[0].courses[0].tabs.assignments.assignmentsNotSubmitted?.map(
+      dataSource={_assignmentsNotSubmitted.map(
         assignment => ({ title: assignment.name, description: assignment.description }))}
       renderItem={(item, index) => (
         <List.Item>
