@@ -448,6 +448,262 @@
                     "syllabus": {},
                     "modules": {},
                     "grades": {},
+                    "gradesObtained": {
+                        "assignments": [
+                            {
+                                "title": "First assignment",
+                                "pointsObtained": "10",
+                                "totalPoints": "10",
+                                "startDate": "01/10/2023",
+                                "dueDate": "01/20/2023"
+                            },
+                            {
+                                "title": "Linear Algebra Review ",
+                                "pointsObtained": "10",
+                                "totalPoints": "10",
+                                "startDate": "01/15/2023",
+                                "dueDate": "01/21/2023"
+                            },
+                            {
+                                "title": "Rasterization Review",
+                                "pointsObtained": "10",
+                                "totalPoints": "10",
+                                "startDate": "01/16/2023",
+                                "dueDate": "01/22/2023"
+                            },
+                            {
+                                "title": "Transformations exercise",
+                                "pointsObtained": "10",
+                                "totalPoints": "10",
+                                "startDate": "01/20/2023",
+                                "dueDate": "01/26/2023"
+                            },
+                            {
+                                "title": "Projection Exercises",
+                                "pointsObtained": "10",
+                                "totalPoints": "10",
+                                "startDate": "01/23/2023",
+                                "dueDate": "01/29/2023"
+                            },
+                            {
+                                "title": "Texture Mapping Exercises",
+                                "pointsObtained": "8",
+                                "totalPoints": "10",
+                                "startDate": "01/26/2023",
+                                "dueDate": "01/29/2023"
+                            },
+                            {
+                                "title": "Color",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Light and Shadow",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/02/2023",
+                                "dueDate": "03/01/2023"
+                            }
+                        ],
+                        "participation": [
+                            {
+                                "title": "Syllabus",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/10/2023",
+                                "dueDate": "01/10/2023"
+                            },
+                            {
+                                "title": "What are Graphics, Pipeline and hardware",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/12/2023",
+                                "dueDate": "01/12/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p1",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/14/2023",
+                                "dueDate": "01/14/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p2",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/16/2023",
+                                "dueDate": "01/16/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/18/2023",
+                                "dueDate": "01/18/2023"
+                            },
+                            {
+                                "title": "Intro",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/20/2023",
+                                "dueDate": "01/20/2023"
+                            },
+                            {
+                                "title": "Vectors",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/22/2023",
+                                "dueDate": "01/22/2023"
+                            },
+                            {
+                                "title": "Span",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "01/24/2023"
+                            },
+                            {
+                                "title": "Linear Transformations",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/26/2023",
+                                "dueDate": "01/26/2023"
+                            },
+                            {
+                                "title": "Span",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "01/24/2023"
+                            },
+                            {
+                                "title": "Matrix Multiplication",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/28/2023",
+                                "dueDate": "01/28/2023"
+                            },
+                            {
+                                "title": "3D Transformations",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/30/2023",
+                                "dueDate": "01/30/2023"
+                            },
+                            {
+                                "title": "Lines part 1 and 2",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/01/2023",
+                                "dueDate": "02/01/2023"
+                            },
+                            {
+                                "title": "Determinant",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/02/2023",
+                                "dueDate": "02/02/2023"
+                            },
+                            {
+                                "title": "Inversive Matrices",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/04/2023",
+                                "dueDate": "02/04/2023"
+                            },
+                            {
+                                "title": "Nonsquare Matrices",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/06/2023",
+                                "dueDate": "02/06/2023"
+                            },
+                            {
+                                "title": "Dot Product",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/08/2023",
+                                "dueDate": "02/08/2023"
+                            },
+                            {
+                                "title": "Cross Product",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/10/2023",
+                                "dueDate": "02/10/2023"
+                            },
+                            {
+                                "title": "Transformations p1, p2, p3 and p4",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/15/2023",
+                                "dueDate": "02/15/2023"
+                            },
+                            {
+                                "title": "Cross Product at Transformation",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/16/2023",
+                                "dueDate": "02/16/2023"
+                            },
+                            {
+                                "title": "Cramer's Rule",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/18/2023",
+                                "dueDate": "02/18/2023"
+                            },
+                            {
+                                "title": "Change of Bias and Eigenvectors",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/20/2023",
+                                "dueDate": "02/20/2023"
+                            },
+                            {
+                                "title": "Projections p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/24/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Texture Mapping p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/26/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Color p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/28/2023",
+                                "dueDate": "02/28/2023"
+                            },
+                            {
+                                "title": "Light and shadow p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "03/01/2023",
+                                "dueDate": "03/01/2023"
+                            }
+                        ],
+                        "exam": [
+                            {
+                                "title": "Midterm Exam",
+                                "pointsObtained": "89",
+                                "totalPoints": "100",
+                                "startDate": "02/26/2023",
+                                "dueDate": "03/28/2023"
+                            }
+                        ],
+                        "assignmentWeightage": "0.5",
+                        "participationWeightage": "0.1",
+                        "examWeightage": "0.4"
+                    },
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
@@ -963,6 +1219,262 @@
                     "syllabus": {},
                     "modules": {},
                     "grades": {},
+                    "gradesObtained": {
+                        "assignments": [
+                            {
+                                "title": "First assignment",
+                                "pointsObtained": "7",
+                                "totalPoints": "10",
+                                "startDate": "01/10/2023",
+                                "dueDate": "01/20/2023"
+                            },
+                            {
+                                "title": "Linear Algebra Review ",
+                                "pointsObtained": "9",
+                                "totalPoints": "10",
+                                "startDate": "01/15/2023",
+                                "dueDate": "01/21/2023"
+                            },
+                            {
+                                "title": "Rasterization Review",
+                                "pointsObtained": "4",
+                                "totalPoints": "10",
+                                "startDate": "01/16/2023",
+                                "dueDate": "01/22/2023"
+                            },
+                            {
+                                "title": "Transformations exercise",
+                                "pointsObtained": "6",
+                                "totalPoints": "10",
+                                "startDate": "01/20/2023",
+                                "dueDate": "01/26/2023"
+                            },
+                            {
+                                "title": "Projection Exercises",
+                                "pointsObtained": "7",
+                                "totalPoints": "10",
+                                "startDate": "01/23/2023",
+                                "dueDate": "01/29/2023"
+                            },
+                            {
+                                "title": "Texture Mapping Exercises",
+                                "pointsObtained": "7",
+                                "totalPoints": "10",
+                                "startDate": "01/26/2023",
+                                "dueDate": "01/29/2023"
+                            },
+                            {
+                                "title": "Color",
+                                "pointsObtained": "5",
+                                "totalPoints": "10",
+                                "startDate": "01/24/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Light and Shadow",
+                                "pointsObtained": "0",
+                                "totalPoints": "10",
+                                "startDate": "02/02/2023",
+                                "dueDate": "03/01/2023"
+                            }
+                        ],
+                        "participation": [
+                            {
+                                "title": "Syllabus",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/10/2023",
+                                "dueDate": "01/10/2023"
+                            },
+                            {
+                                "title": "What are Graphics, Pipeline and hardware",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/12/2023",
+                                "dueDate": "01/12/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p1",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/14/2023",
+                                "dueDate": "01/14/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p2",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/16/2023",
+                                "dueDate": "01/16/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/18/2023",
+                                "dueDate": "01/18/2023"
+                            },
+                            {
+                                "title": "Intro",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/20/2023",
+                                "dueDate": "01/20/2023"
+                            },
+                            {
+                                "title": "Vectors",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/22/2023",
+                                "dueDate": "01/22/2023"
+                            },
+                            {
+                                "title": "Span",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "01/24/2023"
+                            },
+                            {
+                                "title": "Linear Transformations",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/26/2023",
+                                "dueDate": "01/26/2023"
+                            },
+                            {
+                                "title": "Span",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "01/24/2023"
+                            },
+                            {
+                                "title": "Matrix Multiplication",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/28/2023",
+                                "dueDate": "01/28/2023"
+                            },
+                            {
+                                "title": "3D Transformations",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/30/2023",
+                                "dueDate": "01/30/2023"
+                            },
+                            {
+                                "title": "Lines part 1 and 2",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/01/2023",
+                                "dueDate": "02/01/2023"
+                            },
+                            {
+                                "title": "Determinant",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/02/2023",
+                                "dueDate": "02/02/2023"
+                            },
+                            {
+                                "title": "Inversive Matrices",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/04/2023",
+                                "dueDate": "02/04/2023"
+                            },
+                            {
+                                "title": "Nonsquare Matrices",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/06/2023",
+                                "dueDate": "02/06/2023"
+                            },
+                            {
+                                "title": "Dot Product",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/08/2023",
+                                "dueDate": "02/08/2023"
+                            },
+                            {
+                                "title": "Cross Product",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/10/2023",
+                                "dueDate": "02/10/2023"
+                            },
+                            {
+                                "title": "Transformations p1, p2, p3 and p4",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/15/2023",
+                                "dueDate": "02/15/2023"
+                            },
+                            {
+                                "title": "Cross Product at Transformation",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/16/2023",
+                                "dueDate": "02/16/2023"
+                            },
+                            {
+                                "title": "Cramer's Rule",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/18/2023",
+                                "dueDate": "02/18/2023"
+                            },
+                            {
+                                "title": "Change of Bias and Eigenvectors",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/20/2023",
+                                "dueDate": "02/20/2023"
+                            },
+                            {
+                                "title": "Projections p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/24/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Texture Mapping p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/26/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Color p1, p2, p3",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/28/2023",
+                                "dueDate": "02/28/2023"
+                            },
+                            {
+                                "title": "Light and shadow p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "03/01/2023",
+                                "dueDate": "03/01/2023"
+                            }
+                        ],
+                        "exam": [
+                            {
+                                "title": "Midterm Exam",
+                                "pointsObtained": "55",
+                                "totalPoints": "100",
+                                "startDate": "02/26/2023",
+                                "dueDate": "03/28/2023"
+                            }
+                        ],
+                        "assignmentWeightage": "0.5",
+                        "participationWeightage": "0.1",
+                        "examWeightage": "0.4"
+                    },
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
@@ -1478,6 +1990,262 @@
                     "syllabus": {},
                     "modules": {},
                     "grades": {},
+                    "gradesObtained": {
+                        "assignments": [
+                            {
+                                "title": "First assignment",
+                                "pointsObtained": "4",
+                                "totalPoints": "10",
+                                "startDate": "01/10/2023",
+                                "dueDate": "01/20/2023"
+                            },
+                            {
+                                "title": "Linear Algebra Review ",
+                                "pointsObtained": "1",
+                                "totalPoints": "10",
+                                "startDate": "01/15/2023",
+                                "dueDate": "01/21/2023"
+                            },
+                            {
+                                "title": "Rasterization Review",
+                                "pointsObtained": "3",
+                                "totalPoints": "10",
+                                "startDate": "01/16/2023",
+                                "dueDate": "01/22/2023"
+                            },
+                            {
+                                "title": "Transformations exercise",
+                                "pointsObtained": "5",
+                                "totalPoints": "10",
+                                "startDate": "01/20/2023",
+                                "dueDate": "01/26/2023"
+                            },
+                            {
+                                "title": "Projection Exercises",
+                                "pointsObtained": "3",
+                                "totalPoints": "10",
+                                "startDate": "01/23/2023",
+                                "dueDate": "01/29/2023"
+                            },
+                            {
+                                "title": "Texture Mapping Exercises",
+                                "pointsObtained": "2",
+                                "totalPoints": "10",
+                                "startDate": "01/26/2023",
+                                "dueDate": "01/29/2023"
+                            },
+                            {
+                                "title": "Color",
+                                "pointsObtained": "1",
+                                "totalPoints": "10",
+                                "startDate": "01/24/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Light and Shadow",
+                                "pointsObtained": "0",
+                                "totalPoints": "10",
+                                "startDate": "02/02/2023",
+                                "dueDate": "03/01/2023"
+                            }
+                        ],
+                        "participation": [
+                            {
+                                "title": "Syllabus",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/10/2023",
+                                "dueDate": "01/10/2023"
+                            },
+                            {
+                                "title": "What are Graphics, Pipeline and hardware",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/12/2023",
+                                "dueDate": "01/12/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p1",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/14/2023",
+                                "dueDate": "01/14/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p2",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/16/2023",
+                                "dueDate": "01/16/2023"
+                            },
+                            {
+                                "title": "Linear Algebra p3",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/18/2023",
+                                "dueDate": "01/18/2023"
+                            },
+                            {
+                                "title": "Intro",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/20/2023",
+                                "dueDate": "01/20/2023"
+                            },
+                            {
+                                "title": "Vectors",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/22/2023",
+                                "dueDate": "01/22/2023"
+                            },
+                            {
+                                "title": "Span",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "01/24/2023"
+                            },
+                            {
+                                "title": "Linear Transformations",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/26/2023",
+                                "dueDate": "01/26/2023"
+                            },
+                            {
+                                "title": "Span",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/24/2023",
+                                "dueDate": "01/24/2023"
+                            },
+                            {
+                                "title": "Matrix Multiplication",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "01/28/2023",
+                                "dueDate": "01/28/2023"
+                            },
+                            {
+                                "title": "3D Transformations",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "01/30/2023",
+                                "dueDate": "01/30/2023"
+                            },
+                            {
+                                "title": "Lines part 1 and 2",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/01/2023",
+                                "dueDate": "02/01/2023"
+                            },
+                            {
+                                "title": "Determinant",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/02/2023",
+                                "dueDate": "02/02/2023"
+                            },
+                            {
+                                "title": "Inversive Matrices",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/04/2023",
+                                "dueDate": "02/04/2023"
+                            },
+                            {
+                                "title": "Nonsquare Matrices",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/06/2023",
+                                "dueDate": "02/06/2023"
+                            },
+                            {
+                                "title": "Dot Product",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/08/2023",
+                                "dueDate": "02/08/2023"
+                            },
+                            {
+                                "title": "Cross Product",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/10/2023",
+                                "dueDate": "02/10/2023"
+                            },
+                            {
+                                "title": "Transformations p1, p2, p3 and p4",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/15/2023",
+                                "dueDate": "02/15/2023"
+                            },
+                            {
+                                "title": "Cross Product at Transformation",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/16/2023",
+                                "dueDate": "02/16/2023"
+                            },
+                            {
+                                "title": "Cramer's Rule",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/18/2023",
+                                "dueDate": "02/18/2023"
+                            },
+                            {
+                                "title": "Change of Bias and Eigenvectors",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "02/20/2023",
+                                "dueDate": "02/20/2023"
+                            },
+                            {
+                                "title": "Projections p1, p2, p3",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/24/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Texture Mapping p1, p2, p3",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/26/2023",
+                                "dueDate": "02/24/2023"
+                            },
+                            {
+                                "title": "Color p1, p2, p3",
+                                "pointsObtained": "0",
+                                "totalPoints": "1",
+                                "startDate": "02/28/2023",
+                                "dueDate": "02/28/2023"
+                            },
+                            {
+                                "title": "Light and shadow p1, p2, p3",
+                                "pointsObtained": "1",
+                                "totalPoints": "1",
+                                "startDate": "03/01/2023",
+                                "dueDate": "03/01/2023"
+                            }
+                        ],
+                        "exam": [
+                            {
+                                "title": "Midterm Exam",
+                                "pointsObtained": "9",
+                                "totalPoints": "100",
+                                "startDate": "02/26/2023",
+                                "dueDate": "03/28/2023"
+                            }
+                        ],
+                        "assignmentWeightage": "0.5",
+                        "participationWeightage": "0.1",
+                        "examWeightage": "0.4"
+                    },
                     "assignments": {
                         "assignmentsNotSubmitted": [
                             {
