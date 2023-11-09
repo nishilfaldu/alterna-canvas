@@ -7,7 +7,7 @@ import { useUser } from "../components/provider/useUser";
 
 
 const Dashboard = () => {
-  const { user, setUser } = useUser();
+  const { user } = useUser();
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>

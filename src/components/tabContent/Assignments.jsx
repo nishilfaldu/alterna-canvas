@@ -18,7 +18,6 @@ const Assignments = ({ courseID }) => {
   const { user } = useUser();
   const [_assignmentsNotSubmitted, setAssignmentsNotSubmitted] = useState([]);
   const [_assignmentsSubmitted, setAssignmentsSubmitted] = useState([]);
-  const [_userId, setUserId] = useState(0);
 
   const [assignments, setAssignments] = useState();
   useEffect(() => {
@@ -41,7 +40,6 @@ const Assignments = ({ courseID }) => {
       const lastName = names[1];
       // here data is an array of an object
       const data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
-      setUserId(data[0].id);
       const course = data[0]?.courses.filter(course => course.key === courseID);
       const assignNotSubmitted = course[0].tabs.assignments.assignmentsNotSubmitted;
       setAssignmentsNotSubmitted(assignNotSubmitted);

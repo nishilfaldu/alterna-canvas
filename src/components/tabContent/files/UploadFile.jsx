@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 
-const UploadFile = ({ courseID, folderType, fileName }) => {
+const UploadFile = () => {
   const [fileList, setFileList] = useState([]);
   const [uploading, setUploading] = useState(false);
   const handleUpload = () => {
