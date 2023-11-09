@@ -9,7 +9,7 @@ const ToDo = () => {
         title="To-Do"
         extra={<a href="/todo">More</a>}
         style={{
-          width: 275,
+          width: 400,
         }}
       >
         <ToDoComp></ToDoComp>

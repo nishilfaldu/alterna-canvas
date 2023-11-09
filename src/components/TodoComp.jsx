@@ -1,45 +1,44 @@
-import { Avatar, List } from "antd";
+import { Avatar, List, message } from "antd";
 import { useEffect, useState } from "react";
 
 import { useUser } from "./provider/useUser";
-import users from "../data/users.json";
+import { getData } from "../scripts/jsonHelpers";
 
 function ToDoComp() {
-  const { user, setUser } = useUser();
-  const [userInfo, setUserInfo] = useState({});
+  const { user } = useUser();
+  const [assignmentsMeta, setAssignmentsMeta] = useState([]);
 
   useEffect(() => {
-    if (user) {
-      const match = users.find((u) => u.name === user);
-      setUserInfo(match);
+    async function getUserData() {
+      if (!user) {
+        message.error("User not found");
+
+        return;
+      }
+      const names = user.split(" ");
+      const firstName = names[0];
+      const lastName = names[1];
+      const userData = await getData(
+        `http://localhost:3030/students?name=${firstName}+${lastName}`
+      );
+
+      const courses = userData[0].courses;
+
+      const assignmentsNotSubmitted = courses
+        .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
+        .flat();
+
+      setAssignmentsMeta(assignmentsNotSubmitted);
     }
+
+    getUserData();
   }, [user]);
-
-  const handleChange = (value) => {
-    localStorage.setItem("user", value);
-    setUser(value);
-  };
-
-  const data = [
-    {
-      title: "{ userInfo.username}",
-    },
-    {
-      title: "Ant Design Title 2",
-    },
-    {
-      title: "Ant Design Title 3",
-    },
-    {
-      title: "Ant Design Title 4",
-    },
-  ];
 
   return (
     <>
       <List
         itemLayout="horizontal"
-        dataSource={data}
+        dataSource={assignmentsMeta}
         renderItem={(item, index) => (
           <List.Item>
             <List.Item.Meta
@@ -48,8 +47,8 @@ function ToDoComp() {
                   src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
                 />
               }
-              title={<a>{item.title}</a>}
-              description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+              title={<a>{item.name}</a>}
+              description={item.dueDate}
             />
           </List.Item>
         )}
