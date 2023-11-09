@@ -59,6 +59,7 @@ const Assignments = ({ courseID }) => {
     {
       key: "1",
       label: "Assignments Submitted",
+
       children: (
         <List
           itemLayout="horizontal"
@@ -103,6 +104,7 @@ const Assignments = ({ courseID }) => {
         const firstName = names[0];
         const lastName = names[1];
 
+
         let data = await getData(
           `http://localhost:3030/students?name=${firstName}+${lastName}`
         );
@@ -111,6 +113,7 @@ const Assignments = ({ courseID }) => {
           `http://localhost:3030/students/${data[0].id}/`,
           data[0]
         );
+
         if (updatedData) {
           message.success("Water point accepted!");
         } else {
@@ -188,10 +191,12 @@ const Assignments = ({ courseID }) => {
     ]
   );
 
+
   const assignmentsNotSubmitted = [
     {
       key: "1",
       label: "Assignments Not Submitted",
+
       children: (
         <List
           itemLayout="horizontal"
@@ -223,11 +228,13 @@ const Assignments = ({ courseID }) => {
           )}
         />
       ),
+
     },
   ];
 
   return (
     <div className="flex flex-col gap-y-4">
+
       <p>Assignments for course with id: {courseID}</p>
 
       <Collapse
@@ -243,6 +250,7 @@ const Assignments = ({ courseID }) => {
       />
       {contextHolder}
     </div>
+
   );
 };
 

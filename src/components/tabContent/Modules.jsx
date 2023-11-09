@@ -1,12 +1,155 @@
+import { Modal, Collapse, Space, List } from "antd";
 import PropTypes from "prop-types";
+import { useEffect, useState, useCallback } from "react";
+
+import { handleDownload } from "../../scripts/downloadFile";
+import { listFiles, getFileContent } from "../../scripts/getS3Data";
 
 
 
 const Modules = ({ courseID }) => {
+  const moduleCount = 10; // Number of modules
+  const modules = Array.from({ length: moduleCount }, (_, index) => index + 1); // Create an array of module numbers
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalFile, setModalFile] = useState(false);
+
+  const [presentations, setPresentations] = useState([]);
+  useEffect(() => {
+    async function fetchPresentationData() {
+      let helperData = await listFiles(courseID, "presentations");
+      setPresentations(helperData.folderToFileMap.get("presentations"));
+    }
+
+    fetchPresentationData();
+  }, [courseID]);
+
+  const presentationList = presentations
+    ? presentations.map((presentation, index) => ({
+      key: `${index}`,
+      header: `Week ${index + 1}: ${presentation}`,
+      title: `${presentation}`,
+      description: `Presentation ${index + 1}`,
+    }))
+    : [];
+
+  const [moduleData, setModuleData] = useState([]);
+  useEffect(() => {
+    async function fetchModuleData() {
+      let helperData = await listFiles(courseID, "pages");
+      setModuleData(helperData.folderToFileMap.get("pages"));
+    }
+
+    fetchModuleData();
+  }, [courseID]);
+
+  const moduleList = moduleData
+    ? moduleData.map((module, index) => ({
+      key: `${index}`,
+      header: `${module.replace(".html", "")}`,
+      title: `${module}`,
+      description: `Module ${index + 1}`,
+    }))
+    : [];
+
+
+  const openModuleModal = useCallback(filename => {
+    setModalFile(filename);
+    setIsModalVisible(true);
+  });
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  useEffect(() => {
+    const fetchData = async filename => {
+      const fileData = await getFileContent(`courses/${courseID}/pages/${filename}`);
+
+      const div = document.getElementById("modalHTML");
+
+      if (fileData) {
+        const doc = new DOMParser().parseFromString(fileData, "text/html");
+        div.innerHTML = doc.querySelector("body").innerHTML;
+      } else {
+        div.innerHTML = "<p>No information was found for this module. Contact your instructor for more information.</p>";
+      }
+    };
+
+    fetchData(modalFile);
+  }, [courseID, modalFile]);
+
   return (
-    <>
-      <p>Modules for course with id: {courseID}</p>
-    </>
+    <div className="flex flex-col gap-y-4">
+      <Space direction="vertical">
+        {moduleList.length !== 0 && modules.map(module => (
+          <Collapse
+            key={module}
+            defaultActiveKey={["1"]}
+            expandIconPosition="start"
+            collapsible="header"
+            items={[
+              {
+                key: { module },
+                label: `Module ${module}`,
+                children:
+                  <List
+                    itemLayout="horizontal"
+                    dataSource={moduleList.slice((module - 1) * 2, (module - 1) * 2 + 2)}
+                    renderItem={item => (
+                      <List.Item>
+                        <List.Item.Meta
+                          // eslint-disable-next-line max-len
+                          title={<a onClick={() => openModuleModal(item.title)}>{item.header}</a>}
+                          description={item.description}
+                        />
+                      </List.Item>
+                    )}
+                  />,
+              },
+            ]}
+          />
+        ))}
+        <br />
+        <br />
+        <Collapse
+          key="presentations"
+          defaultActiveKey={[]}
+          expandIconPosition="start"
+          collapsible="header"
+          items={[
+            {
+              key: "1",
+              label: "Presentations",
+              children: (
+                <List
+                  itemLayout="horizontal"
+                  dataSource={presentationList}
+                  renderItem={item => (
+                    <List.Item>
+                      <List.Item.Meta
+                        title={<a onClick={() => handleDownload(courseID, "presentations", item.title)}>{item.title}</a>}
+                        description={item.description}
+                      />
+                    </List.Item>
+                  )}
+                />
+              ),
+            },
+          ]}
+        />
+      </Space>
+
+      <Modal
+        open={isModalVisible}
+        onCancel={handleCancel}
+        width={1500}
+        footer={null}
+      >
+        <div id="modalHTML"></div>
+      </Modal>
+    </div>
+
   );
 };
 
