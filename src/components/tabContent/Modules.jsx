@@ -1,15 +1,18 @@
-import { Collapse, Space, List } from "antd";
+import { Modal, Collapse, Space, List } from "antd";
 import PropTypes from "prop-types";
 import { useEffect, useState, useCallback } from "react";
 
 import { handleDownload } from "../../scripts/downloadFile";
-import { listFiles } from "../../scripts/getS3Data";
+import { listFiles, getFileContent } from "../../scripts/getS3Data";
 
 
 
 const Modules = ({ courseID }) => {
   const moduleCount = 10; // Number of modules
   const modules = Array.from({ length: moduleCount }, (_, index) => index + 1); // Create an array of module numbers
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalFile, setModalFile] = useState(false);
 
   const [presentations, setPresentations] = useState([]);
   useEffect(() => {
@@ -43,16 +46,38 @@ const Modules = ({ courseID }) => {
   const moduleList = moduleData
     ? moduleData.map((module, index) => ({
       key: `${index}`,
-      header: `Module ${index + 1}: ${module}`,
+      header: `${module.replace(".html", "")}`,
       title: `${module}`,
       description: `Module ${index + 1}`,
     }))
     : [];
 
-  const openSubmissionModal = useCallback((title, description) => {
-    { title; }
-    { description; }
+
+  const openModuleModal = useCallback(filename => {
+    setModalFile(filename);
+    setIsModalVisible(true);
   });
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
+  useEffect(() => {
+    const fetchData = async filename => {
+      const fileData = await getFileContent(`courses/${courseID}/pages/${filename}`);
+
+      const div = document.getElementById("modalHTML");
+
+      if (fileData) {
+        const doc = new DOMParser().parseFromString(fileData, "text/html");
+        div.innerHTML = doc.querySelector("body").innerHTML;
+      } else {
+        div.innerHTML = "<p>No information was found for this module. Contact your instructor for more information.</p>";
+      }
+    };
+
+    fetchData(modalFile);
+  }, [courseID, modalFile]);
 
   return (
     <div className="flex flex-col gap-y-4">
@@ -75,7 +100,7 @@ const Modules = ({ courseID }) => {
                       <List.Item>
                         <List.Item.Meta
                           // eslint-disable-next-line max-len
-                          title={<a onClick={() => openSubmissionModal(item.title, item.description)}>{item.title}</a>}
+                          title={<a onClick={() => openModuleModal(item.title)}>{item.header}</a>}
                           description={item.description}
                         />
                       </List.Item>
@@ -89,7 +114,7 @@ const Modules = ({ courseID }) => {
         <br />
         <Collapse
           key="presentations"
-          defaultActiveKey={["1"]}
+          defaultActiveKey={[]}
           expandIconPosition="start"
           collapsible="header"
           items={[
@@ -114,7 +139,17 @@ const Modules = ({ courseID }) => {
           ]}
         />
       </Space>
+
+      <Modal
+        open={isModalVisible}
+        onCancel={handleCancel}
+        width={1500}
+        footer={null}
+      >
+        <div id="modalHTML"></div>
+      </Modal>
     </div>
+
   );
 };
 
