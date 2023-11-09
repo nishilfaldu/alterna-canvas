@@ -1,16 +1,9 @@
+// src/components/Announcements.js
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Collapse, Select } from "antd";
 import { useState } from "react";
 
 const { Option } = Select;
-const genExtra = () => (
-  <ExclamationCircleFilled
-    onClick={(event) => {
-      // If you don't want click extra trigger collapse, you can prevent this:
-      event.stopPropagation();
-    }}
-  />
-);
 const announcementsData = [
   {
     key: 1,
@@ -28,7 +21,6 @@ const announcementsData = [
         <p style={{ color: "#999999" }}>Posted on 2023-10-13 at 10:17am</p>
       </div>
     ),
-    extra: genExtra(),
   },
   {
     key: 2,
@@ -69,7 +61,7 @@ const announcementsData = [
   },
 ];
 
-const Announcements = () => {
+const AnnouncementsComp = () => {
   const onChange = (key) => {
     console.log(key);
   };
@@ -81,10 +73,8 @@ const Announcements = () => {
 
   return (
     <>
-      <h2>Announcements</h2>
-      <hr style={{ width: "100%" }} />
       <Collapse
-        defaultActiveKey={["1"]}
+        defaultActiveKey={["0"]}
         onChange={onChange}
         expandIconPosition={expandIconPosition}
         items={announcementsData}
@@ -106,4 +96,4 @@ const Announcements = () => {
   );
 };
 
-export default Announcements;
+export default AnnouncementsComp;

@@ -6,6 +6,8 @@ import users from "../data/users.json";
 
 
 
+
+
 const { Paragraph } = Typography;
 
 export default function Account() {
@@ -14,7 +16,7 @@ export default function Account() {
 
   useEffect(() => {
     if (user) {
-      const match = users.find(u => u.name === user);
+      const match = users.students.find(u => u.name === user);
       setUserInfo(match);
     }
   }, [user]);

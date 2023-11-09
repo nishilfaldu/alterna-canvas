@@ -1,10 +1,10 @@
 import { Avatar, List, message } from "antd";
 import { useEffect, useState } from "react";
 
-import { useUser } from "../components/provider/useUser";
+import { useUser } from "./provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
 
-function ToDo() {
+function ToDoComp() {
   const { user } = useUser();
   const [assignmentsMeta, setAssignmentsMeta] = useState([]);
 
@@ -28,7 +28,12 @@ function ToDo() {
         .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
         .flat();
 
-      setAssignmentsMeta(assignmentsNotSubmitted);
+      // Take only three items
+      const onlyThreeAssignments = assignmentsNotSubmitted.slice(2, 5);
+
+      setAssignmentsMeta(onlyThreeAssignments);
+
+      // setAssignmentsMeta(assignmentsNotSubmitted);
     }
 
     getUserData();
@@ -36,8 +41,6 @@ function ToDo() {
 
   return (
     <>
-      <h2>To Do List</h2>
-      <hr style={{ width: "100%" }} />
       <List
         itemLayout="horizontal"
         dataSource={assignmentsMeta}
@@ -63,4 +66,4 @@ function ToDo() {
   );
 }
 
-export default ToDo;
+export default ToDoComp;
