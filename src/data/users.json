@@ -18,43 +18,43 @@
                             "assignments": [
                                 {
                                     "title": "Getting to know you",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Sketching Practice",
-                                    "pointsObtained": "10.5",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10.5,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Project 1 Check In",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "HTML and CSS practice",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Which smart object project 1",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 }
@@ -62,183 +62,183 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "Monday Lecture: Intro",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Wednesday Lecture: Usability",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Friday Lecture: Norman Principles",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Human Centered Design",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Monday Lecture: Human Centered",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Wednesday Lecture: Human Centered",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Friday Lecture: Usability",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Sketching for Brainstorming",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/28/2023",
                                     "dueDate": "01/28/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Javascript",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/1/2023",
                                     "dueDate": "02/1/2023"
                                 },
                                 {
                                     "title": "Web server",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/2/2023",
                                     "dueDate": "02/2/2023"
                                 },
                                 {
                                     "title": "Javascript Part 1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/04/2023",
                                     "dueDate": "02/04/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/05/2023",
                                     "dueDate": "02/05/2023"
                                 },
                                 {
                                     "title": "Javascript Part 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/06/2023",
                                     "dueDate": "02/06/2023"
                                 },
                                 {
                                     "title": "Javascript Part 3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/08/2023",
                                     "dueDate": "02/1/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/10/2023",
                                     "dueDate": "02/10/2023"
                                 },
                                 {
                                     "title": "Simplicity",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/11/2023",
                                     "dueDate": "02/11/2023"
                                 },
                                 {
                                     "title": "Layout",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/14/2023",
                                     "dueDate": "02/14/2023"
                                 },
                                 {
                                     "title": "Color",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/15/2023",
                                     "dueDate": "02/15/2023"
                                 },
                                 {
                                     "title": "People 1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/16/2023",
                                     "dueDate": "02/16/2023"
                                 },
                                 {
                                     "title": "People 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/18/2023",
                                     "dueDate": "02/18/2023"
                                 },
                                 {
                                     "title": "People 3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 },
                                 {
                                     "title": "People 4",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 }
@@ -246,32 +246,32 @@
                             "projects": [
                                 {
                                     "title": "Project 1 Implementation",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/25/2023"
                                 },
                                 {
                                     "title": "Project 1 Documentation",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/25/2023"
                                 }
                             ],
-                            "final": [
+                            "exam": [
                                 {
                                     "title": "Final Exam",
-                                    "pointsObtained": "-",
-                                    "totalPoints": "100",
-                                    "startDate": "03/38/2023",
+                                    "pointsObtained": null,
+                                    "totalPoints": 100,
+                                    "startDate": "03/28/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.1",
-                            "participationWeightage": "0.05",
-                            "projectWeightage": "0.75",
-                            "finalWeightage": "0.1"
+                            "assignmentWeightage": 0.1,
+                            "participationWeightage": 0.05,
+                            "projectWeightage": 0.75,
+                            "examWeightage": 0.1
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -317,43 +317,43 @@
                             "assignments": [
                                 {
                                     "title": "First assignment",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "User Profiles",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Tasks",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Timeline",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Status Update",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Status Update 2",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 }
@@ -361,57 +361,57 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "Introduction",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Forming Teams",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Initial Project Design",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Profiles",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Tasks",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Timeline",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Status Update",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 }
@@ -419,15 +419,15 @@
                             "exam": [
                                 {
                                     "title": "Exam 1",
-                                    "pointsObtained": "99",
-                                    "totalPoints": "100",
-                                    "startDate": "03/38/2023",
+                                    "pointsObtained": 99,
+                                    "totalPoints": 100,
+                                    "startDate": "03/28/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.5",
-                            "participationWeightage": "0.1",
-                            "examWeightage": "0.4"
+                            "assignmentWeightage": 0.5,
+                            "participationWeightage": 0.1,
+                            "examWeightage": 0.4
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -460,57 +460,57 @@
                             "assignments": [
                                 {
                                     "title": "First assignment",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Linear Algebra Review ",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Rasterization Review",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Transformations exercise",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Projection Exercises",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Texture Mapping Exercises",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Color",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Light and Shadow",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/02/2023",
                                     "dueDate": "03/01/2023"
                                 }
@@ -518,183 +518,183 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "What are Graphics, Pipeline and hardware",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Intro",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Vectors",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Span",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Linear Transformations",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Span",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Matrix Multiplication",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/28/2023",
                                     "dueDate": "01/28/2023"
                                 },
                                 {
                                     "title": "3D Transformations",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Lines part 1 and 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/01/2023"
                                 },
                                 {
                                     "title": "Determinant",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/02/2023",
                                     "dueDate": "02/02/2023"
                                 },
                                 {
                                     "title": "Inversive Matrices",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/04/2023",
                                     "dueDate": "02/04/2023"
                                 },
                                 {
                                     "title": "Nonsquare Matrices",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/06/2023",
                                     "dueDate": "02/06/2023"
                                 },
                                 {
                                     "title": "Dot Product",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/08/2023",
                                     "dueDate": "02/08/2023"
                                 },
                                 {
                                     "title": "Cross Product",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/10/2023",
                                     "dueDate": "02/10/2023"
                                 },
                                 {
                                     "title": "Transformations p1, p2, p3 and p4",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/15/2023",
                                     "dueDate": "02/15/2023"
                                 },
                                 {
                                     "title": "Cross Product at Transformation",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/16/2023",
                                     "dueDate": "02/16/2023"
                                 },
                                 {
                                     "title": "Cramer's Rule",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/18/2023",
                                     "dueDate": "02/18/2023"
                                 },
                                 {
                                     "title": "Change of Bias and Eigenvectors",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 },
                                 {
                                     "title": "Projections p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/24/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Texture Mapping p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/26/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Color p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/28/2023",
                                     "dueDate": "02/28/2023"
                                 },
                                 {
                                     "title": "Light and shadow p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "03/01/2023",
                                     "dueDate": "03/01/2023"
                                 }
@@ -702,15 +702,15 @@
                             "exam": [
                                 {
                                     "title": "Midterm Exam",
-                                    "pointsObtained": "89",
-                                    "totalPoints": "100",
+                                    "pointsObtained": 89,
+                                    "totalPoints": 100,
                                     "startDate": "02/26/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.5",
-                            "participationWeightage": "0.1",
-                            "examWeightage": "0.4"
+                            "assignmentWeightage": 0.5,
+                            "participationWeightage": 0.1,
+                            "examWeightage": 0.4
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -808,43 +808,43 @@
                             "assignments": [
                                 {
                                     "title": "Getting to know you",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Sketching Practice",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Project 1 Check In",
-                                    "pointsObtained": "2",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 2,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "HTML and CSS practice",
-                                    "pointsObtained": "4",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 4,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Which smart object project 1",
-                                    "pointsObtained": "4",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 4,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 }
@@ -852,183 +852,183 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "Monday Lecture: Intro",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Wednesday Lecture: Usability",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Friday Lecture: Norman Principles",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "0",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 0,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Human Centered Design",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Monday Lecture: Human Centered",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Wednesday Lecture: Human Centered",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Friday Lecture: Usability",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Sketching for Brainstorming",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 1",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/28/2023",
                                     "dueDate": "01/28/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Javascript",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/1/2023",
                                     "dueDate": "02/1/2023"
                                 },
                                 {
                                     "title": "Web server",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/2/2023",
                                     "dueDate": "02/2/2023"
                                 },
                                 {
                                     "title": "Javascript Part 1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/04/2023",
                                     "dueDate": "02/04/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/05/2023",
                                     "dueDate": "02/05/2023"
                                 },
                                 {
                                     "title": "Javascript Part 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/06/2023",
                                     "dueDate": "02/06/2023"
                                 },
                                 {
                                     "title": "Javascript Part 3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/08/2023",
                                     "dueDate": "02/1/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/10/2023",
                                     "dueDate": "02/10/2023"
                                 },
                                 {
                                     "title": "Simplicity",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/11/2023",
                                     "dueDate": "02/11/2023"
                                 },
                                 {
                                     "title": "Layout",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/14/2023",
                                     "dueDate": "02/14/2023"
                                 },
                                 {
                                     "title": "Color",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/15/2023",
                                     "dueDate": "02/15/2023"
                                 },
                                 {
                                     "title": "People 1",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/16/2023",
                                     "dueDate": "02/16/2023"
                                 },
                                 {
                                     "title": "People 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/18/2023",
                                     "dueDate": "02/18/2023"
                                 },
                                 {
                                     "title": "People 3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 },
                                 {
                                     "title": "People 4",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 }
@@ -1036,32 +1036,32 @@
                             "projects": [
                                 {
                                     "title": "Project 1 Implementation",
-                                    "pointsObtained": "7",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 7,
+                                    "totalPoints": 10,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/25/2023"
                                 },
                                 {
                                     "title": "Project 1 Documentation",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/25/2023"
                                 }
                             ],
-                            "final": [
+                            "exam": [
                                 {
                                     "title": "Final Exam",
-                                    "pointsObtained": "-",
-                                    "totalPoints": "100",
-                                    "startDate": "03/38/2023",
+                                    "pointsObtained": null,
+                                    "totalPoints": 100,
+                                    "startDate": "03/28/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.1",
-                            "participationWeightage": "0.05",
-                            "projectWeightage": "0.75",
-                            "finalWeightage": "0.1"
+                            "assignmentWeightage": 0.1,
+                            "participationWeightage": 0.05,
+                            "projectWeightage": 0.75,
+                            "examWeightage": 0.1
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -1100,43 +1100,43 @@
                             "assignments": [
                                 {
                                     "title": "First assignment",
-                                    "pointsObtained": "6",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 6,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "User Profiles",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Tasks",
-                                    "pointsObtained": "7",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 7,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Timeline",
-                                    "pointsObtained": "6",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 6,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Status Update",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Status Update 2",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 }
@@ -1144,57 +1144,57 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "Introduction",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Forming Teams",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Initial Project Design",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Profiles",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Tasks",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Timeline",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Status Update",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 }
@@ -1202,15 +1202,15 @@
                             "exam": [
                                 {
                                     "title": "Exam 1",
-                                    "pointsObtained": "76",
-                                    "totalPoints": "100",
-                                    "startDate": "03/38/2023",
+                                    "pointsObtained": 76,
+                                    "totalPoints": 100,
+                                    "startDate": "03/28/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.5",
-                            "participationWeightage": "0.1",
-                            "examWeightage": "0.4"
+                            "assignmentWeightage": 0.5,
+                            "participationWeightage": 0.1,
+                            "examWeightage": 0.4
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -1243,57 +1243,57 @@
                             "assignments": [
                                 {
                                     "title": "First assignment",
-                                    "pointsObtained": "7",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 7,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Linear Algebra Review ",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Rasterization Review",
-                                    "pointsObtained": "4",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 4,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Transformations exercise",
-                                    "pointsObtained": "6",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 6,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Projection Exercises",
-                                    "pointsObtained": "7",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 7,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Texture Mapping Exercises",
-                                    "pointsObtained": "7",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 7,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Color",
-                                    "pointsObtained": "5",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 5,
+                                    "totalPoints": 10,
                                     "startDate": "01/24/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Light and Shadow",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 10,
                                     "startDate": "02/02/2023",
                                     "dueDate": "03/01/2023"
                                 }
@@ -1301,183 +1301,183 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "What are Graphics, Pipeline and hardware",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p2",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Intro",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Vectors",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Span",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Linear Transformations",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Span",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Matrix Multiplication",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/28/2023",
                                     "dueDate": "01/28/2023"
                                 },
                                 {
                                     "title": "3D Transformations",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Lines part 1 and 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/01/2023"
                                 },
                                 {
                                     "title": "Determinant",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/02/2023",
                                     "dueDate": "02/02/2023"
                                 },
                                 {
                                     "title": "Inversive Matrices",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/04/2023",
                                     "dueDate": "02/04/2023"
                                 },
                                 {
                                     "title": "Nonsquare Matrices",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/06/2023",
                                     "dueDate": "02/06/2023"
                                 },
                                 {
                                     "title": "Dot Product",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/08/2023",
                                     "dueDate": "02/08/2023"
                                 },
                                 {
                                     "title": "Cross Product",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/10/2023",
                                     "dueDate": "02/10/2023"
                                 },
                                 {
                                     "title": "Transformations p1, p2, p3 and p4",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/15/2023",
                                     "dueDate": "02/15/2023"
                                 },
                                 {
                                     "title": "Cross Product at Transformation",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/16/2023",
                                     "dueDate": "02/16/2023"
                                 },
                                 {
                                     "title": "Cramer's Rule",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/18/2023",
                                     "dueDate": "02/18/2023"
                                 },
                                 {
                                     "title": "Change of Bias and Eigenvectors",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 },
                                 {
                                     "title": "Projections p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/24/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Texture Mapping p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/26/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Color p1, p2, p3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/28/2023",
                                     "dueDate": "02/28/2023"
                                 },
                                 {
                                     "title": "Light and shadow p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "03/01/2023",
                                     "dueDate": "03/01/2023"
                                 }
@@ -1485,15 +1485,15 @@
                             "exam": [
                                 {
                                     "title": "Midterm Exam",
-                                    "pointsObtained": "55",
-                                    "totalPoints": "100",
+                                    "pointsObtained": 55,
+                                    "totalPoints": 100,
                                     "startDate": "02/26/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.5",
-                            "participationWeightage": "0.1",
-                            "examWeightage": "0.4"
+                            "assignmentWeightage": 0.5,
+                            "participationWeightage": 0.1,
+                            "examWeightage": 0.4
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -1591,43 +1591,43 @@
                             "assignments": [
                                 {
                                     "title": "Getting to know you",
-                                    "pointsObtained": "10",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 10,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Sketching Practice",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Project 1 Check In",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "HTML and CSS practice",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Which smart object project 1",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 }
@@ -1635,183 +1635,183 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "Monday Lecture: Intro",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Wednesday Lecture: Usability",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Friday Lecture: Norman Principles",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Human Centered Design",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Monday Lecture: Human Centered",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Wednesday Lecture: Human Centered",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Friday Lecture: Usability",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Sketching for Brainstorming",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/28/2023",
                                     "dueDate": "01/28/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 2",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Sketching Practice 3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Javascript",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/1/2023",
                                     "dueDate": "02/1/2023"
                                 },
                                 {
                                     "title": "Web server",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/2/2023",
                                     "dueDate": "02/2/2023"
                                 },
                                 {
                                     "title": "Javascript Part 1",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/04/2023",
                                     "dueDate": "02/04/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/05/2023",
                                     "dueDate": "02/05/2023"
                                 },
                                 {
                                     "title": "Javascript Part 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/06/2023",
                                     "dueDate": "02/06/2023"
                                 },
                                 {
                                     "title": "Javascript Part 3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/08/2023",
                                     "dueDate": "02/1/2023"
                                 },
                                 {
                                     "title": "Javascript Practice",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/10/2023",
                                     "dueDate": "02/10/2023"
                                 },
                                 {
                                     "title": "Simplicity",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/11/2023",
                                     "dueDate": "02/11/2023"
                                 },
                                 {
                                     "title": "Layout",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/14/2023",
                                     "dueDate": "02/14/2023"
                                 },
                                 {
                                     "title": "Color",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/15/2023",
                                     "dueDate": "02/15/2023"
                                 },
                                 {
                                     "title": "People 1",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/16/2023",
                                     "dueDate": "02/16/2023"
                                 },
                                 {
                                     "title": "People 2",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/18/2023",
                                     "dueDate": "02/18/2023"
                                 },
                                 {
                                     "title": "People 3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 },
                                 {
                                     "title": "People 4",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 }
@@ -1819,32 +1819,32 @@
                             "projects": [
                                 {
                                     "title": "Project 1 Implementation",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/25/2023"
                                 },
                                 {
                                     "title": "Project 1 Documentation",
-                                    "pointsObtained": "6",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 6,
+                                    "totalPoints": 10,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/25/2023"
                                 }
                             ],
-                            "final": [
+                            "exam": [
                                 {
                                     "title": "Final Exam",
-                                    "pointsObtained": "-",
-                                    "totalPoints": "100",
-                                    "startDate": "03/38/2023",
+                                    "pointsObtained": null,
+                                    "totalPoints": 100,
+                                    "startDate": "03/28/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.1",
-                            "participationWeightage": "0.05",
-                            "projectWeightage": "0.75",
-                            "finalWeightage": "0.1"
+                            "assignmentWeightage": 0.1,
+                            "participationWeightage": 0.05,
+                            "projectWeightage": 0.75,
+                            "examWeightage": 0.1
                         },
                         "assignments": {
                             "assignments": {
@@ -1885,43 +1885,43 @@
                             "assignments": [
                                 {
                                     "title": "First assignment",
-                                    "pointsObtained": "3",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 3,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "User Profiles",
-                                    "pointsObtained": "4",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 4,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Tasks",
-                                    "pointsObtained": "7",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 7,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Timeline",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Status Update",
-                                    "pointsObtained": "8",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 8,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Status Update 2",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 }
@@ -1929,57 +1929,57 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "Introduction",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Forming Teams",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Initial Project Design",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Profiles",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Tasks",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Timeline",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Status Update",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 }
@@ -1987,15 +1987,15 @@
                             "exam": [
                                 {
                                     "title": "Exam 1",
-                                    "pointsObtained": "34",
-                                    "totalPoints": "100",
-                                    "startDate": "03/38/2023",
+                                    "pointsObtained": 34,
+                                    "totalPoints": 100,
+                                    "startDate": "03/28/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.5",
-                            "participationWeightage": "0.1",
-                            "examWeightage": "0.4"
+                            "assignmentWeightage": 0.5,
+                            "participationWeightage": 0.1,
+                            "examWeightage": 0.4
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
@@ -2028,57 +2028,57 @@
                             "assignments": [
                                 {
                                     "title": "First assignment",
-                                    "pointsObtained": "4",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 4,
+                                    "totalPoints": 10,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Linear Algebra Review ",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 10,
                                     "startDate": "01/15/2023",
                                     "dueDate": "01/21/2023"
                                 },
                                 {
                                     "title": "Rasterization Review",
-                                    "pointsObtained": "3",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 3,
+                                    "totalPoints": 10,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Transformations exercise",
-                                    "pointsObtained": "5",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 5,
+                                    "totalPoints": 10,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Projection Exercises",
-                                    "pointsObtained": "3",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 3,
+                                    "totalPoints": 10,
                                     "startDate": "01/23/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Texture Mapping Exercises",
-                                    "pointsObtained": "2",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 2,
+                                    "totalPoints": 10,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/29/2023"
                                 },
                                 {
                                     "title": "Color",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 10,
                                     "startDate": "01/24/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Light and Shadow",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "10",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 10,
                                     "startDate": "02/02/2023",
                                     "dueDate": "03/01/2023"
                                 }
@@ -2086,183 +2086,183 @@
                             "participation": [
                                 {
                                     "title": "Syllabus",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/10/2023",
                                     "dueDate": "01/10/2023"
                                 },
                                 {
                                     "title": "What are Graphics, Pipeline and hardware",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/12/2023",
                                     "dueDate": "01/12/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p1",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/14/2023",
                                     "dueDate": "01/14/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p2",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/16/2023",
                                     "dueDate": "01/16/2023"
                                 },
                                 {
                                     "title": "Linear Algebra p3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/18/2023",
                                     "dueDate": "01/18/2023"
                                 },
                                 {
                                     "title": "Intro",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/20/2023",
                                     "dueDate": "01/20/2023"
                                 },
                                 {
                                     "title": "Vectors",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/22/2023",
                                     "dueDate": "01/22/2023"
                                 },
                                 {
                                     "title": "Span",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Linear Transformations",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/26/2023",
                                     "dueDate": "01/26/2023"
                                 },
                                 {
                                     "title": "Span",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/24/2023",
                                     "dueDate": "01/24/2023"
                                 },
                                 {
                                     "title": "Matrix Multiplication",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "01/28/2023",
                                     "dueDate": "01/28/2023"
                                 },
                                 {
                                     "title": "3D Transformations",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "01/30/2023",
                                     "dueDate": "01/30/2023"
                                 },
                                 {
                                     "title": "Lines part 1 and 2",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/01/2023",
                                     "dueDate": "02/01/2023"
                                 },
                                 {
                                     "title": "Determinant",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/02/2023",
                                     "dueDate": "02/02/2023"
                                 },
                                 {
                                     "title": "Inversive Matrices",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/04/2023",
                                     "dueDate": "02/04/2023"
                                 },
                                 {
                                     "title": "Nonsquare Matrices",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/06/2023",
                                     "dueDate": "02/06/2023"
                                 },
                                 {
                                     "title": "Dot Product",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/08/2023",
                                     "dueDate": "02/08/2023"
                                 },
                                 {
                                     "title": "Cross Product",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/10/2023",
                                     "dueDate": "02/10/2023"
                                 },
                                 {
                                     "title": "Transformations p1, p2, p3 and p4",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/15/2023",
                                     "dueDate": "02/15/2023"
                                 },
                                 {
                                     "title": "Cross Product at Transformation",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/16/2023",
                                     "dueDate": "02/16/2023"
                                 },
                                 {
                                     "title": "Cramer's Rule",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/18/2023",
                                     "dueDate": "02/18/2023"
                                 },
                                 {
                                     "title": "Change of Bias and Eigenvectors",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "02/20/2023",
                                     "dueDate": "02/20/2023"
                                 },
                                 {
                                     "title": "Projections p1, p2, p3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/24/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Texture Mapping p1, p2, p3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/26/2023",
                                     "dueDate": "02/24/2023"
                                 },
                                 {
                                     "title": "Color p1, p2, p3",
-                                    "pointsObtained": "0",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 0,
+                                    "totalPoints": 1,
                                     "startDate": "02/28/2023",
                                     "dueDate": "02/28/2023"
                                 },
                                 {
                                     "title": "Light and shadow p1, p2, p3",
-                                    "pointsObtained": "1",
-                                    "totalPoints": "1",
+                                    "pointsObtained": 1,
+                                    "totalPoints": 1,
                                     "startDate": "03/01/2023",
                                     "dueDate": "03/01/2023"
                                 }
@@ -2270,15 +2270,15 @@
                             "exam": [
                                 {
                                     "title": "Midterm Exam",
-                                    "pointsObtained": "9",
-                                    "totalPoints": "100",
+                                    "pointsObtained": 9,
+                                    "totalPoints": 100,
                                     "startDate": "02/26/2023",
                                     "dueDate": "03/28/2023"
                                 }
                             ],
-                            "assignmentWeightage": "0.5",
-                            "participationWeightage": "0.1",
-                            "examWeightage": "0.4"
+                            "assignmentWeightage": 0.5,
+                            "participationWeightage": 0.1,
+                            "examWeightage": 0.4
                         },
                         "assignments": {
                             "assignmentsNotSubmitted": [
