@@ -1,2310 +1,362 @@
 {
-    "name": "Alice Johnson",
-    "username": "alice123",
-    "email": "alice@example.com",
-    "currentWaterPoints": 0,
-    "currentPlantImage": "path/to/image",
-    "courses": [
+    "students": [
         {
-            "name": "User Interface",
-            "key": "ui",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "Getting to know you",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Sketching Practice",
-                            "pointsObtained": "10.5",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Project 1 Check In",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "HTML and CSS practice",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Which smart object project 1",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
+            "id": 1,
+            "name": "Alice Johnson",
+            "username": "alice123",
+            "email": "alice@example.com",
+            "currentWaterPoints": 0,
+            "currentPlantImage": "path/to/image",
+            "courses": [
+                {
+                    "name": "User Interface",
+                    "key": "ui",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "P2 Sketching and Formative Eval Checkpoint",
+                                    "dueDate": "2023-11-01, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "User Interface"
+                                },
+                                {
+                                    "name": "Heuristic Evaluation Submission",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is sample description B",
+                                    "class": "User Interface"
+                                },
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C",
+                                    "class": "User Interface"
+                                }
+                            ],
+                            "assignmentsSubmitted": [
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C",
+                                    "class": "User Interface"
+                                }
+                            ]
                         }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "Monday Lecture: Intro",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Wednesday Lecture: Usability",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Friday Lecture: Norman Principles",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Human Centered Design",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Monday Lecture: Human Centered",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Wednesday Lecture: Human Centered",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Friday Lecture: Usability",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Sketching for Brainstorming",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/28/2023",
-                            "dueDate": "01/28/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Javascript",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/1/2023",
-                            "dueDate": "02/1/2023"
-                        },
-                        {
-                            "title": "Web server",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/2/2023",
-                            "dueDate": "02/2/2023"
-                        },
-                        {
-                            "title": "Javascript Part 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/04/2023",
-                            "dueDate": "02/04/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/05/2023",
-                            "dueDate": "02/05/2023"
-                        },
-                        {
-                            "title": "Javascript Part 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/06/2023",
-                            "dueDate": "02/06/2023"
-                        },
-                        {
-                            "title": "Javascript Part 3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/08/2023",
-                            "dueDate": "02/1/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/10/2023",
-                            "dueDate": "02/10/2023"
-                        },
-                        {
-                            "title": "Simplicity",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/11/2023",
-                            "dueDate": "02/11/2023"
-                        },
-                        {
-                            "title": "Layout",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/14/2023",
-                            "dueDate": "02/14/2023"
-                        },
-                        {
-                            "title": "Color",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/15/2023",
-                            "dueDate": "02/15/2023"
-                        },
-                        {
-                            "title": "People 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/16/2023",
-                            "dueDate": "02/16/2023"
-                        },
-                        {
-                            "title": "People 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/18/2023",
-                            "dueDate": "02/18/2023"
-                        },
-                        {
-                            "title": "People 3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        },
-                        {
-                            "title": "People 4",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        }
-                    ],
-                    "projects": [
-                        {
-                            "title": "Project 1 Implementation",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/25/2023"
-                        },
-                        {
-                            "title": "Project 1 Documentation",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/25/2023"
-                        }
-                    ],
-                    "final": [
-                        {
-                            "title": "Final Exam",
-                            "pointsObtained": "-",
-                            "totalPoints": "100",
-                            "startDate": "03/38/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.1",
-                    "participationWeightage": "0.05",
-                    "projectWeightage": "0.75",
-                    "finalWeightage": "0.1"
+                    },
+                    "files": {},
+                    "zoom": {}
                 },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
+                {
+                    "name": "Senior Design",
+                    "key": "senior_design",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment #10 - Final Design Reports",
+                                    "dueDate": "2023-11-26, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "Senior Design"
+                                },
+                                {
+                                    "name": "Assignment #11 - Project Advisor Assessments",
+                                    "dueDate": "2023-12-03, 11:59pm",
+                                    "description": "This is sample description B",
+                                    "class": "Senior Design"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
+                        "files": {},
+                        "zoom": {}
+                    }
+                },
+                {
+                    "name": "Computer Graphics",
+                    "key": "computer_graphics",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment 3 Report",
+                                    "dueDate": "2023-10-27, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "Computer Graphics"
+                                },
+                                {
+                                    "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials.",
+                                    "class": "Computer Graphics"
+                                },
+                                {
+                                    "name": "Graduate student project milestone 1 submission",
+                                    "dueDate": "2023-11-07, 11:59pm",
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem.",
+                                    "class": "Computer Graphics"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
+                        "files": {},
+                        "zoom": {}
+                    }
                 }
-            },
-            "files": {},
-            "zoom": {}
-        },
-        {
-            "name": "Senior Design",
-            "key": "senior_design",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "First assignment",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "User Profiles",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Tasks",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Timeline",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Status Update",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Status Update 2",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "Introduction",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Forming Teams",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Initial Project Design",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Profiles",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Tasks",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Timeline",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Status Update",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        }
-                    ],
-                    "exam": [
-                        {
-                            "title": "Exam 1",
-                            "pointsObtained": "99",
-                            "totalPoints": "100",
-                            "startDate": "03/38/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.5",
-                    "participationWeightage": "0.1",
-                    "examWeightage": "0.4"
+            ],
+            "plants": [
+                {
+                    "type": "Sunflower"
                 },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
-                        },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
-                        },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
+                {
+                    "type": "Rose"
                 },
-                "files": {},
-                "zoom": {}
-            }
+                {
+                    "type": "Peach"
+                }
+            ]
         },
         {
-            "name": "Computer Graphics",
-            "key": "computer_graphics",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "First assignment",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
+            "id": 2,
+            "name": "Bob Anderson",
+            "username": "bob456",
+            "email": "bob@example.com",
+            "currentWaterPoints": 0,
+            "currentPlantImage": "path/to/image",
+            "courses": [
+                {
+                    "name": "User Interface",
+                    "key": "ui",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "P2 Sketching and Formative Eval Checkpoint",
+                                    "dueDate": "2023-11-01, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "User Interface"
+                                },
+                                {
+                                    "name": "Heuristic Evaluation Submission",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is sample description B",
+                                    "class": "User Interface"
+                                },
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C",
+                                    "class": "User Interface"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "title": "Linear Algebra Review ",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Rasterization Review",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Transformations exercise",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Projection Exercises",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Texture Mapping Exercises",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Color",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Light and Shadow",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/02/2023",
-                            "dueDate": "03/01/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "What are Graphics, Pipeline and hardware",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Intro",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Vectors",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Span",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Linear Transformations",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Span",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Matrix Multiplication",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/28/2023",
-                            "dueDate": "01/28/2023"
-                        },
-                        {
-                            "title": "3D Transformations",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Lines part 1 and 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/01/2023"
-                        },
-                        {
-                            "title": "Determinant",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/02/2023",
-                            "dueDate": "02/02/2023"
-                        },
-                        {
-                            "title": "Inversive Matrices",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/04/2023",
-                            "dueDate": "02/04/2023"
-                        },
-                        {
-                            "title": "Nonsquare Matrices",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/06/2023",
-                            "dueDate": "02/06/2023"
-                        },
-                        {
-                            "title": "Dot Product",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/08/2023",
-                            "dueDate": "02/08/2023"
-                        },
-                        {
-                            "title": "Cross Product",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/10/2023",
-                            "dueDate": "02/10/2023"
-                        },
-                        {
-                            "title": "Transformations p1, p2, p3 and p4",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/15/2023",
-                            "dueDate": "02/15/2023"
-                        },
-                        {
-                            "title": "Cross Product at Transformation",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/16/2023",
-                            "dueDate": "02/16/2023"
-                        },
-                        {
-                            "title": "Cramer's Rule",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/18/2023",
-                            "dueDate": "02/18/2023"
-                        },
-                        {
-                            "title": "Change of Bias and Eigenvectors",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        },
-                        {
-                            "title": "Projections p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/24/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Texture Mapping p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/26/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Color p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/28/2023",
-                            "dueDate": "02/28/2023"
-                        },
-                        {
-                            "title": "Light and shadow p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "03/01/2023",
-                            "dueDate": "03/01/2023"
-                        }
-                    ],
-                    "exam": [
-                        {
-                            "title": "Midterm Exam",
-                            "pointsObtained": "89",
-                            "totalPoints": "100",
-                            "startDate": "02/26/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.5",
-                    "participationWeightage": "0.1",
-                    "examWeightage": "0.4"
+                        "files": {},
+                        "zoom": {}
+                    }
                 },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
+                {
+                    "name": "Senior Design",
+                    "key": "senior_design",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment #10 - Final Design Reports",
+                                    "dueDate": "2023-11-26, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "Senior Design"
+                                },
+                                {
+                                    "name": "Assignment #11 - Project Advisor Assessments",
+                                    "dueDate": "2023-12-03, 11:59pm",
+                                    "description": "This is sample description B",
+                                    "class": "Senior Design"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
-                        },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
+                        "files": {},
+                        "zoom": {}
+                    }
                 },
-                "files": {},
-                "zoom": {}
-            }
-        }
-    ],
-    "plants": [
-        {
-            "type": "Sunflower"
-        },
-        {
-            "type": "Rose"
-        },
-        {
-            "type": "Peach"
-        }
-    ],
-    "todoList": [
-        {
-            "task": "Complete Assignment A",
-            "dueDate": "2023-04-05"
-        },
-        {
-            "task": "Complete Assignment B",
-            "dueDate": "2023-04-06"
-        },
-        {
-            "task": "Complete Assignment C",
-            "dueDate": "2023-04-07"
-        },
-        {
-            "task": "Study for upcoming exams",
-            "dueDate": "2023-03-15"
-        },
-        {
-            "task": "Complete Assignment D",
-            "dueDate": "2023-04-05"
-        },
-        {
-            "task": "Complete Assignment E",
-            "dueDate": "2023-04-06"
-        },
-        {
-            "task": "Complete Assignment F",
-            "dueDate": "2023-04-07"
-        }
-    ]
-},
-{
-    "name": "Bob Anderson",
-    "username": "bob456",
-    "email": "bob@example.com",
-    "currentWaterPoints": 0,
-    "currentPlantImage": "path/to/image",
-    "courses": [
-        {
-            "name": "User Interface",
-            "key": "ui",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "Getting to know you",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
+                {
+                    "name": "Computer Graphics",
+                    "key": "computer_graphics",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment 3 Report",
+                                    "dueDate": "2023-10-27, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "Computer Graphics"
+                                },
+                                {
+                                    "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials.",
+                                    "class": "Computer Graphics"
+                                },
+                                {
+                                    "name": "Graduate student project milestone 1 submission",
+                                    "dueDate": "2023-11-07, 11:59pm",
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem.",
+                                    "class": "Computer Graphics"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "title": "Sketching Practice",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Project 1 Check In",
-                            "pointsObtained": "2",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "HTML and CSS practice",
-                            "pointsObtained": "4",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "0",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Which smart object project 1",
-                            "pointsObtained": "4",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "Monday Lecture: Intro",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Wednesday Lecture: Usability",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Friday Lecture: Norman Principles",
-                            "pointsObtained": "1",
-                            "totalPoints": "0",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Human Centered Design",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Monday Lecture: Human Centered",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Wednesday Lecture: Human Centered",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Friday Lecture: Usability",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Sketching for Brainstorming",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 1",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/28/2023",
-                            "dueDate": "01/28/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Javascript",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/1/2023",
-                            "dueDate": "02/1/2023"
-                        },
-                        {
-                            "title": "Web server",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/2/2023",
-                            "dueDate": "02/2/2023"
-                        },
-                        {
-                            "title": "Javascript Part 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/04/2023",
-                            "dueDate": "02/04/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/05/2023",
-                            "dueDate": "02/05/2023"
-                        },
-                        {
-                            "title": "Javascript Part 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/06/2023",
-                            "dueDate": "02/06/2023"
-                        },
-                        {
-                            "title": "Javascript Part 3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/08/2023",
-                            "dueDate": "02/1/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/10/2023",
-                            "dueDate": "02/10/2023"
-                        },
-                        {
-                            "title": "Simplicity",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/11/2023",
-                            "dueDate": "02/11/2023"
-                        },
-                        {
-                            "title": "Layout",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/14/2023",
-                            "dueDate": "02/14/2023"
-                        },
-                        {
-                            "title": "Color",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/15/2023",
-                            "dueDate": "02/15/2023"
-                        },
-                        {
-                            "title": "People 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/16/2023",
-                            "dueDate": "02/16/2023"
-                        },
-                        {
-                            "title": "People 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/18/2023",
-                            "dueDate": "02/18/2023"
-                        },
-                        {
-                            "title": "People 3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        },
-                        {
-                            "title": "People 4",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        }
-                    ],
-                    "projects": [
-                        {
-                            "title": "Project 1 Implementation",
-                            "pointsObtained": "7",
-                            "totalPoints": "10",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/25/2023"
-                        },
-                        {
-                            "title": "Project 1 Documentation",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/25/2023"
-                        }
-                    ],
-                    "final": [
-                        {
-                            "title": "Final Exam",
-                            "pointsObtained": "-",
-                            "totalPoints": "100",
-                            "startDate": "03/38/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.1",
-                    "participationWeightage": "0.05",
-                    "projectWeightage": "0.75",
-                    "finalWeightage": "0.1"
+                        "files": {},
+                        "zoom": {}
+                    }
+                }
+            ],
+            "plants": [
+                {
+                    "type": "Sunflower"
                 },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
-                        },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
-                        },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
+                {
+                    "type": "Rose"
                 },
-                "files": {},
-                "zoom": {}
-            }
+                {
+                    "type": "Peach"
+                }
+            ]
         },
         {
-            "name": "Senior Design",
-            "key": "senior_design",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "First assignment",
-                            "pointsObtained": "6",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
+            "id": 3,
+            "name": "Eva Martinez",
+            "username": "eva789",
+            "email": "eva@example.com",
+            "currentWaterPoints": 0,
+            "currentPlantImage": "path/to/image",
+            "courses": [
+                {
+                    "name": "User Interface",
+                    "key": "ui",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "P2 Sketching and Formative Eval Checkpoint",
+                                    "dueDate": "2023-11-01, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "User Interface"
+                                },
+                                {
+                                    "name": "Heuristic Evaluation Submission",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is sample description B",
+                                    "class": "User Interface"
+                                },
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C",
+                                    "class": "User Interface"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "title": "User Profiles",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Tasks",
-                            "pointsObtained": "7",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Timeline",
-                            "pointsObtained": "6",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Status Update",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Status Update 2",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "Introduction",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Forming Teams",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Initial Project Design",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Profiles",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Tasks",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Timeline",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Status Update",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        }
-                    ],
-                    "exam": [
-                        {
-                            "title": "Exam 1",
-                            "pointsObtained": "76",
-                            "totalPoints": "100",
-                            "startDate": "03/38/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.5",
-                    "participationWeightage": "0.1",
-                    "examWeightage": "0.4"
+                        "files": {},
+                        "zoom": {}
+                    }
                 },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
+                {
+                    "name": "Senior Design",
+                    "key": "senior_design",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment #10 - Final Design Reports",
+                                    "dueDate": "2023-11-26, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "Senior Design"
+                                },
+                                {
+                                    "name": "Assignment #11 - Project Advisor Assessments",
+                                    "dueDate": "2023-12-03, 11:59pm",
+                                    "description": "This is sample description B",
+                                    "class": "Senior Design"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
-                        },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
+                        "files": {},
+                        "zoom": {}
+                    }
                 },
-                "files": {},
-                "zoom": {}
-            }
-        },
-        {
-            "name": "Computer Graphics",
-            "key": "computer_graphics",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "First assignment",
-                            "pointsObtained": "7",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
+                {
+                    "name": "Computer Graphics",
+                    "key": "computer_graphics",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment 3 Report",
+                                    "dueDate": "2023-10-27, 11:59pm",
+                                    "description": "This is sample description A",
+                                    "class": "Computer Graphics"
+                                },
+                                {
+                                    "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials.",
+                                    "class": "Computer Graphics"
+                                },
+                                {
+                                    "name": "Graduate student project milestone 1 submission",
+                                    "dueDate": "2023-11-07, 11:59pm",
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem.",
+                                    "class": "Computer Graphics"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
                         },
-                        {
-                            "title": "Linear Algebra Review ",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Rasterization Review",
-                            "pointsObtained": "4",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Transformations exercise",
-                            "pointsObtained": "6",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Projection Exercises",
-                            "pointsObtained": "7",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Texture Mapping Exercises",
-                            "pointsObtained": "7",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Color",
-                            "pointsObtained": "5",
-                            "totalPoints": "10",
-                            "startDate": "01/24/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Light and Shadow",
-                            "pointsObtained": "0",
-                            "totalPoints": "10",
-                            "startDate": "02/02/2023",
-                            "dueDate": "03/01/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "What are Graphics, Pipeline and hardware",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p2",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Intro",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Vectors",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Span",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Linear Transformations",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Span",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Matrix Multiplication",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/28/2023",
-                            "dueDate": "01/28/2023"
-                        },
-                        {
-                            "title": "3D Transformations",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Lines part 1 and 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/01/2023"
-                        },
-                        {
-                            "title": "Determinant",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/02/2023",
-                            "dueDate": "02/02/2023"
-                        },
-                        {
-                            "title": "Inversive Matrices",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/04/2023",
-                            "dueDate": "02/04/2023"
-                        },
-                        {
-                            "title": "Nonsquare Matrices",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/06/2023",
-                            "dueDate": "02/06/2023"
-                        },
-                        {
-                            "title": "Dot Product",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/08/2023",
-                            "dueDate": "02/08/2023"
-                        },
-                        {
-                            "title": "Cross Product",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/10/2023",
-                            "dueDate": "02/10/2023"
-                        },
-                        {
-                            "title": "Transformations p1, p2, p3 and p4",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/15/2023",
-                            "dueDate": "02/15/2023"
-                        },
-                        {
-                            "title": "Cross Product at Transformation",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/16/2023",
-                            "dueDate": "02/16/2023"
-                        },
-                        {
-                            "title": "Cramer's Rule",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/18/2023",
-                            "dueDate": "02/18/2023"
-                        },
-                        {
-                            "title": "Change of Bias and Eigenvectors",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        },
-                        {
-                            "title": "Projections p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/24/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Texture Mapping p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/26/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Color p1, p2, p3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/28/2023",
-                            "dueDate": "02/28/2023"
-                        },
-                        {
-                            "title": "Light and shadow p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "03/01/2023",
-                            "dueDate": "03/01/2023"
-                        }
-                    ],
-                    "exam": [
-                        {
-                            "title": "Midterm Exam",
-                            "pointsObtained": "55",
-                            "totalPoints": "100",
-                            "startDate": "02/26/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.5",
-                    "participationWeightage": "0.1",
-                    "examWeightage": "0.4"
+                        "files": {},
+                        "zoom": {}
+                    }
+                }
+            ],
+            "plants": [
+                {
+                    "type": "Sunflower"
                 },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment D",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description"
-                        },
-                        {
-                            "name": "Assignment E",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description"
-                        },
-                        {
-                            "name": "Assignment F",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description"
-                        }
-                    ]
+                {
+                    "type": "Rose"
                 },
-                "files": {},
-                "zoom": {}
-            }
-        }
-    ],
-    "plants": [
-        {
-            "type": "Sunflower"
-        },
-        {
-            "type": "Rose"
-        },
-        {
-            "type": "Peach"
-        }
-    ],
-    "todoList": [
-        {
-            "task": "Complete Assignment A",
-            "dueDate": "2023-04-05"
-        },
-        {
-            "task": "Complete Assignment B",
-            "dueDate": "2023-04-06"
-        },
-        {
-            "task": "Complete Assignment C",
-            "dueDate": "2023-04-07"
-        },
-        {
-            "task": "ICP: Apply to the Internatioal Co-op Program",
-            "dueDate": "2023-03-15"
-        },
-        {
-            "task": "Complete Assignment D",
-            "dueDate": "2023-04-05"
-        },
-        {
-            "task": "Complete Assignment E",
-            "dueDate": "2023-04-06"
-        },
-        {
-            "task": "Complete Assignment F",
-            "dueDate": "2023-04-07"
-        }
-    ]
-},
-{
-    "name": "Eva Martinez",
-    "username": "eva789",
-    "email": "eva@example.com",
-    "currentWaterPoints": 0,
-    "currentPlantImage": "path/to/image",
-    "courses": [
-        {
-            "name": "User Interface",
-            "key": "ui",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "Getting to know you",
-                            "pointsObtained": "10",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Sketching Practice",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Project 1 Check In",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "HTML and CSS practice",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Which smart object project 1",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "Monday Lecture: Intro",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Wednesday Lecture: Usability",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Friday Lecture: Norman Principles",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Human Centered Design",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Monday Lecture: Human Centered",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Wednesday Lecture: Human Centered",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Friday Lecture: Usability",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Sketching for Brainstorming",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/28/2023",
-                            "dueDate": "01/28/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 2",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Sketching Practice 3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Javascript",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/1/2023",
-                            "dueDate": "02/1/2023"
-                        },
-                        {
-                            "title": "Web server",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/2/2023",
-                            "dueDate": "02/2/2023"
-                        },
-                        {
-                            "title": "Javascript Part 1",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/04/2023",
-                            "dueDate": "02/04/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/05/2023",
-                            "dueDate": "02/05/2023"
-                        },
-                        {
-                            "title": "Javascript Part 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/06/2023",
-                            "dueDate": "02/06/2023"
-                        },
-                        {
-                            "title": "Javascript Part 3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/08/2023",
-                            "dueDate": "02/1/2023"
-                        },
-                        {
-                            "title": "Javascript Practice",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/10/2023",
-                            "dueDate": "02/10/2023"
-                        },
-                        {
-                            "title": "Simplicity",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/11/2023",
-                            "dueDate": "02/11/2023"
-                        },
-                        {
-                            "title": "Layout",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/14/2023",
-                            "dueDate": "02/14/2023"
-                        },
-                        {
-                            "title": "Color",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/15/2023",
-                            "dueDate": "02/15/2023"
-                        },
-                        {
-                            "title": "People 1",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/16/2023",
-                            "dueDate": "02/16/2023"
-                        },
-                        {
-                            "title": "People 2",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/18/2023",
-                            "dueDate": "02/18/2023"
-                        },
-                        {
-                            "title": "People 3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        },
-                        {
-                            "title": "People 4",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        }
-                    ],
-                    "projects": [
-                        {
-                            "title": "Project 1 Implementation",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/25/2023"
-                        },
-                        {
-                            "title": "Project 1 Documentation",
-                            "pointsObtained": "6",
-                            "totalPoints": "10",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/25/2023"
-                        }
-                    ],
-                    "final": [
-                        {
-                            "title": "Final Exam",
-                            "pointsObtained": "-",
-                            "totalPoints": "100",
-                            "startDate": "03/38/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.1",
-                    "participationWeightage": "0.05",
-                    "projectWeightage": "0.75",
-                    "finalWeightage": "0.1"
-                },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
-                        },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
-                        },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
-                },
-                "files": {},
-                "zoom": {}
-            }
-        },
-        {
-            "name": "Senior Design",
-            "key": "senior_design",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "First assignment",
-                            "pointsObtained": "3",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "User Profiles",
-                            "pointsObtained": "4",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Tasks",
-                            "pointsObtained": "7",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Timeline",
-                            "pointsObtained": "1",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Status Update",
-                            "pointsObtained": "8",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Status Update 2",
-                            "pointsObtained": "9",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "Introduction",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Forming Teams",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Initial Project Design",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Profiles",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Tasks",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Timeline",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Status Update",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        }
-                    ],
-                    "exam": [
-                        {
-                            "title": "Exam 1",
-                            "pointsObtained": "34",
-                            "totalPoints": "100",
-                            "startDate": "03/38/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.5",
-                    "participationWeightage": "0.1",
-                    "examWeightage": "0.4"
-                },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment A",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description A"
-                        },
-                        {
-                            "name": "Assignment B",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description B"
-                        },
-                        {
-                            "name": "Assignment C",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description C"
-                        }
-                    ]
-                },
-                "files": {},
-                "zoom": {}
-            }
-        },
-        {
-            "name": "Computer Graphics",
-            "key": "computer_graphics",
-            "tabs": {
-                "syllabus": {},
-                "modules": {},
-                "grades": {},
-                "gradesObtained": {
-                    "assignments": [
-                        {
-                            "title": "First assignment",
-                            "pointsObtained": "4",
-                            "totalPoints": "10",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Linear Algebra Review ",
-                            "pointsObtained": "1",
-                            "totalPoints": "10",
-                            "startDate": "01/15/2023",
-                            "dueDate": "01/21/2023"
-                        },
-                        {
-                            "title": "Rasterization Review",
-                            "pointsObtained": "3",
-                            "totalPoints": "10",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Transformations exercise",
-                            "pointsObtained": "5",
-                            "totalPoints": "10",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Projection Exercises",
-                            "pointsObtained": "3",
-                            "totalPoints": "10",
-                            "startDate": "01/23/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Texture Mapping Exercises",
-                            "pointsObtained": "2",
-                            "totalPoints": "10",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/29/2023"
-                        },
-                        {
-                            "title": "Color",
-                            "pointsObtained": "1",
-                            "totalPoints": "10",
-                            "startDate": "01/24/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Light and Shadow",
-                            "pointsObtained": "0",
-                            "totalPoints": "10",
-                            "startDate": "02/02/2023",
-                            "dueDate": "03/01/2023"
-                        }
-                    ],
-                    "participation": [
-                        {
-                            "title": "Syllabus",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/10/2023",
-                            "dueDate": "01/10/2023"
-                        },
-                        {
-                            "title": "What are Graphics, Pipeline and hardware",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/12/2023",
-                            "dueDate": "01/12/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p1",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/14/2023",
-                            "dueDate": "01/14/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p2",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/16/2023",
-                            "dueDate": "01/16/2023"
-                        },
-                        {
-                            "title": "Linear Algebra p3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/18/2023",
-                            "dueDate": "01/18/2023"
-                        },
-                        {
-                            "title": "Intro",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/20/2023",
-                            "dueDate": "01/20/2023"
-                        },
-                        {
-                            "title": "Vectors",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/22/2023",
-                            "dueDate": "01/22/2023"
-                        },
-                        {
-                            "title": "Span",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Linear Transformations",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/26/2023",
-                            "dueDate": "01/26/2023"
-                        },
-                        {
-                            "title": "Span",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/24/2023",
-                            "dueDate": "01/24/2023"
-                        },
-                        {
-                            "title": "Matrix Multiplication",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "01/28/2023",
-                            "dueDate": "01/28/2023"
-                        },
-                        {
-                            "title": "3D Transformations",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "01/30/2023",
-                            "dueDate": "01/30/2023"
-                        },
-                        {
-                            "title": "Lines part 1 and 2",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/01/2023",
-                            "dueDate": "02/01/2023"
-                        },
-                        {
-                            "title": "Determinant",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/02/2023",
-                            "dueDate": "02/02/2023"
-                        },
-                        {
-                            "title": "Inversive Matrices",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/04/2023",
-                            "dueDate": "02/04/2023"
-                        },
-                        {
-                            "title": "Nonsquare Matrices",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/06/2023",
-                            "dueDate": "02/06/2023"
-                        },
-                        {
-                            "title": "Dot Product",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/08/2023",
-                            "dueDate": "02/08/2023"
-                        },
-                        {
-                            "title": "Cross Product",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/10/2023",
-                            "dueDate": "02/10/2023"
-                        },
-                        {
-                            "title": "Transformations p1, p2, p3 and p4",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/15/2023",
-                            "dueDate": "02/15/2023"
-                        },
-                        {
-                            "title": "Cross Product at Transformation",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/16/2023",
-                            "dueDate": "02/16/2023"
-                        },
-                        {
-                            "title": "Cramer's Rule",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/18/2023",
-                            "dueDate": "02/18/2023"
-                        },
-                        {
-                            "title": "Change of Bias and Eigenvectors",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "02/20/2023",
-                            "dueDate": "02/20/2023"
-                        },
-                        {
-                            "title": "Projections p1, p2, p3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/24/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Texture Mapping p1, p2, p3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/26/2023",
-                            "dueDate": "02/24/2023"
-                        },
-                        {
-                            "title": "Color p1, p2, p3",
-                            "pointsObtained": "0",
-                            "totalPoints": "1",
-                            "startDate": "02/28/2023",
-                            "dueDate": "02/28/2023"
-                        },
-                        {
-                            "title": "Light and shadow p1, p2, p3",
-                            "pointsObtained": "1",
-                            "totalPoints": "1",
-                            "startDate": "03/01/2023",
-                            "dueDate": "03/01/2023"
-                        }
-                    ],
-                    "exam": [
-                        {
-                            "title": "Midterm Exam",
-                            "pointsObtained": "9",
-                            "totalPoints": "100",
-                            "startDate": "02/26/2023",
-                            "dueDate": "03/28/2023"
-                        }
-                    ],
-                    "assignmentWeightage": "0.5",
-                    "participationWeightage": "0.1",
-                    "examWeightage": "0.4"
-                },
-                "assignments": {
-                    "assignmentsNotSubmitted": [
-                        {
-                            "name": "Assignment G",
-                            "dueDate": "2023-04-05",
-                            "description": "This is sample description"
-                        },
-                        {
-                            "name": "Assignment H",
-                            "dueDate": "2023-04-06",
-                            "description": "This is sample description"
-                        },
-                        {
-                            "name": "Assignment I",
-                            "dueDate": "2023-04-07",
-                            "description": "This is sample description"
-                        }
-                    ]
-                },
-                "files": {},
-                "zoom": {}
-            }
-        }
-    ],
-    "plants": [
-        {
-            "type": "Sunflower"
-        },
-        {
-            "type": "Rose"
-        },
-        {
-            "type": "Peach"
-        }
-    ],
-    "todoList": [
-        {
-            "task": "Complete Assignment A",
-            "dueDate": "2023-04-05"
-        },
-        {
-            "task": "Complete Assignment B",
-            "dueDate": "2023-04-06"
-        },
-        {
-            "task": "Complete Assignment C",
-            "dueDate": "2023-04-07"
-        },
-        {
-            "task": "Complete Assignment D",
-            "dueDate": "2023-04-05"
-        },
-        {
-            "task": "Complete Assignment E",
-            "dueDate": "2023-04-06"
-        },
-        {
-            "task": "Complete Assignment F",
-            "dueDate": "2023-04-07"
+                {
+                    "type": "Peach"
+                }
+            ]
         }
     ]
 }
-]
