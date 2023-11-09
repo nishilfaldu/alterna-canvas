@@ -31,9 +31,10 @@ const Assignments = ({ courseID }) => {
 
   useEffect(() => {
     async function fetchData() {
-      if (!user) { message.error("User not found");
+      if (!user) {
+        message.error("User not found");
 
-        return; 
+        return;
       }
       const names = user.split(" ");
       const firstName = names[0];
@@ -57,19 +58,19 @@ const Assignments = ({ courseID }) => {
       key: "1",
       label: "Assignments Submitted",
       children: <List
-      itemLayout="horizontal"
-      // eslint-disable-next-line max-len
-      dataSource={[...(assignments || []).map(assignment => ({ title: assignment })), ..._assignmentsSubmitted.map(assignment => ({ title: assignment.name }))]}
-      renderItem={(item, index) => (
-        <List.Item>
-          <List.Item.Meta
-            avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index}/>}
-            title={<a>{item.title}</a>}
-            description={`This is Assignment ${index + 1}`}
-          />
-        </List.Item>
-      )}
-    />,
+        itemLayout="horizontal"
+        // eslint-disable-next-line max-len
+        dataSource={[...(assignments || []).map(assignment => ({ title: assignment })), ..._assignmentsSubmitted.map(assignment => ({ title: assignment.name }))]}
+        renderItem={(item, index) => (
+          <List.Item>
+            <List.Item.Meta
+              avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index} />}
+              title={<a>{item.title}</a>}
+              description={`This is Assignment ${index + 1}`}
+            />
+          </List.Item>
+        )}
+      />,
     },
   ];
 
@@ -77,7 +78,7 @@ const Assignments = ({ courseID }) => {
     const { destroy, update } = modal.info();
     update({
       title: "Reward",
-      content: <Reward/>,
+      content: <Reward />,
       closable: false,
       okText: "Accept",
       okButtonProps: { style: { backgroundColor: "blue" } },
@@ -87,11 +88,11 @@ const Assignments = ({ courseID }) => {
         const names = user.split(" ");
         const firstName = names[0];
         const lastName = names[1];
-        
+
         let data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
         data[0].currentWaterPoints = data[0].currentWaterPoints + 1;
         const updatedData = putData(`http://localhost:3030/students/${data[0].id}/`, data[0]);
-        if(updatedData) {
+        if (updatedData) {
           message.success("Water point accepted!");
         } else {
           message.error("There was an error in accepting a water point");
@@ -105,7 +106,7 @@ const Assignments = ({ courseID }) => {
     const { destroy, update } = modal.info();
     update({
       title: title,
-      content: <><p>{description}</p><UploadFile courseID={courseID} folderType="assignments" fileName={title}/></>,
+      content: <><p>{description}</p><UploadFile courseID={courseID} folderType="assignments" fileName={title} /></>,
       closable: true,
       cancelText: "Cancel",
       icon: null,
@@ -117,14 +118,14 @@ const Assignments = ({ courseID }) => {
         const names = user.split(" ");
         const firstName = names[0];
         const lastName = names[1];
-        
+
         let data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
         let assignmentsLeft = _assignmentsNotSubmitted.filter(assignment => assignment.name !== title);
-        data[0].courses.filter(course => course.key === courseID)[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;       
+        data[0].courses.filter(course => course.key === courseID)[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
         data[0].courses.filter(course => course.key === courseID)[0].tabs.assignments.assignmentsSubmitted = [..._assignmentsSubmitted, ..._assignmentsNotSubmitted.filter(assignment => assignment.name === title)];
         console.log(data, "data");
         const updatedData = putData(`http://localhost:3030/students/${data[0].id}/`, data[0]);
-        if(updatedData) {
+        if (updatedData) {
           message.success("Assignment Submitted Successfully");
         } else {
           message.error("Error in submitting the assignment");
@@ -134,33 +135,31 @@ const Assignments = ({ courseID }) => {
     });
   }, [modal, courseID, openRewardModal, user, _assignmentsNotSubmitted, _assignmentsSubmitted]);
 
-  
+
   const assignmentsNotSubmitted = [
     {
       key: "1",
       label: "Assignments Not Submitted",
       children: <List
-      itemLayout="horizontal"
-      dataSource={_assignmentsNotSubmitted.map(
-        assignment => ({ title: assignment.name, description: assignment.description }))}
-      renderItem={(item, index) => (
-        <List.Item>
-          <List.Item.Meta
-            avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index}/>}
-            title={<a onClick={() => openSubmissionModal(item.title, item.description)}>{item.title}</a>}
-            description={`This is Assignment ${index + 1}`}
-          />
-        </List.Item>
-      )}
-    />,
+        itemLayout="horizontal"
+        dataSource={_assignmentsNotSubmitted.map(
+          assignment => ({ title: assignment.name, description: assignment.description }))}
+        renderItem={(item, index) => (
+          <List.Item>
+            <List.Item.Meta
+              avatar={<FileOutlined style={{ fontSize: "25px", paddingTop: "10px" }} key={index} />}
+              title={<a onClick={() => openSubmissionModal(item.title, item.description)}>{item.title}</a>}
+              description={`This is Assignment ${index + 1}`}
+            />
+          </List.Item>
+        )}
+      />,
     },
   ];
 
   return (
     <div className="flex flex-col gap-y-4">
-      <p>Assignments for course with id: {courseID}</p>
-
-    <Collapse
+      <Collapse
         defaultActiveKey={["1"]}
         expandIconPosition="start"
         items={assignmentsNotSubmitted}
@@ -174,7 +173,7 @@ const Assignments = ({ courseID }) => {
       {contextHolder}
     </div>
 
-    
+
   );
 };
 
