@@ -6,8 +6,6 @@ import PlantStatus from "../components/dashboardComponents/PlantStatus";
 import Todo from "../components/dashboardComponents/ToDo";
 import { useUser } from "../components/provider/useUser";
 
-
-
 const Dashboard = () => {
   const { user } = useUser();
 
@@ -16,11 +14,13 @@ const Dashboard = () => {
       <Row>
         <Col lg={8}>
           {/* TODO: this HI can be positioned somewhere else */}
-          <header style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}>
+          <header
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
             <h1>Dashboard</h1>
             <span>Welcome, {user}!</span>
           </header>

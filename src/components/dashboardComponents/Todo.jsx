@@ -1,22 +1,20 @@
-import { Card } from "antd";
+import { Card, Space } from "antd";
 
-
+import ToDoComp from "../TodoComp";
 
 const ToDo = () => {
   return (
-    <Card
-      title="To-Do"
-      extra={<a href="/todo">More</a>}
-      style={{
-        width: "auto",
-        marginTop: 20,
-      }}
-    >
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-      <p>Content</p>
-    </Card>
+    <Space direction="vertical" size={10}>
+      <Card
+        title="To-Do"
+        extra={<a href="/todo">More</a>}
+        style={{
+          width: 400,
+        }}
+      >
+        <ToDoComp></ToDoComp>
+      </Card>{" "}
+    </Space>
   );
 };
 

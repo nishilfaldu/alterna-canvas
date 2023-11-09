@@ -20,24 +20,28 @@
                                 {
                                     "name": "P2 Sketching and Formative Eval Checkpoint",
                                     "dueDate": "2023-11-01, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class":"User Interface"
                                 },
                                 {
                                     "name": "Heuristic Evaluation Submission",
                                     "dueDate": "2023-11-03, 11:59pm",
-                                    "description": "This is sample description B"
+                                    "description": "This is sample description B",
+                                    "class":"User Interface"
                                 },
                                 {
                                     "name": "Project 2 Implementation Checkpoint",
                                     "dueDate": "2023-11-06, 11:59pm",
-                                    "description": "This is sample description C"
+                                    "description": "This is sample description C",
+                                    "class":"User Interface"
                                 }
                             ],
                             "assignmentsSubmitted": [
                                 {
                                     "name": "Project 2 Implementation Checkpoint",
                                     "dueDate": "2023-11-06, 11:59pm",
-                                    "description": "This is sample description C"
+                                    "description": "This is sample description C",
+                                    "class":"User Interface"
                                 }
                             ]
                         }
@@ -57,12 +61,14 @@
                                 {
                                     "name": "Assignment #10 - Final Design Reports",
                                     "dueDate": "2023-11-26, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class":"Senior Design"
                                 },
                                 {
                                     "name": "Assignment #11 - Project Advisor Assessments",
                                     "dueDate": "2023-12-03, 11:59pm",
-                                    "description": "This is sample description B"
+                                    "description": "This is sample description B",
+                                    "class":"Senior Design"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -83,17 +89,20 @@
                                 {
                                     "name": "Assignment 3 Report",
                                     "dueDate": "2023-10-27, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class": "Computer Graphics"
                                 },
                                 {
                                     "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
                                     "dueDate": "2023-11-03, 11:59pm",
-                                    "description": "This is an open-book, individual quiz. Please review the lecture materials."
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials.",
+                                    "class": "Computer Graphics"
                                 },
                                 {
                                     "name": "Graduate student project milestone 1 submission",
                                     "dueDate": "2023-11-07, 11:59pm",
-                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem.",
+                                    "class": "Computer Graphics"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -135,17 +144,20 @@
                                 {
                                     "name": "P2 Sketching and Formative Eval Checkpoint",
                                     "dueDate": "2023-11-01, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class": "User Interface"
                                 },
                                 {
                                     "name": "Heuristic Evaluation Submission",
                                     "dueDate": "2023-11-03, 11:59pm",
-                                    "description": "This is sample description B"
+                                    "description": "This is sample description B",
+                                    "class": "User Interface"
                                 },
                                 {
                                     "name": "Project 2 Implementation Checkpoint",
                                     "dueDate": "2023-11-06, 11:59pm",
-                                    "description": "This is sample description C"
+                                    "description": "This is sample description C",
+                                    "class": "User Interface"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -166,12 +178,14 @@
                                 {
                                     "name": "Assignment #10 - Final Design Reports",
                                     "dueDate": "2023-11-26, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class": "Senior Design"
                                 },
                                 {
                                     "name": "Assignment #11 - Project Advisor Assessments",
                                     "dueDate": "2023-12-03, 11:59pm",
-                                    "description": "This is sample description B"
+                                    "description": "This is sample description B",
+                                    "class":"Senior Design"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -192,17 +206,20 @@
                                 {
                                     "name": "Assignment 3 Report",
                                     "dueDate": "2023-10-27, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class":"Computer Graphics"
                                 },
                                 {
                                     "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
                                     "dueDate": "2023-11-03, 11:59pm",
-                                    "description": "This is an open-book, individual quiz. Please review the lecture materials."
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials.",
+                                    "class":"Computer Graphics"
                                 },
                                 {
                                     "name": "Graduate student project milestone 1 submission",
                                     "dueDate": "2023-11-07, 11:59pm",
-                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem.",
+                                    "class":"Computer Graphics"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -244,17 +261,20 @@
                                 {
                                     "name": "P2 Sketching and Formative Eval Checkpoint",
                                     "dueDate": "2023-11-01, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class":"User Interface"
                                 },
                                 {
                                     "name": "Heuristic Evaluation Submission",
                                     "dueDate": "2023-11-03, 11:59pm",
-                                    "description": "This is sample description B"
+                                    "description": "This is sample description B",
+                                    "class":"User Interface"
                                 },
                                 {
                                     "name": "Project 2 Implementation Checkpoint",
                                     "dueDate": "2023-11-06, 11:59pm",
-                                    "description": "This is sample description C"
+                                    "description": "This is sample description C",
+                                    "class":"User Interface"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -275,12 +295,14 @@
                                 {
                                     "name": "Assignment #10 - Final Design Reports",
                                     "dueDate": "2023-11-26, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class":"Senior Design"
                                 },
                                 {
                                     "name": "Assignment #11 - Project Advisor Assessments",
                                     "dueDate": "2023-12-03, 11:59pm",
-                                    "description": "This is sample description B"
+                                    "description": "This is sample description B",
+                                    "class":"Senior Design"
                                 }
                             ],
                             "assignmentsSubmitted": []
@@ -301,17 +323,20 @@
                                 {
                                     "name": "Assignment 3 Report",
                                     "dueDate": "2023-10-27, 11:59pm",
-                                    "description": "This is sample description A"
+                                    "description": "This is sample description A",
+                                    "class":"Computer Graphics"
                                 },
                                 {
                                     "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
                                     "dueDate": "2023-11-03, 11:59pm",
-                                    "description": "This is an open-book, individual quiz. Please review the lecture materials."
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials.",
+                                    "class":"Computer Graphics"
                                 },
                                 {
                                     "name": "Graduate student project milestone 1 submission",
                                     "dueDate": "2023-11-07, 11:59pm",
-                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem.",
+                                    "class":"Computer Graphics"
                                 }
                             ],
                             "assignmentsSubmitted": []
