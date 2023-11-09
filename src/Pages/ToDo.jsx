@@ -1,5 +1,13 @@
+import ToDoComp from "../components/TodoComp";
+
 function ToDo() {
-  return <h1>To-Do List</h1>;
+  return (
+    <>
+      <h2>To Do List</h2>
+      <hr style={{ width: "100%" }} />
+      <ToDoComp></ToDoComp>
+    </>
+  );
 }
 
 export default ToDo;
