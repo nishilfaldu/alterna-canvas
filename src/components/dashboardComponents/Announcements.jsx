@@ -9,7 +9,8 @@ const Announcements = () => {
         title="Announcements"
         extra={<a href="/announcements">More</a>}
         style={{
-          width: 275,
+          width: "auto",
+          marginTop: 20,
         }}
       >
         <AnnouncementsComp></AnnouncementsComp>

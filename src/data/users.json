@@ -1,317 +1,337 @@
-[
-    {
-        "name": "Alice Johnson",
-        "username": "alice123",
-        "email": "alice@example.com",
-        "currentWaterPoints": 0,
-        "currentPlantImage": "path/to/image",
-        "courses": [
-            {
-                "name": "User Interface",
-                "key": "ui",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "P2 Sketching and Formative Eval Checkpoint",
-                                "dueDate": "2023-11-01, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Heuristic Evaluation Submission",
-                                "dueDate": "2023-11-03, 11:59pm",
-                                "description": "This is sample description B"
-                            },
-                            {
-                                "name": "Project 2 Implementation Checkpoint",
-                                "dueDate": "2023-11-06, 11:59pm",
-                                "description": "This is sample description C"
-                            }
-                        ]
+{
+    "students": [
+        {
+            "id": 1,
+            "name": "Alice Johnson",
+            "username": "alice123",
+            "email": "alice@example.com",
+            "currentWaterPoints": 0,
+            "currentPlantImage": "path/to/image",
+            "courses": [
+                {
+                    "name": "User Interface",
+                    "key": "ui",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "P2 Sketching and Formative Eval Checkpoint",
+                                    "dueDate": "2023-11-01, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Heuristic Evaluation Submission",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is sample description B"
+                                },
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C"
+                                }
+                            ],
+                            "assignmentsSubmitted": [
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C"
+                                }
+                            ]
+                        }
+                    },
+                    "files": {},
+                    "zoom": {}
+                },
+                {
+                    "name": "Senior Design",
+                    "key": "senior_design",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment #10 - Final Design Reports",
+                                    "dueDate": "2023-11-26, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Assignment #11 - Project Advisor Assessments",
+                                    "dueDate": "2023-12-03, 11:59pm",
+                                    "description": "This is sample description B"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
                     }
                 },
-                "files": {},
-                "zoom": {}
-            },
-            {
-                "name": "Senior Design",
-                "key": "senior_design",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "Assignment #10 - Final Design Reports",
-                                "dueDate": "2023-11-26, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Assignment #11 - Project Advisor Assessments",
-                                "dueDate": "2023-12-03, 11:59pm",
-                                "description": "This is sample description B"
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
+                {
+                    "name": "Computer Graphics",
+                    "key": "computer_graphics",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment 3 Report",
+                                    "dueDate": "2023-10-27, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials."
+                                },
+                                {
+                                    "name": "Graduate student project milestone 1 submission",
+                                    "dueDate": "2023-11-07, 11:59pm",
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
                 }
-            },
-            {
-                "name": "Computer Graphics",
-                "key": "computer_graphics",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "Assignment 3 Report",
-                                "dueDate": "2023-10-27, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
-                                "dueDate": "2023-11-03, 11:59pm",
-                                "description": "This is an open-book, individual quiz. Please review the lecture materials."
-                            },
-                            {
-                                "name": "Graduate student project milestone 1 submission",
-                                "dueDate": "2023-11-07, 11:59pm",
-                                "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
+            ],
+            "plants": [
+                {
+                    "type": "Sunflower"
+                },
+                {
+                    "type": "Rose"
+                },
+                {
+                    "type": "Peach"
                 }
-            }
-        ],
-        "plants": [
-            {
-                "type": "Sunflower"
-            },
-            {
-                "type": "Rose"
-            },
-            {
-                "type": "Peach"
-            }
-        ]
-    },
-    {
-        "name": "Bob Anderson",
-        "username": "bob456",
-        "email": "bob@example.com",
-        "currentWaterPoints": 0,
-        "currentPlantImage": "path/to/image",
-        "courses": [
-            {
-                "name": "User Interface",
-                "key": "ui",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "P2 Sketching and Formative Eval Checkpoint",
-                                "dueDate": "2023-11-01, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Heuristic Evaluation Submission",
-                                "dueDate": "2023-11-03, 11:59pm",
-                                "description": "This is sample description B"
-                            },
-                            {
-                                "name": "Project 2 Implementation Checkpoint",
-                                "dueDate": "2023-11-06, 11:59pm",
-                                "description": "This is sample description C"
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Bob Anderson",
+            "username": "bob456",
+            "email": "bob@example.com",
+            "currentWaterPoints": 0,
+            "currentPlantImage": "path/to/image",
+            "courses": [
+                {
+                    "name": "User Interface",
+                    "key": "ui",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "P2 Sketching and Formative Eval Checkpoint",
+                                    "dueDate": "2023-11-01, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Heuristic Evaluation Submission",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is sample description B"
+                                },
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
+                },
+                {
+                    "name": "Senior Design",
+                    "key": "senior_design",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment #10 - Final Design Reports",
+                                    "dueDate": "2023-11-26, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Assignment #11 - Project Advisor Assessments",
+                                    "dueDate": "2023-12-03, 11:59pm",
+                                    "description": "This is sample description B"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
+                },
+                {
+                    "name": "Computer Graphics",
+                    "key": "computer_graphics",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment 3 Report",
+                                    "dueDate": "2023-10-27, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials."
+                                },
+                                {
+                                    "name": "Graduate student project milestone 1 submission",
+                                    "dueDate": "2023-11-07, 11:59pm",
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
                 }
-            },
-            {
-                "name": "Senior Design",
-                "key": "senior_design",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "Assignment #10 - Final Design Reports",
-                                "dueDate": "2023-11-26, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Assignment #11 - Project Advisor Assessments",
-                                "dueDate": "2023-12-03, 11:59pm",
-                                "description": "This is sample description B"
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
+            ],
+            "plants": [
+                {
+                    "type": "Sunflower"
+                },
+                {
+                    "type": "Rose"
+                },
+                {
+                    "type": "Peach"
                 }
-            },
-            {
-                "name": "Computer Graphics",
-                "key": "computer_graphics",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "Assignment 3 Report",
-                                "dueDate": "2023-10-27, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
-                                "dueDate": "2023-11-03, 11:59pm",
-                                "description": "This is an open-book, individual quiz. Please review the lecture materials."
-                            },
-                            {
-                                "name": "Graduate student project milestone 1 submission",
-                                "dueDate": "2023-11-07, 11:59pm",
-                                "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Eva Martinez",
+            "username": "eva789",
+            "email": "eva@example.com",
+            "currentWaterPoints": 0,
+            "currentPlantImage": "path/to/image",
+            "courses": [
+                {
+                    "name": "User Interface",
+                    "key": "ui",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "P2 Sketching and Formative Eval Checkpoint",
+                                    "dueDate": "2023-11-01, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Heuristic Evaluation Submission",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is sample description B"
+                                },
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
+                },
+                {
+                    "name": "Senior Design",
+                    "key": "senior_design",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment #10 - Final Design Reports",
+                                    "dueDate": "2023-11-26, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Assignment #11 - Project Advisor Assessments",
+                                    "dueDate": "2023-12-03, 11:59pm",
+                                    "description": "This is sample description B"
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
+                },
+                {
+                    "name": "Computer Graphics",
+                    "key": "computer_graphics",
+                    "tabs": {
+                        "syllabus": {},
+                        "modules": {},
+                        "grades": {},
+                        "assignments": {
+                            "assignmentsNotSubmitted": [
+                                {
+                                    "name": "Assignment 3 Report",
+                                    "dueDate": "2023-10-27, 11:59pm",
+                                    "description": "This is sample description A"
+                                },
+                                {
+                                    "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
+                                    "dueDate": "2023-11-03, 11:59pm",
+                                    "description": "This is an open-book, individual quiz. Please review the lecture materials."
+                                },
+                                {
+                                    "name": "Graduate student project milestone 1 submission",
+                                    "dueDate": "2023-11-07, 11:59pm",
+                                    "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
+                                }
+                            ],
+                            "assignmentsSubmitted": []
+                        },
+                        "files": {},
+                        "zoom": {}
+                    }
                 }
-            }
-        ],
-        "plants": [
-            {
-                "type": "Sunflower"
-            },
-            {
-                "type": "Rose"
-            },
-            {
-                "type": "Peach"
-            }
-        ]
-    },
-    {
-        "name": "Eva Martinez",
-        "username": "eva789",
-        "email": "eva@example.com",
-        "currentWaterPoints": 0,
-        "currentPlantImage": "path/to/image",
-        "courses": [
-            {
-                "name": "User Interface",
-                "key": "ui",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "P2 Sketching and Formative Eval Checkpoint",
-                                "dueDate": "2023-11-01, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Heuristic Evaluation Submission",
-                                "dueDate": "2023-11-03, 11:59pm",
-                                "description": "This is sample description B"
-                            },
-                            {
-                                "name": "Project 2 Implementation Checkpoint",
-                                "dueDate": "2023-11-06, 11:59pm",
-                                "description": "This is sample description C"
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
+            ],
+            "plants": [
+                {
+                    "type": "Sunflower"
+                },
+                {
+                    "type": "Rose"
+                },
+                {
+                    "type": "Peach"
                 }
-            },
-            {
-                "name": "Senior Design",
-                "key": "senior_design",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "Assignment #10 - Final Design Reports",
-                                "dueDate": "2023-11-26, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Assignment #11 - Project Advisor Assessments",
-                                "dueDate": "2023-12-03, 11:59pm",
-                                "description": "This is sample description B"
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
-                }
-            },
-            {
-                "name": "Computer Graphics",
-                "key": "computer_graphics",
-                "tabs": {
-                    "syllabus": {},
-                    "modules": {},
-                    "grades": {},
-                    "assignments": {
-                        "assignmentsNotSubmitted": [
-                            {
-                                "name": "Assignment 3 Report",
-                                "dueDate": "2023-10-27, 11:59pm",
-                                "description": "This is sample description A"
-                            },
-                            {
-                                "name": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
-                                "dueDate": "2023-11-03, 11:59pm",
-                                "description": "This is an open-book, individual quiz. Please review the lecture materials."
-                            },
-                            {
-                                "name": "Graduate student project milestone 1 submission",
-                                "dueDate": "2023-11-07, 11:59pm",
-                                "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
-                            }
-                        ]
-                    },
-                    "files": {},
-                    "zoom": {}
-                }
-            }
-        ],
-        "plants": [
-            {
-                "type": "Sunflower"
-            },
-            {
-                "type": "Rose"
-            },
-            {
-                "type": "Peach"
-            }
-        ]
-    }
-]
+            ]
+        }
+    ]
+}
