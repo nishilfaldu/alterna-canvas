@@ -1,6 +1,6 @@
 import { Collapse, Space, List } from "antd";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 import { handleDownload } from "../../scripts/downloadFile";
 import { listFiles } from "../../scripts/getS3Data";
@@ -13,12 +13,12 @@ const Modules = ({ courseID }) => {
 
   const [presentations, setPresentations] = useState([]);
   useEffect(() => {
-    async function fetchData() {
+    async function fetchPresentationData() {
       let helperData = await listFiles(courseID, "presentations");
       setPresentations(helperData.folderToFileMap.get("presentations"));
     }
 
-    fetchData();
+    fetchPresentationData();
   }, [courseID]);
 
   const presentationList = presentations
@@ -30,15 +30,59 @@ const Modules = ({ courseID }) => {
     }))
     : [];
 
+  const [moduleData, setModuleData] = useState([]);
+  useEffect(() => {
+    async function fetchModuleData() {
+      let helperData = await listFiles(courseID, "pages");
+      setModuleData(helperData.folderToFileMap.get("pages"));
+    }
+
+    fetchModuleData();
+  }, [courseID]);
+
+  const moduleList = moduleData
+    ? moduleData.map((module, index) => ({
+      key: `${index}`,
+      header: `Module ${index + 1}: ${module}`,
+      title: `${module}`,
+      description: `Module ${index + 1}`,
+    }))
+    : [];
+
+  const openSubmissionModal = useCallback((title, description) => {
+    { title; }
+    { description; }
+  });
+
   return (
     <div className="flex flex-col gap-y-4">
       <Space direction="vertical">
-        {modules.map(module => (
+        {moduleList.length !== 0 && modules.map(module => (
           <Collapse
             key={module}
             defaultActiveKey={["1"]}
             expandIconPosition="start"
             collapsible="header"
+            items={[
+              {
+                key: { module },
+                label: `Module ${module}`,
+                children:
+                  <List
+                    itemLayout="horizontal"
+                    dataSource={moduleList.slice((module - 1) * 2, (module - 1) * 2 + 2)}
+                    renderItem={item => (
+                      <List.Item>
+                        <List.Item.Meta
+                          // eslint-disable-next-line max-len
+                          title={<a onClick={() => openSubmissionModal(item.title, item.description)}>{item.title}</a>}
+                          description={item.description}
+                        />
+                      </List.Item>
+                    )}
+                  />,
+              },
+            ]}
           />
         ))}
         <br />
@@ -59,7 +103,7 @@ const Modules = ({ courseID }) => {
                   renderItem={item => (
                     <List.Item>
                       <List.Item.Meta
-                        title={<a onClick={() => handleDownload(courseID, "presentations", item.title)}>{item.header}</a>}
+                        title={<a onClick={() => handleDownload(courseID, "presentations", item.title)}>{item.title}</a>}
                         description={item.description}
                       />
                     </List.Item>
