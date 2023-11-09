@@ -14,6 +14,8 @@ export const UserProvider = ({ children }) => {
     const storedUsername = localStorage.getItem("user");
     if (storedUsername) {
       setUser(storedUsername);
+    } else {
+      setUser("Alice Johnson");
     }
   }, []);
 
