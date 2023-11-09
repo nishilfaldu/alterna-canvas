@@ -7,6 +7,7 @@ const PlantStatus = () => {
   // TODO: dynamically set these values
   const currentHealth = 2;
   const totalHealth = 15;
+  const percentHealth = Math.round((currentHealth / totalHealth) * 100);
   const plantName = "Name of Plant";
   const waterAvailable = 4;
   const daysUntilWilted = 3;
@@ -18,21 +19,24 @@ const PlantStatus = () => {
         <Col lg={8}>
           <h2 style={{ marginBottom: 20 }}>{plantName}</h2>
           <ProgressBar
-            now={(currentHealth / totalHealth) * 100}
-            label={`${Math.round((currentHealth / totalHealth) * 100)}%`}
+            now={percentHealth}
+            label={`${percentHealth}%`}
+            style={{ height: "38px" }}
           />
           <p
             style={{
               display: "flex",
-              margin: "auto",
             }}
           >
             Health: {currentHealth}/{totalHealth}{" "}
-            <MdOutlineWaterDrop color="cornflowerblue" style={{ margin: "auto 5" }} />
+            <MdOutlineWaterDrop
+              color="cornflowerblue"
+              style={{ margin: "auto 5" }}
+            />
           </p>
-          <div style={{ display: "flex", marginTop: 20, width: "100%" }}>
+          <div style={{ marginTop: 20 }}>
             <Button
-              style={{ width: "100%" }}
+              style={{ width: "50%" }}
               onClick={() =>
                 console.log("TODO: add functionality to this button!")
               }
@@ -40,14 +44,14 @@ const PlantStatus = () => {
               Water
             </Button>
           </div>
-          <p
-            style={{
-              display: "flex",
-              margin: "auto",
-            }}
-          >
-            {waterAvailable} <MdOutlineWaterDrop color="cornflowerblue" style={{ margin: "auto 5" }} />{" "}
-            available, {daysUntilWilted} days until wilted</p>
+          <p style={{ display: "flex" }}>
+            {waterAvailable}{" "}
+            <MdOutlineWaterDrop
+              color="cornflowerblue"
+              style={{ margin: "auto 5" }}
+            />{" "}
+            available, {daysUntilWilted} days until wilted
+          </p>
         </Col>
       </Row>
     </Container>
