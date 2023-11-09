@@ -28,7 +28,12 @@ function ToDoComp() {
         .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
         .flat();
 
-      setAssignmentsMeta(assignmentsNotSubmitted);
+      // Take only three items
+      const onlyThreeAssignments = assignmentsNotSubmitted.slice(2, 5);
+
+      setAssignmentsMeta(onlyThreeAssignments);
+
+      // setAssignmentsMeta(assignmentsNotSubmitted);
     }
 
     getUserData();
