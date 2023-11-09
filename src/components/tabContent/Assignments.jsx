@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { FileOutlined } from "@ant-design/icons";
 import { Collapse, List, Modal } from "antd";
 import { message } from "antd";
@@ -6,17 +7,18 @@ import { useCallback, useEffect, useState } from "react";
 
 import Reward from "./files/Reward";
 import UploadFile from "./files/UploadFile";
-import users from "../../data/users.json";
 import { listFiles } from "../../scripts/getS3Data";
-import { getData } from "../../scripts/jsonHelpers";
+import { getData, putData } from "../../scripts/jsonHelpers";
 import { useUser } from "../provider/useUser";
 
 
 
 const Assignments = ({ courseID }) => {
   const [modal, contextHolder] = Modal.useModal();
-  const { user, setUser } = useUser();
+  const { user } = useUser();
   const [_assignmentsNotSubmitted, setAssignmentsNotSubmitted] = useState([]);
+  const [_assignmentsSubmitted, setAssignmentsSubmitted] = useState([]);
+  const [_userId, setUserId] = useState(0);
 
   const [assignments, setAssignments] = useState();
   useEffect(() => {
@@ -39,24 +41,27 @@ const Assignments = ({ courseID }) => {
       const lastName = names[1];
       // here data is an array of an object
       const data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
+      setUserId(data[0].id);
       const course = data[0]?.courses.filter(course => course.key === courseID);
       const assignNotSubmitted = course[0].tabs.assignments.assignmentsNotSubmitted;
-      console.log(assignNotSubmitted);
       setAssignmentsNotSubmitted(assignNotSubmitted);
+      const assignSubmitted = course[0].tabs.assignments.assignmentsSubmitted;
+      // console.log(assignSubmitted);
+      setAssignmentsSubmitted(assignSubmitted);
     }
 
     fetchData();
   }, [user, courseID]);
 
 
-  // TODO: might need to mutate data in users.json if we want to switch assignments between collapses
   const assignmentsSubmitted = [
     {
       key: "1",
       label: "Assignments Submitted",
       children: <List
       itemLayout="horizontal"
-      dataSource={assignments?.map(assignment => ({ title: assignment }))}
+      // eslint-disable-next-line max-len
+      dataSource={[...(assignments || []).map(assignment => ({ title: assignment })), ..._assignmentsSubmitted.map(assignment => ({ title: assignment.name }))]}
       renderItem={(item, index) => (
         <List.Item>
           <List.Item.Meta
@@ -75,13 +80,27 @@ const Assignments = ({ courseID }) => {
     update({
       title: "Reward",
       content: <Reward/>,
-      closable: true,
+      closable: false,
       okText: "Accept",
       okButtonProps: { style: { backgroundColor: "blue" } },
       onCancel: destroy,
       okCancel: false,
+      onOk: async () => {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        
+        let data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
+        data[0].currentWaterPoints = data[0].currentWaterPoints + 1;
+        const updatedData = putData(`http://localhost:3030/students/${data[0].id}/`, data[0]);
+        if(updatedData) {
+          message.success("Water point accepted!");
+        } else {
+          message.error("There was an error in accepting a water point");
+        }
+      },
     });
-  }, [modal]);
+  }, [modal, user]);
 
 
   const openSubmissionModal = useCallback((title, description) => {
@@ -96,9 +115,26 @@ const Assignments = ({ courseID }) => {
       okCancel: true,
       okText: "OK",
       onCancel: destroy,
-      onOk: () => openRewardModal(),
+      onOk: async () => {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        
+        let data = await getData(`http://localhost:3030/students?name=${firstName}+${lastName}`);
+        let assignmentsLeft = _assignmentsNotSubmitted.filter(assignment => assignment.name !== title);
+        data[0].courses.filter(course => course.key === courseID)[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;       
+        data[0].courses.filter(course => course.key === courseID)[0].tabs.assignments.assignmentsSubmitted = [..._assignmentsSubmitted, ..._assignmentsNotSubmitted.filter(assignment => assignment.name === title)];
+        console.log(data, "data");
+        const updatedData = putData(`http://localhost:3030/students/${data[0].id}/`, data[0]);
+        if(updatedData) {
+          message.success("Assignment Submitted Successfully");
+        } else {
+          message.error("Error in submitting the assignment");
+        }
+        openRewardModal();
+      },
     });
-  }, [modal, courseID, openRewardModal]);
+  }, [modal, courseID, openRewardModal, user, _assignmentsNotSubmitted, _assignmentsSubmitted]);
 
   
   const assignmentsNotSubmitted = [

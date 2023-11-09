@@ -32,6 +32,13 @@
                                     "dueDate": "2023-11-06, 11:59pm",
                                     "description": "This is sample description C"
                                 }
+                            ],
+                            "assignmentsSubmitted": [
+                                {
+                                    "name": "Project 2 Implementation Checkpoint",
+                                    "dueDate": "2023-11-06, 11:59pm",
+                                    "description": "This is sample description C"
+                                }
                             ]
                         }
                     },
@@ -57,7 +64,8 @@
                                     "dueDate": "2023-12-03, 11:59pm",
                                     "description": "This is sample description B"
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -87,7 +95,8 @@
                                     "dueDate": "2023-11-07, 11:59pm",
                                     "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -138,7 +147,8 @@
                                     "dueDate": "2023-11-06, 11:59pm",
                                     "description": "This is sample description C"
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -163,7 +173,8 @@
                                     "dueDate": "2023-12-03, 11:59pm",
                                     "description": "This is sample description B"
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -193,7 +204,8 @@
                                     "dueDate": "2023-11-07, 11:59pm",
                                     "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -244,7 +256,8 @@
                                     "dueDate": "2023-11-06, 11:59pm",
                                     "description": "This is sample description C"
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -269,7 +282,8 @@
                                     "dueDate": "2023-12-03, 11:59pm",
                                     "description": "This is sample description B"
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}
@@ -299,7 +313,8 @@
                                     "dueDate": "2023-11-07, 11:59pm",
                                     "description": "This submission is for graduate student only who work on the graduate student project. Milestone #1 requires you to study at least one recent reinforcement learning (RL) paper in-depth, and to formulate your own idea of using RL to tackle the strategic release planning (SRP) problem."
                                 }
-                            ]
+                            ],
+                            "assignmentsSubmitted": []
                         },
                         "files": {},
                         "zoom": {}

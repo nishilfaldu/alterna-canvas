@@ -3,8 +3,6 @@ import { Button, Upload, message } from "antd";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-import { uploadFile } from "../../../scripts/uploadFile";
-
 
 
 const UploadFile = ({ courseID, folderType, fileName }) => {
@@ -16,7 +14,7 @@ const UploadFile = ({ courseID, folderType, fileName }) => {
     setTimeout(() => {
       setUploading(false);
       message.success("File uploaded successfully");
-      }, 1000);      
+      }, 1000);  
     };
 
   const props = {
