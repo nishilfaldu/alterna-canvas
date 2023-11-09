@@ -6,6 +6,8 @@ import users from "../data/users.json";
 
 
 
+
+
 const { Paragraph } = Typography;
 
 export default function Account() {
@@ -52,8 +54,8 @@ export default function Account() {
         <div>
           <img
             style={{
-              width: 300,
-              height: 300,
+              width: 200,
+              height: 200,
               top: 30,
               left: 50,
               position: "relative",

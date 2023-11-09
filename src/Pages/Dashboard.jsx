@@ -1,3 +1,5 @@
+import { Container, Row, Col } from "react-bootstrap";
+
 import Announcements from "../components/dashboardComponents/Announcements";
 import CourseCard from "../components/dashboardComponents/CourseCard";
 import PlantStatus from "../components/dashboardComponents/PlantStatus";
@@ -10,19 +12,27 @@ const Dashboard = () => {
   const { user } = useUser();
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <Container>
+      <Row>
+        <Col lg={8}>
       {/* TODO: this HI can be positioned somewhere else */}
-      <h1>Dashboard {`(Hi, ${user})`}</h1>
-      <hr style={{ width: "80%" }} />
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-        <CourseCard />
-        <div style={{ display: "flex", flexDirection: "column", marginRight: "0 !important", paddingTop: "20px" }}>
+          <h1>Dashboard {`(Hi, ${user})`}</h1>
+          <hr />
+          <CourseCard />
+        </Col>
+        <Col>
           <Todo />
+        </Col>
+      </Row>
+      <Row style={{ marginTop: 20 }}>
+        <Col lg={8}>
+          <PlantStatus />
+        </Col>
+        <Col>
           <Announcements />
-        </div>
-      </div>
-      <PlantStatus />
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

@@ -22,7 +22,7 @@ function Course() {
   return (
     <>
       <h1>{courseName}</h1>
-      <CourseTabs courseID={id} />
+      <CourseTabs courseID={id} courseName={courseName} />
     </>
   );
 }
