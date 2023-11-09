@@ -15,8 +15,15 @@ const Dashboard = () => {
     <Container>
       <Row>
         <Col lg={8}>
-      {/* TODO: this HI can be positioned somewhere else */}
-          <h1>Dashboard {`(Hi, ${user})`}</h1>
+          {/* TODO: this HI can be positioned somewhere else */}
+          <header style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}>
+            <h1>Dashboard</h1>
+            <span>Welcome, {user}!</span>
+          </header>
           <hr />
           <CourseCard />
         </Col>
