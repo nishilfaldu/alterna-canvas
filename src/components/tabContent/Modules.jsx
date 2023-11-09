@@ -61,23 +61,31 @@ const Modules = ({ courseID }) => {
   const handleCancel = () => {
     setIsModalVisible(false);
   };
-
   useEffect(() => {
     const fetchData = async filename => {
-      const fileData = await getFileContent(`courses/${courseID}/pages/${filename}`);
+      const div = document.getElementById("modalHTML"); // Move the declaration here
 
-      const div = document.getElementById("modalHTML");
-
-      if (fileData) {
-        const doc = new DOMParser().parseFromString(fileData, "text/html");
-        div.innerHTML = doc.querySelector("body").innerHTML;
+      if (filename.endsWith(".png")) { // Remove unnecessary curly braces around filename
+        div.innerHTML = "<img src='https://developer.ibm.com/developer/default/tutorials/wa-react-intro/images/figure1.png' alt='image' />"; // Update with the appropriate image path
       } else {
-        div.innerHTML = "<p>No information was found for this module. Contact your instructor for more information.</p>";
+        try {
+          const fileData = await getFileContent(`courses/${courseID}/pages/${filename}`);
+          if (fileData) {
+            const doc = new DOMParser().parseFromString(fileData, "text/html");
+            div.innerHTML = doc.querySelector("body").innerHTML;
+          } else {
+            div.innerHTML = "<p>No information was found for this module. Contact your instructor for more information.</p>";
+          }
+        } catch (error) {
+          console.error("Error fetching file content: ", error);
+          div.innerHTML = "<p>An error occurred while fetching the content. Please try again later.</p>";
+        }
       }
     };
 
     fetchData(modalFile);
   }, [courseID, modalFile]);
+
 
   return (
     <div className="flex flex-col gap-y-4">
