@@ -6,8 +6,14 @@ import usersData from "../../data/users.json";
 import { useUser } from "../provider/useUser";
 
 const Grades = ({ courseID }) => {
+  // eslint-disable-next-line no-unused-vars
   const { user, setUser } = useUser();
   const [thisUsersGrades, setThisUsersGrades] = useState(null);
+  const [assignmentsGrade, setAssignmentsGrade] = useState(null);
+  const [participationGrade, setParticipationGrade] = useState(null);
+  const [projectsGrade, setProjectsGrade] = useState(null);
+  const [examGrade, setExamGrade] = useState(null);
+  const [courseGrade, setCourseGrade] = useState(null);
 
   useEffect(() => {
     if (user) {
@@ -17,14 +23,144 @@ const Grades = ({ courseID }) => {
           .courses.find((course) => course.key === courseID).tabs.gradesObtained
       );
     }
+
+    const calculateSectionGrade = (arrayOfGrades) => {
+      let earnedPoints = 0;
+      let totalPoints = 0;
+      let nullValues = 0;
+
+      arrayOfGrades.forEach((grade) => {
+        totalPoints += grade.totalPoints;
+        if (grade.pointsObtained !== null) {
+          earnedPoints += grade.pointsObtained;
+        } else {
+          nullValues++;
+        }
+      });
+
+      return {
+        // If all of the assignments for the section are ungraded, return null for the earnedPoints
+        // We don't want the ungraded assignments hurting the user's grades
+        earnedPoints: nullValues === arrayOfGrades.length ? null : earnedPoints,
+        totalPoints: totalPoints,
+      };
+    };
+
+    // Calculate the grades for each section of the course
+    if (thisUsersGrades) {
+      // Get the total Assignments grade
+      if (thisUsersGrades.assignments) {
+        setAssignmentsGrade(calculateSectionGrade(thisUsersGrades.assignments));
+      }
+      // Get the total Participation grade
+      if (thisUsersGrades.participation) {
+        setParticipationGrade(
+          calculateSectionGrade(thisUsersGrades.participation)
+        );
+      }
+      // Get the total Projects grade
+      if (thisUsersGrades.projects) {
+        setProjectsGrade(calculateSectionGrade(thisUsersGrades.projects));
+      }
+      // Get the total Exam grade
+      if (thisUsersGrades.exam) {
+        setExamGrade(calculateSectionGrade(thisUsersGrades.exam));
+      }
+    }
   }, [user, courseID, thisUsersGrades]);
+
+  useEffect(() => {
+    const getEarnedSectionPercentOfCourse = (sectionGrade, weightage) => {
+      if (sectionGrade && sectionGrade.earnedPoints !== null) {
+        return {
+          earnedPercent:
+            (sectionGrade.earnedPoints / sectionGrade.totalPoints) * weightage,
+          totalPercent: weightage,
+        };
+      } else {
+        return {
+          earnedPercent: 0,
+          totalPercent: 0,
+        };
+      }
+    };
+
+    // Calculate the overall course grade
+    const calculateOverallGrade = () => {
+      const assignmentPercents = getEarnedSectionPercentOfCourse(
+        assignmentsGrade,
+        thisUsersGrades.assignmentWeightage
+      );
+      const participationPercents = getEarnedSectionPercentOfCourse(
+        participationGrade,
+        thisUsersGrades.participationWeightage
+      );
+      const projectPercents = getEarnedSectionPercentOfCourse(
+        projectsGrade,
+        thisUsersGrades.projectWeightage
+      );
+      const examPercents = getEarnedSectionPercentOfCourse(
+        examGrade,
+        thisUsersGrades.examWeightage
+      );
+
+      const earnedPercent =
+        assignmentPercents.earnedPercent +
+        participationPercents.earnedPercent +
+        projectPercents.earnedPercent +
+        examPercents.earnedPercent;
+      const totalPercent =
+        assignmentPercents.totalPercent +
+        participationPercents.totalPercent +
+        projectPercents.totalPercent +
+        examPercents.totalPercent;
+
+      return (earnedPercent / totalPercent) * 100;
+    };
+    if (user && thisUsersGrades) {
+      // Get the user's grade in the course
+      setCourseGrade(calculateOverallGrade());
+    }
+  }, [
+    assignmentsGrade,
+    examGrade,
+    projectsGrade,
+    participationGrade,
+    user,
+    thisUsersGrades,
+  ]);
+
+  const displaySectionGrade = (sectionName, sectionGrade) => {
+    if (sectionGrade && sectionGrade.earnedPoints) {
+      return (
+        <p>
+          {sectionName}: {sectionGrade.earnedPoints}/{sectionGrade.totalPoints}{" "}
+          points (
+          {Math.round(
+            (sectionGrade.earnedPoints / sectionGrade.totalPoints) * 100
+          )}
+          %)
+        </p>
+      );
+    } else if (sectionGrade && sectionGrade.earnedPoints === null) {
+      return (
+        <p>
+          {sectionName}: --/{sectionGrade.totalPoints} (Not incorporated into
+          overall course grade.)
+        </p>
+      );
+    }
+  };
 
   return (
     <>
-    <h2>Total Grade: CALCULATE AND ADD HERE</h2>
-    <h2>Grade by Section</h2>
-    Show grade breakdown here...
-    <h2>Details</h2>
+      {courseGrade && <h2>Total Grade: {courseGrade.toFixed(2)}%</h2>}
+      <h2>Grade by Section</h2>
+      {displaySectionGrade("Assignments", assignmentsGrade)}
+      {displaySectionGrade("Participation", participationGrade)}
+      {displaySectionGrade("Projects", projectsGrade)}
+      {displaySectionGrade("Exam", examGrade)}
+      <h2>Details</h2>
       {user && thisUsersGrades && (
         <>
           {Object.keys(thisUsersGrades)
