@@ -11,6 +11,7 @@ const Dashboard = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
+      {/* TODO: this HI can be positioned somewhere else */}
       <h1>Dashboard {`(Hi, ${user})`}</h1>
       <hr style={{ width: "80%" }} />
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
