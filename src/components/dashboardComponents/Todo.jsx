@@ -1,30 +1,23 @@
-import { Card, Space } from "antd";
+import { Card } from "antd";
 
 
 
 const ToDo = () => {
-    return (
-        <Space direction="vertical" size={16}>
-            <Card
-                title="To-Do"
-                extra={<a href="/todo">More</a>}
-                style={{
-                    width: 400,
-                }}
-            >
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-                <p>Content</p>
-
-            </Card>
-            {" "}
-            {" "}
-            {" "}
-
-        </Space>
-
-    );
+  return (
+    <Card
+      title="To-Do"
+      extra={<a href="/todo">More</a>}
+      style={{
+        width: "auto",
+        marginTop: 20,
+      }}
+    >
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+    </Card>
+  );
 };
 
 export default ToDo;
