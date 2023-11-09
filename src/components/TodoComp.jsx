@@ -47,7 +47,11 @@ function ToDoComp() {
                   src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
                 />
               }
-              title={<a>{item.name}</a>}
+              title={
+                <a>
+                  {item.class}: {item.name}
+                </a>
+              }
               description={item.dueDate}
             />
           </List.Item>
