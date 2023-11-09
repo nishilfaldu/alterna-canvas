@@ -130,84 +130,87 @@ const Grades = ({ courseID }) => {
     thisUsersGrades,
   ]);
 
-  const displaySectionGrade = (sectionName, sectionGrade) => {
-    if (sectionGrade && sectionGrade.earnedPoints) {
+  const displaySectionDetails = (gradeType, sectionGrade) => {
+    if (sectionGrade) {
       return (
-        <p>
-          {sectionName}: {sectionGrade.earnedPoints}/{sectionGrade.totalPoints}{" "}
-          points (
-          {Math.round(
-            (sectionGrade.earnedPoints / sectionGrade.totalPoints) * 100
-          )}
-          %)
-        </p>
-      );
-    } else if (sectionGrade && sectionGrade.earnedPoints === null) {
-      return (
-        <p>
-          {sectionName}: --/{sectionGrade.totalPoints} (Not incorporated into
-          overall course grade.)
-        </p>
+        <div style={{ margin: "20px 0" }}>
+          <h3>
+            {gradeType.charAt(0).toUpperCase() + gradeType.slice(1)} —
+            {sectionGrade.earnedPoints === null && " Nothing graded yet"}
+            {sectionGrade.earnedPoints && (
+              <>
+                {" "}
+                {sectionGrade.earnedPoints}/{sectionGrade.totalPoints} points (
+                {(
+                  (sectionGrade.earnedPoints / sectionGrade.totalPoints) *
+                  100
+                ).toFixed(2)}
+                %)
+              </>
+            )}
+          </h3>
+          <ListGroup>
+            {thisUsersGrades[gradeType].map((type, typeIndex) => {
+              return (
+                <ListGroup.Item
+                  key={`type${typeIndex}`}
+                  style={{ padding: "20px" }}
+                >
+                  <Container>
+                    <Row>
+                      <Col>
+                        <h4>{type.title}</h4>
+                        <p style={{ margin: "5px" }}>
+                          <b>Start date:</b> {type.startDate}
+                        </p>
+                        <p style={{ margin: "5px" }}>
+                          <b>Due date:</b> {type.dueDate}
+                        </p>
+                      </Col>
+                      <Col
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "end",
+                        }}
+                      >
+                        <p>
+                          <b>
+                            {sectionGrade.earnedPoints === null &&
+                              "Not yet graded"}
+                          </b>
+                          {sectionGrade.earnedPoints && (
+                            <>
+                              <b>Grade:</b> {type.pointsObtained}/
+                              {type.totalPoints} (
+                              {Math.round(
+                                (type.pointsObtained / type.totalPoints) * 100
+                              )}
+                              %)
+                            </>
+                          )}
+                        </p>
+                      </Col>
+                    </Row>
+                  </Container>
+                </ListGroup.Item>
+              );
+            })}
+          </ListGroup>
+        </div>
       );
     }
   };
 
   return (
     <>
-      {courseGrade && <h2>Total Grade: {courseGrade.toFixed(2)}%</h2>}
-      <h2>Grade by Section</h2>
-      {displaySectionGrade("Assignments", assignmentsGrade)}
-      {displaySectionGrade("Participation", participationGrade)}
-      {displaySectionGrade("Projects", projectsGrade)}
-      {displaySectionGrade("Exam", examGrade)}
-      <h2>Details</h2>
+      {courseGrade && <h2>Course Grade: {courseGrade.toFixed(2)}%</h2>}
       {user && thisUsersGrades && (
         <>
-          {Object.keys(thisUsersGrades)
-            .filter((gradeTypeName) => !gradeTypeName.includes("Weightage"))
-            .map((gradeType, headerIndex) => {
-              return (
-                <div key={`header${headerIndex}`}>
-                  <h3>
-                    {gradeType.charAt(0).toUpperCase() + gradeType.slice(1)}
-                  </h3>
-                  <ListGroup>
-                    {thisUsersGrades[gradeType].map((type, typeIndex) => {
-                      return (
-                        <ListGroup.Item key={`type${typeIndex}`}>
-                          <Container>
-                            <Row>
-                              <Col>
-                                <h4>{type.title}</h4>
-                                <p>Start Date: {type.startDate}</p>
-                                <p>Due Date: {type.dueDate}</p>
-                              </Col>
-                              <Col
-                                style={{
-                                  display: "flex",
-                                  alignItems: "center",
-                                  justifyContent: "end",
-                                }}
-                              >
-                                <p>
-                                  <b>Grade:</b> {type.pointsObtained}/
-                                  {type.totalPoints} (
-                                  {Math.round(
-                                    (type.pointsObtained / type.totalPoints) *
-                                      100
-                                  )}
-                                  %)
-                                </p>
-                              </Col>
-                            </Row>
-                          </Container>
-                        </ListGroup.Item>
-                      );
-                    })}
-                  </ListGroup>
-                </div>
-              );
-            })}
+          {displaySectionDetails("assignments", assignmentsGrade)}
+          {displaySectionDetails("participation", participationGrade)}
+          {displaySectionDetails("projects", projectsGrade)}
+          {displaySectionDetails("exam", examGrade)}
         </>
       )}
       {!user && <p>You are not currently logged in.</p>}
