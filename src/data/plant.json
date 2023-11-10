@@ -1,0 +1,14 @@
+{
+    "plants": [
+        {
+            "id": 4,
+            "name": "tomato",
+            "num_stages": 6
+        },
+        {
+            "id": 5,
+            "name": "tree",
+            "num_stages": 8
+        }
+    ]
+}
