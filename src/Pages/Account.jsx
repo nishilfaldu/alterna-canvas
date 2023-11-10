@@ -6,8 +6,6 @@ import users from "../data/users.json";
 
 
 
-
-
 const { Paragraph } = Typography;
 
 export default function Account() {
@@ -50,20 +48,8 @@ export default function Account() {
           alignItems: "flex-start",
         }}
       ></div>
-      <div className="flex items-center gap-x-40">
-        <div>
-          <img
-            style={{
-              width: 200,
-              height: 200,
-              top: 30,
-              left: 50,
-              position: "relative",
-            }}
-            src="https://d1jj76g3lut4fe.cloudfront.net/processed/thumb/S1Yc7F14OY0nt2uB50.png?Expires=1698214046&Signature=fix6SRlz-nAX7wBqXnllf8e3caUuMCKFkTo5kEVp0XJlY~cAXzG4N9UB3cuFNmiQmelDDKCdonPGovRV7zTP-p7pqk9Q327kpO09CRs-LUNtyCF-l02yv~D5u-N7eF0ONKneNInShJyKghKTtk9Q8KYXsReIJTPl782Ab0NhX33z4w9wRhuSQsxEocqwqBu9W6bT75vwvjXuyopQTNtuT9TsUvU454dMheNsWFVMLFgzsTEM8TbizkO7rXorEaUFF3MSEDXNB7CFM01N85FUZMRe7Lc2~EF0LRw1RkFGEuJDYkmKQuwxMFQiRFEXy67CTrPpBISxPtJorwRTLXsVlQ__&Key-Pair-Id=K2YEDJLVZ3XRI"
-            alt="Profile"
-          />
-        </div>
+      <div className="flex items-center gap-x-20">
+        <img style={{ borderRadius: "50%", margin: 50 }} src={`src/assets/profileImages/${user.split(" ")[0].toLowerCase()}.jpg`} />
         <div className="flex flex-col gap-y-3">
           <Select
             size="medium"
