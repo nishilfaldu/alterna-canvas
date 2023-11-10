@@ -1,8 +1,11 @@
-import { Avatar, List, message } from "antd";
+import { List, message } from "antd";
 import { useEffect, useState } from "react";
 
+import CourseIcons from "./CourseIcons";
 import { useUser } from "./provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
+
+
 
 function ToDoComp() {
   const { user } = useUser();
@@ -25,15 +28,18 @@ function ToDoComp() {
       const courses = userData[0].courses;
 
       const assignmentsNotSubmitted = courses
-        .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
+        .map(course => course.tabs.assignments.assignmentsNotSubmitted)
         .flat();
 
-      // Take only three items
-      const onlyThreeAssignments = assignmentsNotSubmitted.slice(2, 5);
+      // Sort the assignments in order of the due date
+      assignmentsNotSubmitted.sort((a, b) =>
+        a.dueDate > b.dueDate ? 1 : b.dueDate > a.dueDate ? -1 : 0,
+      );
+
+      // Get the 3 assignments with the earliest due dates
+      const onlyThreeAssignments = assignmentsNotSubmitted.slice(0, 3);
 
       setAssignmentsMeta(onlyThreeAssignments);
-
-      // setAssignmentsMeta(assignmentsNotSubmitted);
     }
 
     getUserData();
@@ -45,18 +51,10 @@ function ToDoComp() {
         itemLayout="horizontal"
         dataSource={assignmentsMeta}
         renderItem={(item, index) => (
-          <List.Item>
+          <List.Item key={index}>
             <List.Item.Meta
-              avatar={
-                <Avatar
-                  src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
-                />
-              }
-              title={
-                <a>
-                  {item.class}: {item.name}
-                </a>
-              }
+              avatar={CourseIcons[item.class]}
+              title={<>{item.class}: {item.name}</>}
               description={item.dueDate}
             />
           </List.Item>
