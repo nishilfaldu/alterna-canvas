@@ -1,8 +1,11 @@
-import { Avatar, List, message } from "antd";
+import { List, message } from "antd";
 import { useEffect, useState } from "react";
 
+import CourseIcons from "../components/CourseIcons";
 import { useUser } from "../components/provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
+
+
 
 function ToDo() {
   const { user } = useUser();
@@ -25,8 +28,13 @@ function ToDo() {
       const courses = userData[0].courses;
 
       const assignmentsNotSubmitted = courses
-        .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
+        .map(course => course.tabs.assignments.assignmentsNotSubmitted)
         .flat();
+
+      // Sort the assignments in order of the due date
+      assignmentsNotSubmitted.sort((a, b) =>
+        a.dueDate > b.dueDate ? 1 : b.dueDate > a.dueDate ? -1 : 0,
+      );
 
       setAssignmentsMeta(assignmentsNotSubmitted);
     }
@@ -42,18 +50,10 @@ function ToDo() {
         itemLayout="horizontal"
         dataSource={assignmentsMeta}
         renderItem={(item, index) => (
-          <List.Item>
+          <List.Item key={index}>
             <List.Item.Meta
-              avatar={
-                <Avatar
-                  src={`https://xsgames.co/randomusers/avatar.php?g=pixel&key=${index}`}
-                />
-              }
-              title={
-                <a>
-                  {item.class}: {item.name}
-                </a>
-              }
+              avatar={CourseIcons[item.class]}
+              title={<>{item.class}: {item.name}</>}
               description={item.dueDate}
             />
           </List.Item>
