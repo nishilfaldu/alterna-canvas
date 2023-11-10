@@ -26,11 +26,11 @@ const Modules = ({ courseID }) => {
 
   const presentationList = presentations
     ? presentations.map((presentation, index) => ({
-      key: `${index}`,
-      header: `Week ${index + 1}: ${presentation}`,
-      title: `${presentation}`,
-      description: `Presentation ${index + 1}`,
-    }))
+        key: `${index}`,
+        header: `Week ${index + 1}: ${presentation}`,
+        title: `${presentation}`,
+        description: `Presentation ${index + 1}`,
+      }))
     : [];
 
   const [moduleData, setModuleData] = useState([]);
@@ -45,11 +45,11 @@ const Modules = ({ courseID }) => {
 
   const moduleList = moduleData
     ? moduleData.map((module, index) => ({
-      key: `${index}`,
-      header: `${module.replace(".html", "")}`,
-      title: `${module}`,
-      description: `Module ${index + 1}`,
-    }))
+        key: `${index}`,
+        header: `${module.replace(".html", "")}`,
+        title: `${module}`,
+        description: `Module ${index + 1}`,
+      }))
     : [];
 
 
@@ -64,60 +64,78 @@ const Modules = ({ courseID }) => {
   useEffect(() => {
     const fetchData = async filename => {
       const div = document.getElementById("modalHTML"); // Move the declaration here
-
-      if (filename.endsWith(".png")) { // Remove unnecessary curly braces around filename
-        div.innerHTML = "<img src='https://developer.ibm.com/developer/default/tutorials/wa-react-intro/images/figure1.png' alt='image' />"; // Update with the appropriate image path
-      } else {
-        try {
-          const fileData = await getFileContent(`courses/${courseID}/pages/${filename}`);
-          if (fileData) {
-            const doc = new DOMParser().parseFromString(fileData, "text/html");
-            div.innerHTML = doc.querySelector("body").innerHTML;
-          } else {
-            div.innerHTML = "<p>No information was found for this module. Contact your instructor for more information.</p>";
+      if (filename) {
+        if (filename.endsWith(".png")) {
+          // Remove unnecessary curly braces around filename
+          div.innerHTML =
+            "<img src='https://developer.ibm.com/developer/default/tutorials/wa-react-intro/images/figure1.png' alt='image' />"; // Update with the appropriate image path
+        } else {
+          try {
+            const fileData = await getFileContent(
+              `courses/${courseID}/pages/${filename}`,
+            );
+            if (fileData) {
+              const doc = new DOMParser().parseFromString(
+                fileData,
+                "text/html",
+              );
+              div.innerHTML = doc.querySelector("body").innerHTML;
+            } else {
+              div.innerHTML =
+                "<p>No information was found for this module. Contact your instructor for more information.</p>";
+            }
+          } catch (error) {
+            console.error("Error fetching file content: ", error);
+            div.innerHTML =
+              "<p>An error occurred while fetching the content. Please try again later.</p>";
           }
-        } catch (error) {
-          console.error("Error fetching file content: ", error);
-          div.innerHTML = "<p>An error occurred while fetching the content. Please try again later.</p>";
         }
       }
     };
 
     fetchData(modalFile);
   }, [courseID, modalFile]);
-
+  
 
   return (
     <div className="flex flex-col gap-y-4">
       <Space direction="vertical">
-        {moduleList.length !== 0 && modules.map(module => (
-          <Collapse
-            key={module}
-            defaultActiveKey={["1"]}
-            expandIconPosition="start"
-            collapsible="header"
-            items={[
-              {
-                key: { module },
-                label: `Module ${module}`,
-                children:
-                  <List
-                    itemLayout="horizontal"
-                    dataSource={moduleList.slice((module - 1) * 2, (module - 1) * 2 + 2)}
-                    renderItem={item => (
-                      <List.Item>
-                        <List.Item.Meta
-                          // eslint-disable-next-line max-len
-                          title={<a onClick={() => openModuleModal(item.title)}>{item.header}</a>}
-                          description={item.description}
-                        />
-                      </List.Item>
-                    )}
-                  />,
-              },
-            ]}
-          />
-        ))}
+        {moduleList.length !== 0 &&
+          modules.map(module => (
+            <Collapse
+              key={module}
+              defaultActiveKey={["1"]}
+              expandIconPosition="start"
+              collapsible="header"
+              items={[
+                {
+                  key: { module },
+                  label: `Module ${module}`,
+                  children: (
+                    <List
+                      itemLayout="horizontal"
+                      dataSource={moduleList.slice(
+                        (module - 1) * 2,
+                        (module - 1) * 2 + 2,
+                      )}
+                      renderItem={item => (
+                        <List.Item>
+                          <List.Item.Meta
+                            title={
+                              <a onClick={() => openModuleModal(item.title)}>
+                                {item.header}
+                              </a>
+                            }
+                            description={item.description}
+                          />
+                        </List.Item>
+                      )}
+                    />
+                  ),
+                },
+              ]}
+            />
+          ))}
         <br />
         <br />
         <Collapse
@@ -136,7 +154,19 @@ const Modules = ({ courseID }) => {
                   renderItem={item => (
                     <List.Item>
                       <List.Item.Meta
-                        title={<a onClick={() => handleDownload(courseID, "presentations", item.title)}>{item.title}</a>}
+                        title={
+                          <a
+                            onClick={() =>
+                              handleDownload(
+                                courseID,
+                                "presentations",
+                                item.title,
+                              )
+                            }
+                          >
+                            {item.title}
+                          </a>
+                        }
                         description={item.description}
                       />
                     </List.Item>

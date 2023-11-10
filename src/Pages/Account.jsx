@@ -49,7 +49,7 @@ export default function Account() {
         }}
       ></div>
       <div className="flex items-center gap-x-20">
-        <img style={{ borderRadius: "50%", margin: 50 }} src={`src/assets/profileImages/${user.split(" ")[0].toLowerCase()}.jpg`} />
+        <img style={{ borderRadius: "50%", margin: 50 }} src={`/src/assets/profileImages/${user.split(" ")[0].toLowerCase()}.jpg`} />
         <div className="flex flex-col gap-y-3">
           <Select
             size="medium"
