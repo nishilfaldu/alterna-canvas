@@ -1,4 +1,4 @@
-import { List, message } from "antd";
+import { Avatar, List } from "antd";
 import { useEffect, useState } from "react";
 
 import CourseIcons from "./CourseIcons";
@@ -13,16 +13,16 @@ function ToDoComp() {
 
   useEffect(() => {
     async function getUserData() {
-      if (!user) {
-        message.error("User not found");
+      // if (!user) {
+      //   message.error("User not found");
 
-        return;
-      }
+      //   return;
+      // }
       const names = user.split(" ");
       const firstName = names[0];
       const lastName = names[1];
       const userData = await getData(
-        `http://localhost:3030/students?name=${firstName}+${lastName}`
+        `http://localhost:3030/students?name=${firstName}+${lastName}`,
       );
 
       const courses = userData[0].courses;

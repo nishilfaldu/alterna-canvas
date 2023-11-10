@@ -22,7 +22,7 @@ function ToDo() {
       const firstName = names[0];
       const lastName = names[1];
       const userData = await getData(
-        `http://localhost:3030/students?name=${firstName}+${lastName}`
+        `http://localhost:3030/students?name=${firstName}+${lastName}`,
       );
 
       const courses = userData[0].courses;

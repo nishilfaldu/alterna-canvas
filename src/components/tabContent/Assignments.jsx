@@ -11,6 +11,8 @@ import { listFiles } from "../../scripts/getS3Data";
 import { getData, putData } from "../../scripts/jsonHelpers";
 import { useUser } from "../provider/useUser";
 
+
+
 const Assignments = ({ courseID }) => {
   const [modal, contextHolder] = Modal.useModal();
   const { user } = useUser();
@@ -39,10 +41,10 @@ const Assignments = ({ courseID }) => {
       const lastName = names[1];
       // here data is an array of an object
       const data = await getData(
-        `http://localhost:3030/students?name=${firstName}+${lastName}`
+        `http://localhost:3030/students?name=${firstName}+${lastName}`,
       );
       const course = data[0]?.courses.filter(
-        (course) => course.key === courseID
+        course => course.key === courseID,
       );
       const assignNotSubmitted =
         course[0].tabs.assignments.assignmentsNotSubmitted;
@@ -65,8 +67,8 @@ const Assignments = ({ courseID }) => {
           itemLayout="horizontal"
           // eslint-disable-next-line max-len
           dataSource={[
-            ...(assignments || []).map((assignment) => ({ title: assignment })),
-            ..._assignmentsSubmitted.map((assignment) => ({
+            ...(assignments || []).map(assignment => ({ title: assignment })),
+            ..._assignmentsSubmitted.map(assignment => ({
               title: assignment.name,
             })),
           ]}
@@ -106,12 +108,12 @@ const Assignments = ({ courseID }) => {
 
 
         let data = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
         );
         data[0].currentWaterPoints = data[0].currentWaterPoints + 1;
         const updatedData = putData(
           `http://localhost:3030/students/${data[0].id}/`,
-          data[0]
+          data[0],
         );
 
         if (updatedData) {
@@ -151,26 +153,26 @@ const Assignments = ({ courseID }) => {
           const lastName = names[1];
 
           let data = await getData(
-            `http://localhost:3030/students?name=${firstName}+${lastName}`
+            `http://localhost:3030/students?name=${firstName}+${lastName}`,
           );
           let assignmentsLeft = _assignmentsNotSubmitted.filter(
-            (assignment) => assignment.name !== title
+            assignment => assignment.name !== title,
           );
           data[0].courses.filter(
-            (course) => course.key === courseID
+            course => course.key === courseID,
           )[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
           data[0].courses.filter(
-            (course) => course.key === courseID
+            course => course.key === courseID,
           )[0].tabs.assignments.assignmentsSubmitted = [
             ..._assignmentsSubmitted,
             ..._assignmentsNotSubmitted.filter(
-              (assignment) => assignment.name === title
+              assignment => assignment.name === title,
             ),
           ];
           console.log(data, "data");
           const updatedData = putData(
             `http://localhost:3030/students/${data[0].id}/`,
-            data[0]
+            data[0],
           );
           if (updatedData) {
             message.success("Assignment Submitted Successfully");
@@ -188,7 +190,7 @@ const Assignments = ({ courseID }) => {
       user,
       _assignmentsNotSubmitted,
       _assignmentsSubmitted,
-    ]
+    ],
   );
 
 
@@ -200,7 +202,7 @@ const Assignments = ({ courseID }) => {
       children: (
         <List
           itemLayout="horizontal"
-          dataSource={_assignmentsNotSubmitted.map((assignment) => ({
+          dataSource={_assignmentsNotSubmitted.map(assignment => ({
             title: assignment.name,
             description: assignment.description,
           }))}
