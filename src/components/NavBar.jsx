@@ -30,7 +30,7 @@ const NavBar = () => {
             <Tooltip title="Profile">
               <img
                 style={{ borderRadius: "50%", height: 50 }}
-                src={`src/assets/profileImages/${user
+                src={`/src/assets/profileImages/${user
                   .split(" ")[0]
                   .toLowerCase()}.jpg`}
               />
