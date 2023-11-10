@@ -234,9 +234,6 @@ const Assignments = ({ courseID }) => {
 
   return (
     <div className="flex flex-col gap-y-4">
-
-      <p>Assignments for course with id: {courseID}</p>
-
       <Collapse
         defaultActiveKey={["1"]}
         expandIconPosition="start"
@@ -250,7 +247,6 @@ const Assignments = ({ courseID }) => {
       />
       {contextHolder}
     </div>
-
   );
 };
 
