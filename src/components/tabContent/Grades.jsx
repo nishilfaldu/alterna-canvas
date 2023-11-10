@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { ListGroup, Container, Row, Col } from "react-bootstrap";
 
-import usersData from "../../data/users.json";
+import { getData } from "../../scripts/jsonHelpers";
 import { useUser } from "../provider/useUser";
 
 
@@ -17,14 +17,23 @@ const Grades = ({ courseID }) => {
   const [courseGrade, setCourseGrade] = useState(null);
 
   useEffect(() => {
-    if (user) {
-      // TODO: get the grades data using the getData method
-      setThisUsersGrades(
-        usersData.students
-          .find(currentUserInArray => currentUserInArray.name === user)
-          .courses.find(course => course.key === courseID).tabs.grades,
-      );
-    }
+    const fetchData = async () => {
+      if (user) {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        const allGradesData = await getData(
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+        );
+
+        setThisUsersGrades(
+          allGradesData[0].courses.find(course => course.key === courseID)
+            .tabs.grades,
+        );
+      }
+    };
+
+    fetchData();
 
     const calculateSectionGrade = arrayOfGrades => {
       let earnedPoints = 0;
