@@ -172,10 +172,7 @@ const Grades = ({ courseID }) => {
                       <Col>
                         <h4>{type.title}</h4>
                         <p style={{ margin: "5px" }}>
-                          <b>Start date:</b> {type.startDate}
-                        </p>
-                        <p style={{ margin: "5px" }}>
-                          <b>Due date:</b> {type.dueDate}
+                          Due {type.dueDate}
                         </p>
                       </Col>
                       <Col
