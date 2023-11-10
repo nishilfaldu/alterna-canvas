@@ -13,11 +13,11 @@ function ToDo() {
 
   useEffect(() => {
     async function getUserData() {
-      if (!user) {
-        message.error("User not found");
+      // if (!user) {
+      //   message.error("User not found");
 
-        return;
-      }
+      //   return;
+      // }
       const names = user.split(" ");
       const firstName = names[0];
       const lastName = names[1];
