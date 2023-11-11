@@ -111,6 +111,14 @@ const Assignments = ({ courseID }) => {
           `http://localhost:3030/students?name=${firstName}+${lastName}`,
         );
         data[0].currentWaterPoints = data[0].currentWaterPoints + 1;
+        const today = new Date();
+        // Get the components of the current date
+        const month = (today.getMonth() + 1).toString().padStart(2, "0");
+        const day = today.getDate().toString().padStart(2, "0");
+        const year = today.getFullYear();
+        // Create a formatted date string in mm/dd/yyyy format
+        const formattedDate = `${month}/${day}/${year}`;
+        data[0].lastUpdatedWaterPoints = formattedDate;
         const updatedData = putData(
           `http://localhost:3030/students/${data[0].id}/`,
           data[0],

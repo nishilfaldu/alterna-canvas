@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useUser } from "../components/provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
 
+
+
 function ToDo() {
   const { user } = useUser();
   const [assignmentsMeta, setAssignmentsMeta] = useState([]);
@@ -19,13 +21,13 @@ function ToDo() {
       const firstName = names[0];
       const lastName = names[1];
       const userData = await getData(
-        `http://localhost:3030/students?name=${firstName}+${lastName}`
+        `http://localhost:3030/students?name=${firstName}+${lastName}`,
       );
 
       const courses = userData[0].courses;
 
       const assignmentsNotSubmitted = courses
-        .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
+        .map(course => course.tabs.assignments.assignmentsNotSubmitted)
         .flat();
 
       setAssignmentsMeta(assignmentsNotSubmitted);
@@ -36,7 +38,7 @@ function ToDo() {
 
   return (
     <>
-      <h2>To Do List</h2>
+      <h1>To Do List</h1>
       <hr style={{ width: "100%" }} />
       <List
         itemLayout="horizontal"
