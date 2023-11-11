@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+ 
 import { FileOutlined } from "@ant-design/icons";
 import { Collapse, List, Modal } from "antd";
 import { message } from "antd";
@@ -65,7 +65,7 @@ const Assignments = ({ courseID }) => {
       children: (
         <List
           itemLayout="horizontal"
-          // eslint-disable-next-line max-len
+           
           dataSource={[
             ...(assignments || []).map(assignment => ({ title: assignment })),
             ..._assignmentsSubmitted.map(assignment => ({
