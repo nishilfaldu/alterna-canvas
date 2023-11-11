@@ -56,7 +56,7 @@ const Modules = ({ courseID }) => {
   const openModuleModal = useCallback(filename => {
     setModalFile(filename);
     setIsModalVisible(true);
-  });
+  }, []);
 
   const handleCancel = () => {
     setIsModalVisible(false);
