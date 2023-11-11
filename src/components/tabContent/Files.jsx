@@ -27,6 +27,7 @@ function Files({ courseID }) {
   const [treeData, setTreeData] = useState();
   const [dataSource, setDataSource] = useState();
   const [folderToFileMap, setFolderToFileMap] = useState();
+  const [defaultExpanded, setDefaultExpanded] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -38,30 +39,41 @@ function Files({ courseID }) {
     fetchData();
   }, [courseID]);
 
+  useEffect(() => {
+    if (folderToFileMap) {
+      const folderKeys = Array.from(folderToFileMap.keys());
+      setDefaultExpanded(folderKeys[0]);
+      onSelect(folderKeys);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [folderToFileMap]);
+
   const onSelect = keys => {
     const dataSource = folderToFileMap.get(keys[0]).map(file => ({
       key: file,
       name: file,
-      action: <Button icon={<DownloadOutlined />} onClick={() => handleDownload(courseID, keys[0], file)}></Button>,
+      action: (
+        <Button
+          icon={<DownloadOutlined />}
+          onClick={() => handleDownload(courseID, keys[0], file)}
+        ></Button>
+      ),
     }));
     setDataSource(dataSource);
-    // console.log("Trigger Select", keys, info);
   };
-  // const onExpand = keys => {
-  //   // console.log("Trigger Expand", keys, info);
-  // };
 
   return (
     <div className="flex flex-row">
-      <DirectoryTree
-        height={500}
-        multiple
-        defaultExpandAll
-        onSelect={onSelect}
-        // onExpand={onExpand}
-        treeData={treeData}
-        className="w-1/4"
-      />
+      {defaultExpanded && (
+        <DirectoryTree
+          height={500}
+          onSelect={onSelect}
+          treeData={treeData}
+          defaultExpandedKeys={[defaultExpanded]}
+          defaultSelectedKeys={[defaultExpanded]}
+          className="w-1/4"
+        />
+      )}
       <Table
         size="large"
         className="w-full"
@@ -69,7 +81,6 @@ function Files({ courseID }) {
         columns={columns}
       />
     </div>
-    
   );
 }
 
