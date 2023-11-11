@@ -40,21 +40,21 @@ const CourseCard = () => {
           <CustomCard
             title="User Interface"
             link="/course/ui"
-            image="/UI-course-image.png"
+            image="/courseImages/UI-course-image.png"
           />
         </Col>
         <Col>
           <CustomCard
             title="Computer Graphics"
             link="/course/computer_graphics"
-            image="/graphics-course-image.jpg"
+            image="/courseImages/graphics-course-image.jpg"
           />
         </Col>
         <Col>
           <CustomCard
             title="Senior Design"
             link="/course/senior_design"
-            image="/senior-design-course-image.png"
+            image="/courseImages/senior-design-course-image.png"
           />
         </Col>
       </Row>
