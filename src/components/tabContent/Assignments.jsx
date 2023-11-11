@@ -1,4 +1,4 @@
- 
+
 import { FileOutlined } from "@ant-design/icons";
 import { Collapse, List, Modal } from "antd";
 import { message } from "antd";
@@ -65,7 +65,7 @@ const Assignments = ({ courseID }) => {
       children: (
         <List
           itemLayout="horizontal"
-           
+
           dataSource={[
             ...(assignments || []).map(assignment => ({ title: assignment })),
             ..._assignmentsSubmitted.map(assignment => ({
@@ -111,6 +111,14 @@ const Assignments = ({ courseID }) => {
           `http://localhost:3030/students?name=${firstName}+${lastName}`,
         );
         data[0].currentWaterPoints = data[0].currentWaterPoints + 1;
+        const today = new Date();
+        // Get the components of the current date
+        const month = (today.getMonth() + 1).toString().padStart(2, "0");
+        const day = today.getDate().toString().padStart(2, "0");
+        const year = today.getFullYear();
+        // Create a formatted date string in mm/dd/yyyy format
+        const formattedDate = `${month}/${day}/${year}`;
+        data[0].lastUpdatedWaterPoints = formattedDate;
         const updatedData = putData(
           `http://localhost:3030/students/${data[0].id}/`,
           data[0],
@@ -164,11 +172,11 @@ const Assignments = ({ courseID }) => {
           data[0].courses.filter(
             course => course.key === courseID,
           )[0].tabs.assignments.assignmentsSubmitted = [
-            ..._assignmentsSubmitted,
-            ..._assignmentsNotSubmitted.filter(
-              assignment => assignment.name === title,
-            ),
-          ];
+              ..._assignmentsSubmitted,
+              ..._assignmentsNotSubmitted.filter(
+                assignment => assignment.name === title,
+              ),
+            ];
           console.log(data, "data");
           const updatedData = putData(
             `http://localhost:3030/students/${data[0].id}/`,
