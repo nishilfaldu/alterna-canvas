@@ -16,7 +16,7 @@ const NavBar = () => {
         <Navbar.Brand href="/">
           <img
             alt="University of Cincinnati logo"
-            src="/University_of_Cincinnati_logo.png"
+            src="/logos/University_of_Cincinnati_logo.png"
             width="150"
             className="d-inline-block align-top"
           />
@@ -30,7 +30,7 @@ const NavBar = () => {
             <Tooltip title="Profile">
               <img
                 style={{ borderRadius: "50%", height: 50 }}
-                src={`/src/assets/profileImages/${user
+                src={`/profileImages/${user
                   .split(" ")[0]
                   .toLowerCase()}.jpg`}
               />
