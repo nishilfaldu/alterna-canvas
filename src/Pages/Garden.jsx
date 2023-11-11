@@ -61,7 +61,6 @@ const Garden = () => {
 
       if (numTimesWatered < 5) {
         updatedNumTimesWatered += 1;
-
         if (currentPlantTitle === "Neem Tree") {
           plantUpdate = `src/assets/images/plant/tree/stage${updatedNumTimesWatered}.png`;
         } else if (currentPlantTitle === "Tomato Plant") {
@@ -69,6 +68,7 @@ const Garden = () => {
         }
       } else {
         updatedNumTimesWatered = 0;
+        message.success("New level unlocked!");
 
         if (currentPlantTitle === "Neem Tree") {
           plantUpdate = "src/assets/images/empty.png";
@@ -122,73 +122,103 @@ const Garden = () => {
   };
 
   return (
-    <>
+    <div>
       <h1>My Garden</h1>
       <hr></hr>
       <br></br>
-      <Container>
-        <Row>
-          <Col>
-
-            <img
-              src={currentPlantImage}
-              style={{ width: "50%", height: "auto", aspectRatio: "1 / 1" }}
-              alt="Plant"
-            />
-          </Col>
-          <Col lg={8}>
-            <h2 style={{ marginBottom: 20 }}> {currentPlantTitle} </h2>
-            <ProgressBar
-              now={Math.round((numTimesWatered / 5) * 100)}
-              label={`${Math.round((numTimesWatered / 5) * 100)}%`}
-              style={{ height: "38px" }}
-            />
-            <p
-              style={{
-                display: "flex",
-              }}
-            >
-              Health: {numTimesWatered}/{5}{" "}
-              <MdOutlineWaterDrop
-                color="cornflowerblue"
-                style={{ margin: "auto 5" }}
+      {currentPlantTitle === "Done now" ? (
+        <Container>
+          <Row className="text-center">
+            <Row>
+              <img
+                src={currentPlantImage}
+                style={{ width: "10%", height: "auto", aspectRatio: "1 / 1" }}
+                alt="Plant-Empty"
+                className="mx-auto"
               />
-            </p>
-            <div style={{ marginTop: 20 }}>
-              <Button
-                style={{ width: "50%" }}
-                onClick={handleWatering}
-              >
-                Water Me
-                </Button>
-            </div>
-            <p style={{ display: "flex" }}>
-              {thisUserWaterPoints}{" "}
-              <MdOutlineWaterDrop
-                color="cornflowerblue"
-                style={{ margin: "auto 5" }}
-              />{" "}
-                available, {daysToWilt} days until wilted
-              </p>
-          </Col>
-        </Row>
-      </Container>
-
-      <img
-        src={currentGardenImage}
-        alt="Garden"
-        style={{
-          width: "70%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginTop: "150px",
-        }}
-      ></img>
-    </>
+              <p>All done for the semester!</p>
+            </Row>
+            <Row>
+              <img
+                src={currentGardenImage}
+                alt="Garden"
+                style={{
+                  width: "70%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  aspectRatio: "19 / 5",
+                }}
+              ></img>
+            </Row>
+          </Row>
+        </Container>
+      ) : (
+          <Container>
+            <Row>
+              <Col>
+                <img
+                  src={currentPlantImage}
+                  style={{ width: "50%", height: "auto", aspectRatio: "1 / 1" }}
+                  alt="Plant"
+                />
+              </Col>
+              <Col lg={8}>
+                <h2 style={{ marginBottom: 20 }}> {currentPlantTitle} </h2>
+                <ProgressBar
+                  now={Math.round((numTimesWatered / 5) * 100)}
+                  label={`${Math.round((numTimesWatered / 5) * 100)}%`}
+                  style={{ height: "38px" }}
+                />
+                <p
+                  style={{
+                    display: "flex",
+                  }}
+                >
+                  Health: {numTimesWatered}/{5}{" "}
+                  <MdOutlineWaterDrop
+                    color="cornflowerblue"
+                    style={{ margin: "auto 5" }}
+                  />
+                </p>
+                <div style={{ marginTop: 20 }}>
+                  <Button
+                    style={{ width: "50%" }}
+                    onClick={handleWatering}
+                  >
+                    Water Me
+                  </Button>
+                </div>
+                <p style={{ display: "flex" }}>
+                  {thisUserWaterPoints}{" "}
+                  <MdOutlineWaterDrop
+                    color="cornflowerblue"
+                    style={{ margin: "auto 5" }}
+                  />{" "}
+                  available, {daysToWilt} days until wilted
+                </p>
+              </Col>
+            </Row>
+            <Row>
+              <div style={{ marginTop: "200px" }}>
+                <img
+                  src={currentGardenImage}
+                  alt="Garden"
+                  style={{
+                    width: "70%",
+                    marginLeft: "auto",
+                    marginRight: "auto",
+                    aspectRatio: "19 / 5",
+                  }}
+                ></img>
+              </div>
+            </Row>
+          </Container>
+        )}
+    </div>
   );
 };
+
 Garden.propTypes = {
   courseID: PropTypes.string,
 };
-
 export default Garden;
