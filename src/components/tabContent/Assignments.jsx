@@ -1,6 +1,5 @@
-
 import { FileOutlined } from "@ant-design/icons";
-import { Collapse, List, Modal } from "antd";
+import { Collapse, List, Modal, Input } from "antd";
 import { message } from "antd";
 import PropTypes from "prop-types";
 import { useCallback, useEffect, useState } from "react";
@@ -12,6 +11,8 @@ import { getData, putData } from "../../scripts/jsonHelpers";
 import { useUser } from "../provider/useUser";
 
 
+
+const { TextArea } = Input;
 
 const Assignments = ({ courseID }) => {
   const [modal, contextHolder] = Modal.useModal();
@@ -133,74 +134,6 @@ const Assignments = ({ courseID }) => {
     });
   }, [modal, user]);
 
-  // const openSubmissionModal = useCallback(
-  //   (title, description) => {
-  //     const { destroy, update } = modal.info();
-  //     update({
-  //       title: title,
-  //       content: (
-  //         <>
-  //           <p>{description}</p>
-  //           <UploadFile
-  //             courseID={courseID}
-  //             folderType="assignments"
-  //             fileName={title}
-  //           />
-  //         </>
-  //       ),
-  //       closable: true,
-  //       cancelText: "Cancel",
-  //       icon: null,
-  //       okButtonProps: { style: { backgroundColor: "blue" } },
-  //       okCancel: true,
-  //       okText: "OK",
-  //       onCancel: destroy,
-  //       onOk: async () => {
-  //         const names = user.split(" ");
-  //         const firstName = names[0];
-  //         const lastName = names[1];
-
-  //         let data = await getData(
-  //           `http://localhost:3030/students?name=${firstName}+${lastName}`,
-  //         );
-  //         let assignmentsLeft = _assignmentsNotSubmitted.filter(
-  //           assignment => assignment.name !== title,
-  //         );
-  //         data[0].courses.filter(
-  //           course => course.key === courseID,
-  //         )[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
-  //         data[0].courses.filter(
-  //           course => course.key === courseID,
-  //         )[0].tabs.assignments.assignmentsSubmitted = [
-  //             ..._assignmentsSubmitted,
-  //             ..._assignmentsNotSubmitted.filter(
-  //               assignment => assignment.name === title,
-  //             ),
-  //           ];
-  //         console.log(data, "data");
-  //         const updatedData = putData(
-  //           `http://localhost:3030/students/${data[0].id}/`,
-  //           data[0],
-  //         );
-  //         if (updatedData) {
-  //           message.success("Assignment Submitted Successfully");
-  //         } else {
-  //           message.error("Error in submitting the assignment");
-  //         }
-  //         openRewardModal();
-  //       },
-  //     });
-  //   },
-  //   [
-  //     modal,
-  //     courseID,
-  //     openRewardModal,
-  //     user,
-  //     _assignmentsNotSubmitted,
-  //     _assignmentsSubmitted,
-  //   ],
-  // );
-
   const openSubmissionModal = useCallback(
     async (title, description) => {
       const { destroy, update } = modal.info();
@@ -209,6 +142,7 @@ const Assignments = ({ courseID }) => {
         content: (
           <>
             <p>{description}</p>
+            <TextArea rows={4} style={{marginBottom: 20 }} />
             <UploadFile
               courseID={courseID}
               folderType="assignments"
@@ -255,8 +189,13 @@ const Assignments = ({ courseID }) => {
             setAssignmentsSubmitted(updatedAssignmentsSubmitted);
 
             // Update data on the server
-            studentData[0].courses[courseIdIndex].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
-            studentData[0].courses[courseIdIndex].tabs.assignments.assignmentsSubmitted = updatedAssignmentsSubmitted;
+            studentData[0].courses[
+              courseIdIndex
+            ].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
+            studentData[0].courses[
+              courseIdIndex
+            ].tabs.assignments.assignmentsSubmitted =
+              updatedAssignmentsSubmitted;
 
             const updatedData = putData(
               `http://localhost:3030/students/${studentData[0].id}/`,
