@@ -1,18 +1,13 @@
 import { message } from "antd";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  ProgressBar,
-  Button,
-  Spinner,
-} from "react-bootstrap";
+import { Container, Row, Col, ProgressBar, Button } from "react-bootstrap";
 import { MdOutlineWaterDrop } from "react-icons/md";
 
 import { useUser } from "./provider/useUser";
 import { getData, putData } from "../scripts/jsonHelpers";
+
+
 
 const GardenComp = ({ isDashboard }) => {
   const { user } = useUser();
@@ -25,7 +20,7 @@ const GardenComp = ({ isDashboard }) => {
         if (user) {
           const names = user.split(" ");
           const allUsersData = await getData(
-            `http://localhost:3030/students?name=${names[0]}+${names[1]}`
+            `http://localhost:3030/students?name=${names[0]}+${names[1]}`,
           );
           const thisUsersData = allUsersData[0];
 
@@ -36,8 +31,43 @@ const GardenComp = ({ isDashboard }) => {
           const daysDifference = Math.ceil(
             timeDifference / (1000 * 60 * 60 * 24)
           );
-          setDaysToWilt(14 - daysDifference);
+          const calculatedDaysToWilt = 14 - daysDifference;
 
+          // Update accordingly if the plant is wilted
+          if (calculatedDaysToWilt <= 0) {
+            // Tell the user that their plant has wilted
+            message.warning(
+              "Your plant has wilted and your progress for this plant has reset. Be sure to water your plant at least once every 2 weeks!",
+              7,
+            );
+
+            const updatedPlantImage = `/plantImages/${
+              thisUsersData.currentPlantName === "Apple Tree"
+                ? "tree"
+                : "tomato"
+            }/stage${0}.jpg`;
+
+            // Update the variable to be stored in the state
+            thisUsersData.numTimesWatered = 0;
+            thisUsersData.currentPlantImage = updatedPlantImage;
+
+            // Update the variable in the JSON file
+            try {
+              const newUserData = {
+                ...userData,
+                numTimesWatered: 0,
+                currentPlantImage: updatedPlantImage,
+              };
+              await putData(
+                `http://localhost:3030/students/${userData.id}/`,
+                newUserData,
+              );
+            } catch (error) {
+              console.error("Error saving to JSON file: ", error);
+            }
+          }
+
+          setDaysToWilt(calculatedDaysToWilt);
           setUserData(thisUsersData);
         }
       } catch (error) {
@@ -46,6 +76,7 @@ const GardenComp = ({ isDashboard }) => {
     };
 
     fetchData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const handleWatering = async () => {
@@ -112,7 +143,7 @@ const GardenComp = ({ isDashboard }) => {
         try {
           const updatedData = await putData(
             `http://localhost:3030/students/${userData.id}/`,
-            newUserData
+            newUserData,
           );
 
           if (updatedData) {
@@ -125,7 +156,7 @@ const GardenComp = ({ isDashboard }) => {
         }
       } else {
         message.error(
-          "Out of water points. Please refill by submitting more assignments!"
+          "Out of water points. Please refill by submitting more assignments!",
         );
       }
     }
@@ -203,7 +234,8 @@ const GardenComp = ({ isDashboard }) => {
                   color="cornflowerblue"
                   style={{ margin: "auto 5" }}
                 />{" "}
-                available, {daysToWilt} days until wilted
+                available,{" "}
+                {daysToWilt > 0 ? `${daysToWilt} days until wilted` : "wilted"}
               </p>
             </Col>
           </Row>
