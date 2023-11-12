@@ -61,23 +61,23 @@ const Garden = () => {
 
       if (numTimesWatered < 5) {
         updatedNumTimesWatered += 1;
-        if (currentPlantTitle === "Neem Tree") {
-          plantUpdate = `src/assets/images/plant/tree/stage${updatedNumTimesWatered}.png`;
+        if (currentPlantTitle === "Apple Tree") {
+          plantUpdate = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
         } else if (currentPlantTitle === "Tomato Plant") {
-          plantUpdate = `src/assets/images/plant/tomato/stage${updatedNumTimesWatered}.png`;
+          plantUpdate = `/plantImages/tomato/stage${updatedNumTimesWatered}.jpg`;
         }
       } else {
         updatedNumTimesWatered = 0;
         message.success("New level unlocked!");
 
-        if (currentPlantTitle === "Neem Tree") {
-          plantUpdate = "src/assets/images/empty.png";
-          gardenUpdate = "src/assets/images/plant/garden5.png";
+        if (currentPlantTitle === "Apple Tree") {
+          plantUpdate = "/plantImages/empty.png";
+          gardenUpdate = "/plantImages/garden5.png";
           plantTitle = "Done now";
         } else if (currentPlantTitle === "Tomato Plant") {
-          plantUpdate = `src/assets/images/plant/tree/stage${updatedNumTimesWatered}.png`;
-          gardenUpdate = "src/assets/images/plant/garden4.png";
-          plantTitle = "Neem Tree";
+          plantUpdate = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
+          gardenUpdate = "/plantImages/garden4.png";
+          plantTitle = "Apple Tree";
         }
       }
 
