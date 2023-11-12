@@ -133,8 +133,76 @@ const Assignments = ({ courseID }) => {
     });
   }, [modal, user]);
 
+  // const openSubmissionModal = useCallback(
+  //   (title, description) => {
+  //     const { destroy, update } = modal.info();
+  //     update({
+  //       title: title,
+  //       content: (
+  //         <>
+  //           <p>{description}</p>
+  //           <UploadFile
+  //             courseID={courseID}
+  //             folderType="assignments"
+  //             fileName={title}
+  //           />
+  //         </>
+  //       ),
+  //       closable: true,
+  //       cancelText: "Cancel",
+  //       icon: null,
+  //       okButtonProps: { style: { backgroundColor: "blue" } },
+  //       okCancel: true,
+  //       okText: "OK",
+  //       onCancel: destroy,
+  //       onOk: async () => {
+  //         const names = user.split(" ");
+  //         const firstName = names[0];
+  //         const lastName = names[1];
+
+  //         let data = await getData(
+  //           `http://localhost:3030/students?name=${firstName}+${lastName}`,
+  //         );
+  //         let assignmentsLeft = _assignmentsNotSubmitted.filter(
+  //           assignment => assignment.name !== title,
+  //         );
+  //         data[0].courses.filter(
+  //           course => course.key === courseID,
+  //         )[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
+  //         data[0].courses.filter(
+  //           course => course.key === courseID,
+  //         )[0].tabs.assignments.assignmentsSubmitted = [
+  //             ..._assignmentsSubmitted,
+  //             ..._assignmentsNotSubmitted.filter(
+  //               assignment => assignment.name === title,
+  //             ),
+  //           ];
+  //         console.log(data, "data");
+  //         const updatedData = putData(
+  //           `http://localhost:3030/students/${data[0].id}/`,
+  //           data[0],
+  //         );
+  //         if (updatedData) {
+  //           message.success("Assignment Submitted Successfully");
+  //         } else {
+  //           message.error("Error in submitting the assignment");
+  //         }
+  //         openRewardModal();
+  //       },
+  //     });
+  //   },
+  //   [
+  //     modal,
+  //     courseID,
+  //     openRewardModal,
+  //     user,
+  //     _assignmentsNotSubmitted,
+  //     _assignmentsSubmitted,
+  //   ],
+  // );
+
   const openSubmissionModal = useCallback(
-    (title, description) => {
+    async (title, description) => {
       const { destroy, update } = modal.info();
       update({
         title: title,
@@ -160,34 +228,49 @@ const Assignments = ({ courseID }) => {
           const firstName = names[0];
           const lastName = names[1];
 
-          let data = await getData(
+          let studentData = await getData(
             `http://localhost:3030/students?name=${firstName}+${lastName}`,
           );
-          let assignmentsLeft = _assignmentsNotSubmitted.filter(
-            assignment => assignment.name !== title,
+
+          const courseIdIndex = studentData[0]?.courses.findIndex(
+            course => course.key === courseID,
           );
-          data[0].courses.filter(
-            course => course.key === courseID,
-          )[0].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
-          data[0].courses.filter(
-            course => course.key === courseID,
-          )[0].tabs.assignments.assignmentsSubmitted = [
+
+          if (courseIdIndex !== -1) {
+            const assignmentsLeft = _assignmentsNotSubmitted.filter(
+              assignment => assignment.name !== title,
+            );
+
+            // Update local state
+            setAssignmentsNotSubmitted(assignmentsLeft);
+
+            const updatedAssignmentsSubmitted = [
               ..._assignmentsSubmitted,
               ..._assignmentsNotSubmitted.filter(
                 assignment => assignment.name === title,
               ),
             ];
-          console.log(data, "data");
-          const updatedData = putData(
-            `http://localhost:3030/students/${data[0].id}/`,
-            data[0],
-          );
-          if (updatedData) {
-            message.success("Assignment Submitted Successfully");
-          } else {
-            message.error("Error in submitting the assignment");
+
+            // Update local state
+            setAssignmentsSubmitted(updatedAssignmentsSubmitted);
+
+            // Update data on the server
+            studentData[0].courses[courseIdIndex].tabs.assignments.assignmentsNotSubmitted = assignmentsLeft;
+            studentData[0].courses[courseIdIndex].tabs.assignments.assignmentsSubmitted = updatedAssignmentsSubmitted;
+
+            const updatedData = putData(
+              `http://localhost:3030/students/${studentData[0].id}/`,
+              studentData[0],
+            );
+
+            if (updatedData) {
+              message.success("Assignment Submitted Successfully");
+            } else {
+              message.error("Error in submitting the assignment");
+            }
+
+            openRewardModal();
           }
-          openRewardModal();
         },
       });
     },
@@ -198,6 +281,8 @@ const Assignments = ({ courseID }) => {
       user,
       _assignmentsNotSubmitted,
       _assignmentsSubmitted,
+      setAssignmentsNotSubmitted,
+      setAssignmentsSubmitted,
     ],
   );
 
