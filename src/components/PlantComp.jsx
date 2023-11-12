@@ -1,7 +1,14 @@
 import { message } from "antd";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
-import { Container, Row, Col, ProgressBar, Button } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  ProgressBar,
+  Button,
+  Spinner,
+} from "react-bootstrap";
 import { MdOutlineWaterDrop } from "react-icons/md";
 
 import { useUser } from "./provider/useUser";
@@ -9,40 +16,32 @@ import { getData, putData } from "../scripts/jsonHelpers";
 
 const GardenComp = ({ isDashboard }) => {
   const { user } = useUser();
-  const [thisUserWaterPoints, setThisUsersWaterPoints] = useState(null);
+  const [userData, setUserData] = useState(null);
   const [daysToWilt, setDaysToWilt] = useState(null);
-  const [numTimesWatered, setNumTimesWatered] = useState(null);
-  const [currentPlantImage, setCurrentPlantImage] = useState(null);
-  const [currentGardenImage, setCurrentGardenImage] = useState(null);
-  const [currentPlantTitle, setCurrentPlantTitle] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         if (user) {
           const names = user.split(" ");
-          const firstName = names[0];
-          const lastName = names[1];
-          const allWaterData = await getData(
-            `http://localhost:3030/students?name=${firstName}+${lastName}`
+          const allUsersData = await getData(
+            `http://localhost:3030/students?name=${names[0]}+${names[1]}`
           );
+          const thisUsersData = allUsersData[0];
 
-          const date = new Date(allWaterData[0].lastUpdatedWaterPoints);
+          // Calculate the time to wilt
+          const date = new Date(thisUsersData.lastUpdatedWaterPoints);
           const today = new Date();
           const timeDifference = Math.abs(today - date);
           const daysDifference = Math.ceil(
             timeDifference / (1000 * 60 * 60 * 24)
           );
-
-          setThisUsersWaterPoints(allWaterData[0].currentWaterPoints);
           setDaysToWilt(14 - daysDifference);
-          setNumTimesWatered(allWaterData[0].numTimesWatered);
-          setCurrentPlantImage(allWaterData[0].currentPlantImage);
-          setCurrentGardenImage(allWaterData[0].currentGardenImage);
-          setCurrentPlantTitle(allWaterData[0].currentPlantName);
+
+          setUserData(thisUsersData);
         }
       } catch (error) {
-        message.error("Error fetching data:", error);
+        message.error("Error fetching data: ", error);
       }
     };
 
@@ -50,72 +49,85 @@ const GardenComp = ({ isDashboard }) => {
   }, [user]);
 
   const handleWatering = async () => {
-    if (thisUserWaterPoints > 0) {
-      const updatedWaterPoints = thisUserWaterPoints - 1;
-      let updatedNumTimesWatered = numTimesWatered;
-      let plantUpdate = currentPlantImage;
-      let gardenUpdate = currentGardenImage;
-      let plantTitle = currentPlantTitle;
+    if (userData) {
+      const {
+        currentWaterPoints,
+        numTimesWatered,
+        currentPlantImage,
+        currentGardenImage,
+        currentPlantName,
+      } = userData;
 
-      if (numTimesWatered < 5) {
-        updatedNumTimesWatered += 1;
-        if (currentPlantTitle === "Apple Tree") {
-          plantUpdate = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
-        } else if (currentPlantTitle === "Tomato Plant") {
-          plantUpdate = `/plantImages/tomato/stage${updatedNumTimesWatered}.jpg`;
-        }
-      } else {
-        updatedNumTimesWatered = 0;
-        message.success("New level unlocked!");
+      if (currentWaterPoints > 0) {
+        const updatedWaterPoints = currentWaterPoints - 1;
+        let updatedNumTimesWatered = numTimesWatered;
+        let updatedPlantImage = currentPlantImage;
+        let updatedGardenImage = currentGardenImage;
+        let updatedPlantName = currentPlantName;
 
-        if (currentPlantTitle === "Apple Tree") {
-          plantUpdate = "/plantImages/empty.png";
-          gardenUpdate = "/plantImages/garden5.png";
-          plantTitle = "Done now";
-        } else if (currentPlantTitle === "Tomato Plant") {
-          plantUpdate = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
-          gardenUpdate = "/plantImages/garden4.png";
-          plantTitle = "Apple Tree";
-        }
-      }
-
-      setThisUsersWaterPoints(updatedWaterPoints);
-      setNumTimesWatered(updatedNumTimesWatered);
-      setCurrentGardenImage(gardenUpdate);
-      setCurrentPlantImage(plantUpdate);
-      setCurrentPlantTitle(plantTitle);
-
-      try {
-        const names = user.split(" ");
-        const firstName = names[0];
-        const lastName = names[1];
-
-        let data = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`
-        );
-        data[0].currentWaterPoints = updatedWaterPoints;
-        data[0].numTimesWatered = updatedNumTimesWatered;
-        data[0].currentPlantImage = plantUpdate;
-        data[0].currentGardenImage = gardenUpdate;
-        data[0].currentPlantName = plantTitle;
-
-        const updatedData = await putData(
-          `http://localhost:3030/students/${data[0].id}/`,
-          data[0]
-        );
-
-        if (updatedData) {
-          message.success("Water point used!");
+        if (numTimesWatered < 4) {
+          updatedNumTimesWatered++;
+          if (currentPlantName === "Apple Tree") {
+            updatedPlantImage = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
+          } else if (currentPlantName === "Tomato Plant") {
+            updatedPlantImage = `/plantImages/tomato/stage${updatedNumTimesWatered}.jpg`;
+          }
         } else {
+          updatedNumTimesWatered = 0;
+          if (currentPlantName === "Apple Tree") {
+            message.success("Garden completed!");
+            updatedPlantImage = "/plantImages/empty.png";
+            updatedGardenImage = "/plantImages/garden5.png";
+            updatedPlantName = "Done now";
+          } else if (currentPlantName === "Tomato Plant") {
+            message.success("New level unlocked!");
+            updatedPlantImage = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
+            updatedGardenImage = "/plantImages/garden4.png";
+            updatedPlantName = "Apple Tree";
+          }
+        }
+
+        const now = new Date();
+
+        const newUserData = {
+          ...userData,
+          currentWaterPoints: updatedWaterPoints,
+          lastUpdatedWaterPoints: `${(now.getMonth() + 1)
+            .toString()
+            .padStart(2, "0")}/${now
+            .getDate()
+            .toString()
+            .padStart(2, "0")}/${now.getFullYear().toString()}`,
+          numTimesWatered: updatedNumTimesWatered,
+          currentPlantImage: updatedPlantImage,
+          currentGardenImage: updatedGardenImage,
+          currentPlantName: updatedPlantName,
+        };
+
+        // Update the state of the page
+        setUserData(newUserData);
+        setDaysToWilt(14);
+
+        // Update the JSON file
+        try {
+          const updatedData = await putData(
+            `http://localhost:3030/students/${userData.id}/`,
+            newUserData
+          );
+
+          if (updatedData) {
+            message.success("Water point used!");
+          } else {
+            message.error("Error updating water points.");
+          }
+        } catch (error) {
           message.error("Error updating water points.");
         }
-      } catch (error) {
-        message.error("Error updating water points.");
+      } else {
+        message.error(
+          "Out of water points. Please refill by submitting more assignments!"
+        );
       }
-    } else {
-      message.error(
-        "Out of water points. Please refill by submitting more assignments!"
-      );
     }
   };
 
@@ -123,14 +135,13 @@ const GardenComp = ({ isDashboard }) => {
     <>
       <h1>My Garden</h1>
       <hr></hr>
-      <br></br>
-      {currentPlantTitle === "Done now" ? (
+      {userData && userData.currentPlantName === "Done now" && (
         <Container>
           <Row className="text-center">
             <Col>
               <Row style={{ marginBottom: 50 }}>
                 <img
-                  src={currentPlantImage}
+                  src={userData.currentPlantImage}
                   style={{
                     width: "15%",
                     height: "auto",
@@ -145,21 +156,29 @@ const GardenComp = ({ isDashboard }) => {
             </Col>
           </Row>
         </Container>
-      ) : (
+      )}
+      {userData && userData.currentPlantName !== "Done now" && (
         <Container>
           <Row>
             <Col>
               <img
-                src={currentPlantImage}
-                style={{ width: "50%", height: "auto", aspectRatio: "1 / 1" }}
+                src={userData.currentPlantImage}
+                style={{
+                  width: "50%",
+                  height: "auto",
+                  aspectRatio: "1 / 1",
+                }}
                 alt="Plant"
               />
             </Col>
             <Col lg={8}>
-              <h2 style={{ marginBottom: 20 }}> {currentPlantTitle} </h2>
+              <h2 style={{ marginBottom: 20 }}>
+                {" "}
+                {userData.currentPlantName}{" "}
+              </h2>
               <ProgressBar
-                now={Math.round((numTimesWatered / 5) * 100)}
-                label={`${Math.round((numTimesWatered / 5) * 100)}%`}
+                now={Math.round((userData.numTimesWatered / 5) * 100)}
+                label={`${Math.round((userData.numTimesWatered / 5) * 100)}%`}
                 style={{ height: "38px" }}
               />
               <p
@@ -167,7 +186,7 @@ const GardenComp = ({ isDashboard }) => {
                   display: "flex",
                 }}
               >
-                Health: {numTimesWatered}/{5}{" "}
+                Health: {userData.numTimesWatered}/{5}{" "}
                 <MdOutlineWaterDrop
                   color="cornflowerblue"
                   style={{ margin: "auto 5" }}
@@ -179,7 +198,7 @@ const GardenComp = ({ isDashboard }) => {
                 </Button>
               </div>
               <p style={{ display: "flex" }}>
-                {thisUserWaterPoints}{" "}
+                {userData.currentWaterPoints}{" "}
                 <MdOutlineWaterDrop
                   color="cornflowerblue"
                   style={{ margin: "auto 5" }}
@@ -191,10 +210,10 @@ const GardenComp = ({ isDashboard }) => {
         </Container>
       )}
       {/* Only show the entire garden in the Garden page (not on the Dashboard) */}
-      {!isDashboard && (
+      {!isDashboard && userData && (
         <div style={{ marginTop: "125px" }}>
           <img
-            src={currentGardenImage}
+            src={userData.currentGardenImage}
             alt="Garden"
             style={{
               width: "70%",
