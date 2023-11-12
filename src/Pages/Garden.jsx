@@ -61,23 +61,23 @@ const Garden = () => {
 
       if (numTimesWatered < 5) {
         updatedNumTimesWatered += 1;
-        if (currentPlantTitle === "Neem Tree") {
-          plantUpdate = `src/assets/images/plant/tree/stage${updatedNumTimesWatered}.png`;
+        if (currentPlantTitle === "Apple Tree") {
+          plantUpdate = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
         } else if (currentPlantTitle === "Tomato Plant") {
-          plantUpdate = `src/assets/images/plant/tomato/stage${updatedNumTimesWatered}.png`;
+          plantUpdate = `/plantImages/tomato/stage${updatedNumTimesWatered}.jpg`;
         }
       } else {
         updatedNumTimesWatered = 0;
         message.success("New level unlocked!");
 
-        if (currentPlantTitle === "Neem Tree") {
-          plantUpdate = "src/assets/images/empty.png";
-          gardenUpdate = "src/assets/images/plant/garden5.png";
+        if (currentPlantTitle === "Apple Tree") {
+          plantUpdate = "/plantImages/empty.png";
+          gardenUpdate = "/plantImages/garden5.png";
           plantTitle = "Done now";
         } else if (currentPlantTitle === "Tomato Plant") {
-          plantUpdate = `src/assets/images/plant/tree/stage${updatedNumTimesWatered}.png`;
-          gardenUpdate = "src/assets/images/plant/garden4.png";
-          plantTitle = "Neem Tree";
+          plantUpdate = `/plantImages/tree/stage${updatedNumTimesWatered}.jpg`;
+          gardenUpdate = "/plantImages/garden4.png";
+          plantTitle = "Apple Tree";
         }
       }
 
@@ -129,77 +129,17 @@ const Garden = () => {
       {currentPlantTitle === "Done now" ? (
         <Container>
           <Row className="text-center">
-            <Row>
-              <img
-                src={currentPlantImage}
-                style={{ width: "10%", height: "auto", aspectRatio: "1 / 1" }}
-                alt="Plant-Empty"
-                className="mx-auto"
-              />
-              <p>All done for the semester!</p>
-            </Row>
-            <Row>
-              <img
-                src={currentGardenImage}
-                alt="Garden"
-                style={{
-                  width: "70%",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  aspectRatio: "19 / 5",
-                }}
-              ></img>
-            </Row>
-          </Row>
-        </Container>
-      ) : (
-          <Container>
-            <Row>
-              <Col>
+            <Col>
+              <Row style={{ marginBottom: 50 }}>
                 <img
                   src={currentPlantImage}
-                  style={{ width: "50%", height: "auto", aspectRatio: "1 / 1" }}
-                  alt="Plant"
+                  style={{ width: "15%", height: "auto", aspectRatio: "1 / 1", marginBottom: 20 }}
+                  alt="Plant-Empty"
+                  className="mx-auto"
                 />
-              </Col>
-              <Col lg={8}>
-                <h2 style={{ marginBottom: 20 }}> {currentPlantTitle} </h2>
-                <ProgressBar
-                  now={Math.round((numTimesWatered / 5) * 100)}
-                  label={`${Math.round((numTimesWatered / 5) * 100)}%`}
-                  style={{ height: "38px" }}
-                />
-                <p
-                  style={{
-                    display: "flex",
-                  }}
-                >
-                  Health: {numTimesWatered}/{5}{" "}
-                  <MdOutlineWaterDrop
-                    color="cornflowerblue"
-                    style={{ margin: "auto 5" }}
-                  />
-                </p>
-                <div style={{ marginTop: 20 }}>
-                  <Button
-                    style={{ width: "50%" }}
-                    onClick={handleWatering}
-                  >
-                    Water Me
-                  </Button>
-                </div>
-                <p style={{ display: "flex" }}>
-                  {thisUserWaterPoints}{" "}
-                  <MdOutlineWaterDrop
-                    color="cornflowerblue"
-                    style={{ margin: "auto 5" }}
-                  />{" "}
-                  available, {daysToWilt} days until wilted
-                </p>
-              </Col>
-            </Row>
-            <Row>
-              <div style={{ marginTop: "200px" }}>
+                <h2>All done for the semester!</h2>
+              </Row>
+              <Row>
                 <img
                   src={currentGardenImage}
                   alt="Garden"
@@ -210,10 +150,69 @@ const Garden = () => {
                     aspectRatio: "19 / 5",
                   }}
                 ></img>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      ) : (
+        <Container>
+          <Row>
+            <Col>
+              <img
+                src={currentPlantImage}
+                style={{ width: "50%", height: "auto", aspectRatio: "1 / 1" }}
+                alt="Plant"
+              />
+            </Col>
+            <Col lg={8}>
+              <h2 style={{ marginBottom: 20 }}> {currentPlantTitle} </h2>
+              <ProgressBar
+                now={Math.round((numTimesWatered / 5) * 100)}
+                label={`${Math.round((numTimesWatered / 5) * 100)}%`}
+                style={{ height: "38px" }}
+              />
+              <p
+                style={{
+                  display: "flex",
+                }}
+              >
+                Health: {numTimesWatered}/{5}{" "}
+                <MdOutlineWaterDrop
+                  color="cornflowerblue"
+                  style={{ margin: "auto 5" }}
+                />
+              </p>
+              <div style={{ marginTop: 20 }}>
+                <Button style={{ width: "50%" }} onClick={handleWatering}>
+                  Water Me
+                </Button>
               </div>
-            </Row>
-          </Container>
-        )}
+              <p style={{ display: "flex" }}>
+                {thisUserWaterPoints}{" "}
+                <MdOutlineWaterDrop
+                  color="cornflowerblue"
+                  style={{ margin: "auto 5" }}
+                />{" "}
+                available, {daysToWilt} days until wilted
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            <div style={{ marginTop: "150px" }}>
+              <img
+                src={currentGardenImage}
+                alt="Garden"
+                style={{
+                  width: "70%",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  aspectRatio: "19 / 5",
+                }}
+              ></img>
+            </div>
+          </Row>
+        </Container>
+      )}
     </div>
   );
 };

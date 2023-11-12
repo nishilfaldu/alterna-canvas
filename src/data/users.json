@@ -8,9 +8,9 @@
       "currentWaterPoints": 3,
       "lastUpdatedWaterPoints": "11/10/2023",
       "numTimesWatered": 2,
-      "currentPlantImage": "src/assets/images/plant/tree/stage2.png",
-      "currentGardenImage": "src/assets/images/plant/garden4.png",
-      "currentPlantName": "Neem Tree",
+      "currentPlantImage": "/plantImages/tree/stage2.jpg",
+      "currentGardenImage": "/plantImages/garden4.png",
+      "currentPlantName": "Apple Tree",
       "courses": [
         {
           "name": "User Interface",
@@ -802,8 +802,8 @@
       "currentWaterPoints": 6,
       "lastUpdatedWaterPoints": "11/10/2023",
       "numTimesWatered": 0,
-      "currentPlantImage": "src/assets/images/plant/tomato/stage0.png",
-      "currentGardenImage": "src/assets/images/plant/garden3.png",
+      "currentPlantImage": "/plantImages/tomato/stage0.jpg",
+      "currentGardenImage": "/plantImages/garden3.png",
       "currentPlantName": "Tomato Plant",
       "courses": [
         {
@@ -1589,9 +1589,9 @@
       "currentWaterPoints": 8,
       "lastUpdatedWaterPoints": "11/10/2023",
       "numTimesWatered": 4,
-      "currentPlantImage": "src/assets/images/plant/tree/stage4.png",
-      "currentGardenImage": "src/assets/images/plant/garden4.png",
-      "currentPlantName": "Neem Tree",
+      "currentPlantImage": "/plantImages/tree/stage4.jpg",
+      "currentGardenImage": "/plantImages/garden4.png",
+      "currentPlantName": "Apple Tree",
       "courses": [
         {
           "name": "User Interface",
@@ -1859,31 +1859,31 @@
               "examWeightage": 0.1
             },
             "assignments": {
-                "assignmentsNotSubmitted": [
-                  {
-                    "name": "P2 Sketching and Formative Eval Checkpoint",
-                    "dueDate": "2023-11-01, 11:59pm",
-                    "description": "This is sample description A",
-                    "class": "User Interface"
-                  },
-                  {
-                    "name": "Heuristic Evaluation Submission",
-                    "dueDate": "2023-11-03, 11:59pm",
-                    "description": "This is sample description B",
-                    "class": "User Interface"
-                  },
-                  {
-                    "name": "Project 2 Implementation Checkpoint",
-                    "dueDate": "2023-11-06, 11:59pm",
-                    "description": "This is sample description C",
-                    "class": "User Interface"
-                  }
-                ],
-                "assignmentsSubmitted": []
-              },
-              "files": {},
-              "zoom": {}
-            }
+              "assignmentsNotSubmitted": [
+                {
+                  "name": "P2 Sketching and Formative Eval Checkpoint",
+                  "dueDate": "2023-11-01, 11:59pm",
+                  "description": "This is sample description A",
+                  "class": "User Interface"
+                },
+                {
+                  "name": "Heuristic Evaluation Submission",
+                  "dueDate": "2023-11-03, 11:59pm",
+                  "description": "This is sample description B",
+                  "class": "User Interface"
+                },
+                {
+                  "name": "Project 2 Implementation Checkpoint",
+                  "dueDate": "2023-11-06, 11:59pm",
+                  "description": "This is sample description C",
+                  "class": "User Interface"
+                }
+              ],
+              "assignmentsSubmitted": []
+            },
+            "files": {},
+            "zoom": {}
+          }
         },
         {
           "name": "Senior Design",
