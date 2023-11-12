@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, ProgressBar, Button } from "react-bootstrap";
 import { MdOutlineWaterDrop } from "react-icons/md";
 
-import { useUser } from "../components/provider/useUser";
+import { useUser } from "./provider/useUser";
 import { getData, putData } from "../scripts/jsonHelpers";
 
-
-
-const Garden = () => {
+const GardenComp = ({ isDashboard }) => {
   const { user } = useUser();
   const [thisUserWaterPoints, setThisUsersWaterPoints] = useState(null);
   const [daysToWilt, setDaysToWilt] = useState(null);
@@ -26,14 +24,14 @@ const Garden = () => {
           const firstName = names[0];
           const lastName = names[1];
           const allWaterData = await getData(
-            `http://localhost:3030/students?name=${firstName}+${lastName}`,
+            `http://localhost:3030/students?name=${firstName}+${lastName}`
           );
 
           const date = new Date(allWaterData[0].lastUpdatedWaterPoints);
           const today = new Date();
           const timeDifference = Math.abs(today - date);
           const daysDifference = Math.ceil(
-            timeDifference / (1000 * 60 * 60 * 24),
+            timeDifference / (1000 * 60 * 60 * 24)
           );
 
           setThisUsersWaterPoints(allWaterData[0].currentWaterPoints);
@@ -93,7 +91,7 @@ const Garden = () => {
         const lastName = names[1];
 
         let data = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+          `http://localhost:3030/students?name=${firstName}+${lastName}`
         );
         data[0].currentWaterPoints = updatedWaterPoints;
         data[0].numTimesWatered = updatedNumTimesWatered;
@@ -103,7 +101,7 @@ const Garden = () => {
 
         const updatedData = await putData(
           `http://localhost:3030/students/${data[0].id}/`,
-          data[0],
+          data[0]
         );
 
         if (updatedData) {
@@ -116,13 +114,13 @@ const Garden = () => {
       }
     } else {
       message.error(
-        "Out of water points. Please refill by submitting more assignments!",
+        "Out of water points. Please refill by submitting more assignments!"
       );
     }
   };
 
   return (
-    <div>
+    <>
       <h1>My Garden</h1>
       <hr></hr>
       <br></br>
@@ -133,23 +131,16 @@ const Garden = () => {
               <Row style={{ marginBottom: 50 }}>
                 <img
                   src={currentPlantImage}
-                  style={{ width: "15%", height: "auto", aspectRatio: "1 / 1", marginBottom: 20 }}
+                  style={{
+                    width: "15%",
+                    height: "auto",
+                    aspectRatio: "1 / 1",
+                    marginBottom: 20,
+                  }}
                   alt="Plant-Empty"
                   className="mx-auto"
                 />
                 <h2>All done for the semester!</h2>
-              </Row>
-              <Row>
-                <img
-                  src={currentGardenImage}
-                  alt="Garden"
-                  style={{
-                    width: "70%",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    aspectRatio: "19 / 5",
-                  }}
-                ></img>
               </Row>
             </Col>
           </Row>
@@ -197,27 +188,28 @@ const Garden = () => {
               </p>
             </Col>
           </Row>
-          <Row>
-            <div style={{ marginTop: "150px" }}>
-              <img
-                src={currentGardenImage}
-                alt="Garden"
-                style={{
-                  width: "70%",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  aspectRatio: "19 / 5",
-                }}
-              ></img>
-            </div>
-          </Row>
         </Container>
       )}
-    </div>
+      {/* Only show the entire garden in the Garden page (not on the Dashboard) */}
+      {!isDashboard && (
+        <div style={{ marginTop: "125px" }}>
+          <img
+            src={currentGardenImage}
+            alt="Garden"
+            style={{
+              width: "70%",
+              marginLeft: "auto",
+              marginRight: "auto",
+              aspectRatio: "19 / 5",
+            }}
+          ></img>
+        </div>
+      )}
+    </>
   );
 };
 
-Garden.propTypes = {
-  courseID: PropTypes.string,
+GardenComp.propTypes = {
+  isDashboard: PropTypes.bool,
 };
-export default Garden;
+export default GardenComp;

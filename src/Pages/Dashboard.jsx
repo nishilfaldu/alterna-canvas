@@ -6,6 +6,8 @@ import PlantStatus from "../components/dashboardComponents/PlantStatus";
 import Todo from "../components/dashboardComponents/Todo";
 import { useUser } from "../components/provider/useUser";
 
+import PlantComp from "../components/PlantComp";
+
 
 
 const Dashboard = () => {
@@ -35,7 +37,7 @@ const Dashboard = () => {
       </Row>
       <Row style={{ marginTop: 20 }}>
         <Col lg={8}>
-          <PlantStatus />
+          <PlantComp isDashboard={true} />
         </Col>
         <Col>
           <Announcements />
