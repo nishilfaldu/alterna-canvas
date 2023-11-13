@@ -1,8 +1,6 @@
 import { Collapse, Select } from "antd";
 import { useState } from "react";
 
-
-
 const { Option } = Select;
 const announcementsData = [
   {
@@ -62,12 +60,12 @@ const announcementsData = [
 ];
 
 const AnnouncementsComp = () => {
-  const onChange = key => {
+  const onChange = (key) => {
     console.log(key);
   };
 
   const [expandIconPosition, setExpandIconPosition] = useState("start");
-  const onPositionChange = newExpandIconPosition => {
+  const onPositionChange = (newExpandIconPosition) => {
     setExpandIconPosition(newExpandIconPosition);
   };
 
@@ -81,7 +79,9 @@ const AnnouncementsComp = () => {
       ></Collapse>
 
       <br />
-      <span>Expand Icon Position: </span>
+      <span style={{ fontSize: 12, color: "grey" }}>
+        Expand Icon Position:{" "}
+      </span>
       <Select
         value={expandIconPosition}
         style={{
