@@ -290,9 +290,7 @@
                   "dueDate": "2023-11-06, 11:59pm",
                   "description": "This is sample description C",
                   "class": "User Interface"
-                }
-              ],
-              "assignmentsSubmitted": [
+                },
                 {
                   "name": "Project 2 Implementation Checkpoint",
                   "dueDate": "2023-11-06, 11:59pm",
@@ -305,6 +303,9 @@
                   "description": "This is sample description A",
                   "class": "User Interface"
                 }
+              ],
+              "assignmentsSubmitted": [
+                
               ]
             }
           },
@@ -754,44 +755,6 @@
         {
           "type": "Peach"
         }
-      ],
-      "todoList": [
-        {
-          "task": "P2 Sketching and Formative Eval Checkpoint",
-          "dueDate": "2023-11-01, 11:59pm"
-        },
-        {
-          "task": "Heuristic Evaluation Submission",
-          "dueDate": "2023-11-03, 11:59pm"
-        },
-        {
-          "task": "Project 2 Implementation Checkpoint",
-          "dueDate": "2023-11-06, 11:59pm"
-        },
-        {
-          "task": "Study for upcoming exams",
-          "dueDate": "2023-03-15 11:59pm"
-        },
-        {
-          "task": "Assignment #10 - Final Design Reports",
-          "dueDate": "2023-11-26, 11:59pm"
-        },
-        {
-          "task": "Assignment #11 - Project Advisor Assessments",
-          "dueDate": "2023-12-03, 11:59pm"
-        },
-        {
-          "task": "Assignment 3 Report",
-          "dueDate": "2023-10-27, 11:59pm"
-        },
-        {
-          "task": "Quiz 7 (due: 11:59pm, Nov 3, 2023)",
-          "dueDate": "2023-11-03, 11:59pm"
-        },
-        {
-          "task": "Graduate student project milestone 1 submission",
-          "dueDate": "2023-11-07, 11:59pm"
-        }
       ]
     },
     {
@@ -799,10 +762,10 @@
       "name": "Bob Anderson",
       "username": "bob456",
       "email": "bob@example.com",
-      "currentWaterPoints": 6,
-      "lastUpdatedWaterPoints": "11/10/2023",
-      "numTimesWatered": 0,
-      "currentPlantImage": "/plantImages/tomato/stage0.jpg",
+      "currentWaterPoints": 3,
+      "lastUpdatedWaterPoints": "11/13/2023",
+      "numTimesWatered": 3,
+      "currentPlantImage": "/plantImages/tomato/stage3.jpg",
       "currentGardenImage": "/plantImages/garden3.png",
       "currentPlantName": "Tomato Plant",
       "courses": [

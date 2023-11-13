@@ -5,8 +5,6 @@ import CourseIcons from "../components/CourseIcons";
 import { useUser } from "../components/provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
 
-
-
 function ToDo() {
   const { user } = useUser();
   const [assignmentsMeta, setAssignmentsMeta] = useState([]);
@@ -19,19 +17,19 @@ function ToDo() {
         const firstName = names[0];
         const lastName = names[1];
         const userData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+          `http://localhost:3030/students?name=${firstName}+${lastName}`
         );
 
         const courses = userData[0].courses;
         setGardenPic(userData[0].currentGardenImage);
 
         const assignmentsNotSubmitted = courses
-          .map(course => course.tabs.assignments.assignmentsNotSubmitted)
+          .map((course) => course.tabs.assignments.assignmentsNotSubmitted)
           .flat();
 
         // Sort the assignments in order of the due date
         assignmentsNotSubmitted.sort((a, b) =>
-          a.dueDate > b.dueDate ? 1 : b.dueDate > a.dueDate ? -1 : 0,
+          a.dueDate > b.dueDate ? 1 : b.dueDate > a.dueDate ? -1 : 0
         );
 
         setAssignmentsMeta(assignmentsNotSubmitted);
@@ -62,7 +60,10 @@ function ToDo() {
           </List.Item>
         )}
       />
-      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
     </>
   );
 }
