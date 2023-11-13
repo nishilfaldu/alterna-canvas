@@ -8,4 +8,4 @@ To run this project on your machine, complete the following steps:
    - Run `npm install` to install the necessary npm packages.
    - Run `npm run dev` to run the application in your localhost.
 3. In a separate terminal, still in the root directory, run `npm install -g json-server` and then run `json-server --watch src/data/users.json --port 3030`.
-4. Open the web app at the URL provided when you ran the `npm run dev` command (likely http://localhost:5173/).
+4. Open the web app at the URL provided when you ran the `npm run dev` command (likely http://localhost:5173/). Alternatively, perform the above steps and navigate to alterna-canvas.vercel.app. 
