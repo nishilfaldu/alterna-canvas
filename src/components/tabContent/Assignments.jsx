@@ -20,6 +20,8 @@ const Assignments = ({ courseID }) => {
   const [_assignmentsNotSubmitted, setAssignmentsNotSubmitted] = useState([]);
   const [_assignmentsSubmitted, setAssignmentsSubmitted] = useState([]);
 
+  const [gardenPic, setGardenPic] = useState();
+
   const [assignments, setAssignments] = useState();
   useEffect(() => {
     async function fetchData() {
@@ -57,6 +59,24 @@ const Assignments = ({ courseID }) => {
 
     fetchData();
   }, [user, courseID]);
+
+
+  useEffect(() => {
+    async function getUserData() {
+      if (user) {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        const userData = await getData(
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+        );
+
+        setGardenPic(userData[0].currentGardenImage);
+      }
+    }
+
+    getUserData();
+  }, [user]);
 
   const assignmentsSubmitted = [
     {
@@ -142,7 +162,7 @@ const Assignments = ({ courseID }) => {
         content: (
           <>
             <p>{description}</p>
-            <TextArea rows={4} style={{marginBottom: 20 }} />
+            <TextArea rows={4} style={{ marginBottom: 20 }} />
             <UploadFile
               courseID={courseID}
               folderType="assignments"
@@ -280,6 +300,7 @@ const Assignments = ({ courseID }) => {
         items={assignmentsSubmitted}
       />
       {contextHolder}
+      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
     </div>
   );
 };

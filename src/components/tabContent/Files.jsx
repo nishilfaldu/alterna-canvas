@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 
 import { handleDownload } from "../../scripts/downloadFile";
 import { listFiles } from "../../scripts/getS3Data";
+import { getData } from "../../scripts/jsonHelpers";
+import { useUser } from "../provider/useUser";
 
 
 
@@ -25,9 +27,12 @@ const columns = [
 
 function Files({ courseID }) {
   const [treeData, setTreeData] = useState();
+  const { user } = useUser();
+
   const [dataSource, setDataSource] = useState();
   const [folderToFileMap, setFolderToFileMap] = useState();
   const [defaultExpanded, setDefaultExpanded] = useState();
+  const [gardenPic, setGardenPic] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -62,7 +67,24 @@ function Files({ courseID }) {
     setDataSource(dataSource);
   };
 
-  return (
+  useEffect(() => {
+    async function getUserData() {
+      if (user) {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        const userData = await getData(
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+        );
+
+        setGardenPic(userData[0].currentGardenImage);
+      }
+    }
+
+    getUserData();
+  }, [user]);
+
+  return (<>
     <div className="flex flex-row">
       {defaultExpanded && (
         <DirectoryTree
@@ -80,7 +102,10 @@ function Files({ courseID }) {
         dataSource={dataSource}
         columns={columns}
       />
+
     </div>
+    <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+  </>
   );
 }
 
