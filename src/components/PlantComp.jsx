@@ -7,8 +7,6 @@ import { MdOutlineWaterDrop } from "react-icons/md";
 import { useUser } from "./provider/useUser";
 import { getData, putData } from "../scripts/jsonHelpers";
 
-
-
 const GardenComp = ({ isDashboard }) => {
   const { user } = useUser();
   const [userData, setUserData] = useState(null);
@@ -20,7 +18,7 @@ const GardenComp = ({ isDashboard }) => {
         if (user) {
           const names = user.split(" ");
           const allUsersData = await getData(
-            `http://localhost:3030/students?name=${names[0]}+${names[1]}`,
+            `http://localhost:3030/students?name=${names[0]}+${names[1]}`
           );
           const thisUsersData = allUsersData[0];
 
@@ -38,7 +36,7 @@ const GardenComp = ({ isDashboard }) => {
             // Tell the user that their plant has wilted
             message.warning(
               "Your plant has wilted and your progress for this plant has reset. Be sure to water your plant at least once every 2 weeks!",
-              7,
+              7
             );
 
             const updatedPlantImage = `/plantImages/${
@@ -60,7 +58,7 @@ const GardenComp = ({ isDashboard }) => {
               };
               await putData(
                 `http://localhost:3030/students/${userData.id}/`,
-                newUserData,
+                newUserData
               );
             } catch (error) {
               console.error("Error saving to JSON file: ", error);
@@ -76,7 +74,7 @@ const GardenComp = ({ isDashboard }) => {
     };
 
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const handleWatering = async () => {
@@ -143,7 +141,7 @@ const GardenComp = ({ isDashboard }) => {
         try {
           const updatedData = await putData(
             `http://localhost:3030/students/${userData.id}/`,
-            newUserData,
+            newUserData
           );
 
           if (updatedData) {
@@ -156,7 +154,7 @@ const GardenComp = ({ isDashboard }) => {
         }
       } else {
         message.error(
-          "Out of water points. Please refill by submitting more assignments!",
+          "Out of water points. Please refill by submitting more assignments!"
         );
       }
     }
@@ -164,7 +162,7 @@ const GardenComp = ({ isDashboard }) => {
 
   return (
     <>
-      <h1>My Garden</h1>
+      <h2>My Garden</h2>
       <hr></hr>
       {userData && userData.currentPlantName === "Done now" && (
         <Container>
@@ -182,7 +180,7 @@ const GardenComp = ({ isDashboard }) => {
                   alt="Plant-Empty"
                   className="mx-auto"
                 />
-                <h2>All done for the semester!</h2>
+                <h3>All done for the semester!</h3>
               </Row>
             </Col>
           </Row>
@@ -203,10 +201,10 @@ const GardenComp = ({ isDashboard }) => {
               />
             </Col>
             <Col lg={8}>
-              <h2 style={{ marginBottom: 20 }}>
+              <h3 style={{ marginBottom: 20 }}>
                 {" "}
                 {userData.currentPlantName}{" "}
-              </h2>
+              </h3>
               <ProgressBar
                 now={Math.round((userData.numTimesWatered / 5) * 100)}
                 label={`${Math.round((userData.numTimesWatered / 5) * 100)}%`}
