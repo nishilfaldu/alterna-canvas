@@ -5,12 +5,10 @@ import { useState, useEffect } from "react";
 import { useUser } from "../components/provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
 
-
-
 const { Option } = Select;
 const genExtra = () => (
   <ExclamationCircleFilled
-    onClick={event => {
+    onClick={(event) => {
       // If you don't want click extra trigger collapse, you can prevent this:
       event.stopPropagation();
     }}
@@ -75,7 +73,7 @@ const announcementsData = [
 ];
 
 const Announcements = () => {
-  const onChange = key => {
+  const onChange = (key) => {
     console.log(key);
   };
 
@@ -83,10 +81,9 @@ const Announcements = () => {
   const [gardenPic, setGardenPic] = useState();
   const { user } = useUser();
 
-  const onPositionChange = newExpandIconPosition => {
+  const onPositionChange = (newExpandIconPosition) => {
     setExpandIconPosition(newExpandIconPosition);
   };
-
 
   useEffect(() => {
     async function getUserData() {
@@ -95,7 +92,7 @@ const Announcements = () => {
         const firstName = names[0];
         const lastName = names[1];
         const userData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+          `http://localhost:3030/students?name=${firstName}+${lastName}`
         );
 
         setGardenPic(userData[0].currentGardenImage);
@@ -117,18 +114,25 @@ const Announcements = () => {
       ></Collapse>
 
       <br />
-      <span>Expand Icon Position: </span>
+      <span style={{ fontSize: 12, color: "grey" }}>
+        Expand Icon Position:{" "}
+      </span>
       <Select
         value={expandIconPosition}
         style={{
           margin: "8px",
+          fontSize: 12,
+          color: "grey",
         }}
         onChange={onPositionChange}
       >
         <Option value="start">Start</Option>
         <Option value="end">End</Option>
       </Select>
-      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
     </>
   );
 };
