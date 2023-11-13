@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from "react";
 
 import { handleDownload } from "../../scripts/downloadFile";
 import { listFiles, getFileContent } from "../../scripts/getS3Data";
+import { getData } from "../../scripts/jsonHelpers";
+import { useUser } from "../provider/useUser";
 
 
 
@@ -11,8 +13,29 @@ const Modules = ({ courseID }) => {
   const moduleCount = 10; // Number of modules
   const modules = Array.from({ length: moduleCount }, (_, index) => index + 1); // Create an array of module numbers
 
+  const { user } = useUser();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [modalFile, setModalFile] = useState(false);
+  const [gardenPic, setGardenPic] = useState();
+
+
+  useEffect(() => {
+    async function getUserData() {
+      if (user) {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        const userData = await getData(
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+        );
+
+        setGardenPic(userData[0].currentGardenImage);
+      }
+    }
+
+    getUserData();
+  }, [user]);
+
 
   const [presentations, setPresentations] = useState([]);
   useEffect(() => {
@@ -26,11 +49,11 @@ const Modules = ({ courseID }) => {
 
   const presentationList = presentations
     ? presentations.map((presentation, index) => ({
-        key: `${index}`,
-        header: `Week ${index + 1}: ${presentation}`,
-        title: `${presentation}`,
-        description: `Presentation ${index + 1}`,
-      }))
+      key: `${index}`,
+      header: `Week ${index + 1}: ${presentation}`,
+      title: `${presentation}`,
+      description: `Presentation ${index + 1}`,
+    }))
     : [];
 
   const [moduleData, setModuleData] = useState([]);
@@ -45,11 +68,11 @@ const Modules = ({ courseID }) => {
 
   const moduleList = moduleData
     ? moduleData.map((module, index) => ({
-        key: `${index}`,
-        header: `${module.replace(".html", "")}`,
-        title: `${module}`,
-        description: `Module ${index + 1}`,
-      }))
+      key: `${index}`,
+      header: `${module.replace(".html", "")}`,
+      title: `${module}`,
+      description: `Module ${index + 1}`,
+    }))
     : [];
 
 
@@ -95,7 +118,7 @@ const Modules = ({ courseID }) => {
 
     fetchData(modalFile);
   }, [courseID, modalFile]);
-  
+
 
   return (
     <div className="flex flex-col gap-y-4">
@@ -186,6 +209,7 @@ const Modules = ({ courseID }) => {
       >
         <div id="modalHTML"></div>
       </Modal>
+      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
     </div>
 
   );

@@ -10,6 +10,7 @@ import { getData } from "../scripts/jsonHelpers";
 function ToDo() {
   const { user } = useUser();
   const [assignmentsMeta, setAssignmentsMeta] = useState([]);
+  const [gardenPic, setGardenPic] = useState();
 
   useEffect(() => {
     async function getUserData() {
@@ -22,6 +23,7 @@ function ToDo() {
         );
 
         const courses = userData[0].courses;
+        setGardenPic(userData[0].currentGardenImage);
 
         const assignmentsNotSubmitted = courses
           .map(course => course.tabs.assignments.assignmentsNotSubmitted)
@@ -60,6 +62,7 @@ function ToDo() {
           </List.Item>
         )}
       />
+      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
     </>
   );
 }

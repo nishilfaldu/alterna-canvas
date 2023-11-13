@@ -15,6 +15,26 @@ const Grades = ({ courseID }) => {
   const [projectsGrade, setProjectsGrade] = useState(null);
   const [examGrade, setExamGrade] = useState(null);
   const [courseGrade, setCourseGrade] = useState(null);
+  const [gardenPic, setGardenPic] = useState();
+
+
+  useEffect(() => {
+    async function getUserData() {
+      if (user) {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        const userData = await getData(
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+        );
+
+        setGardenPic(userData[0].currentGardenImage);
+      }
+    }
+
+    getUserData();
+  }, [user]);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -225,6 +245,7 @@ const Grades = ({ courseID }) => {
       {user && !thisUsersGrades && (
         <p>Sorry, no grades were found for you, {user}.</p>
       )}
+      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
     </>
   );
 };

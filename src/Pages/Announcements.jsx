@@ -1,6 +1,9 @@
 import { ExclamationCircleFilled } from "@ant-design/icons";
 import { Collapse, Select } from "antd";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { useUser } from "../components/provider/useUser";
+import { getData } from "../scripts/jsonHelpers";
 
 
 
@@ -77,9 +80,30 @@ const Announcements = () => {
   };
 
   const [expandIconPosition, setExpandIconPosition] = useState("start");
+  const [gardenPic, setGardenPic] = useState();
+  const { user } = useUser();
+
   const onPositionChange = newExpandIconPosition => {
     setExpandIconPosition(newExpandIconPosition);
   };
+
+
+  useEffect(() => {
+    async function getUserData() {
+      if (user) {
+        const names = user.split(" ");
+        const firstName = names[0];
+        const lastName = names[1];
+        const userData = await getData(
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+        );
+
+        setGardenPic(userData[0].currentGardenImage);
+      }
+    }
+
+    getUserData();
+  }, [user]);
 
   return (
     <>
@@ -104,6 +128,7 @@ const Announcements = () => {
         <Option value="start">Start</Option>
         <Option value="end">End</Option>
       </Select>
+      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
     </>
   );
 };
