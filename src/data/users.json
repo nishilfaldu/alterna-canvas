@@ -5,12 +5,12 @@
       "name": "Alice Johnson",
       "username": "alice123",
       "email": "alice@example.com",
-      "currentWaterPoints": 3,
-      "lastUpdatedWaterPoints": "11/10/2023",
-      "numTimesWatered": 2,
-      "currentPlantImage": "/plantImages/tree/stage2.jpg",
-      "currentGardenImage": "/plantImages/garden4.png",
-      "currentPlantName": "Apple Tree",
+      "currentWaterPoints": 0,
+      "lastUpdatedWaterPoints": "11/13/2023",
+      "numTimesWatered": 0,
+      "currentPlantImage": "/plantImages/empty.png",
+      "currentGardenImage": "/plantImages/garden5.png",
+      "currentPlantName": "Done now",
       "courses": [
         {
           "name": "User Interface",

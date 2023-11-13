@@ -5,8 +5,6 @@ import { ListGroup, Container, Row, Col } from "react-bootstrap";
 import { getData } from "../../scripts/jsonHelpers";
 import { useUser } from "../provider/useUser";
 
-
-
 const Grades = ({ courseID }) => {
   const { user } = useUser();
   const [thisUsersGrades, setThisUsersGrades] = useState(null);
@@ -17,7 +15,6 @@ const Grades = ({ courseID }) => {
   const [courseGrade, setCourseGrade] = useState(null);
   const [gardenPic, setGardenPic] = useState();
 
-
   useEffect(() => {
     async function getUserData() {
       if (user) {
@@ -25,7 +22,7 @@ const Grades = ({ courseID }) => {
         const firstName = names[0];
         const lastName = names[1];
         const userData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+          `http://localhost:3030/students?name=${firstName}+${lastName}`
         );
 
         setGardenPic(userData[0].currentGardenImage);
@@ -35,7 +32,6 @@ const Grades = ({ courseID }) => {
     getUserData();
   }, [user]);
 
-
   useEffect(() => {
     const fetchData = async () => {
       if (user) {
@@ -43,24 +39,24 @@ const Grades = ({ courseID }) => {
         const firstName = names[0];
         const lastName = names[1];
         const allGradesData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`,
+          `http://localhost:3030/students?name=${firstName}+${lastName}`
         );
 
         setThisUsersGrades(
-          allGradesData[0].courses.find(course => course.key === courseID)
-            .tabs.grades,
+          allGradesData[0].courses.find((course) => course.key === courseID)
+            .tabs.grades
         );
       }
     };
 
     fetchData();
 
-    const calculateSectionGrade = arrayOfGrades => {
+    const calculateSectionGrade = (arrayOfGrades) => {
       let earnedPoints = 0;
       let totalPoints = 0;
       let nullValues = 0;
 
-      arrayOfGrades.forEach(grade => {
+      arrayOfGrades.forEach((grade) => {
         totalPoints += grade.totalPoints;
         if (grade.pointsObtained !== null) {
           earnedPoints += grade.pointsObtained;
@@ -86,7 +82,7 @@ const Grades = ({ courseID }) => {
       // Get the total Participation grade
       if (thisUsersGrades.participation) {
         setParticipationGrade(
-          calculateSectionGrade(thisUsersGrades.participation),
+          calculateSectionGrade(thisUsersGrades.participation)
         );
       }
       // Get the total Projects grade
@@ -120,19 +116,19 @@ const Grades = ({ courseID }) => {
     const calculateOverallGrade = () => {
       const assignmentPercents = getEarnedSectionPercentOfCourse(
         assignmentsGrade,
-        thisUsersGrades.assignmentWeightage,
+        thisUsersGrades.assignmentWeightage
       );
       const participationPercents = getEarnedSectionPercentOfCourse(
         participationGrade,
-        thisUsersGrades.participationWeightage,
+        thisUsersGrades.participationWeightage
       );
       const projectPercents = getEarnedSectionPercentOfCourse(
         projectsGrade,
-        thisUsersGrades.projectWeightage,
+        thisUsersGrades.projectWeightage
       );
       const examPercents = getEarnedSectionPercentOfCourse(
         examGrade,
-        thisUsersGrades.examWeightage,
+        thisUsersGrades.examWeightage
       );
 
       const earnedPercent =
@@ -165,13 +161,13 @@ const Grades = ({ courseID }) => {
     if (sectionGrade) {
       return (
         <div style={{ margin: "20px 0" }}>
-          <h3>
+          <h5 style={{ color: "grey" }}>
             {gradeType.charAt(0).toUpperCase() + gradeType.slice(1)} —
             {sectionGrade.earnedPoints === null && " Nothing graded yet"}
             {sectionGrade.earnedPoints && (
               <>
                 {" "}
-                {sectionGrade.earnedPoints}/{sectionGrade.totalPoints} points (
+                {sectionGrade.earnedPoints}/{sectionGrade.totalPoints} (
                 {(
                   (sectionGrade.earnedPoints / sectionGrade.totalPoints) *
                   100
@@ -179,7 +175,7 @@ const Grades = ({ courseID }) => {
                 %)
               </>
             )}
-          </h3>
+          </h5>
           <ListGroup>
             {thisUsersGrades[gradeType].map((type, typeIndex) => {
               return (
@@ -190,10 +186,8 @@ const Grades = ({ courseID }) => {
                   <Container>
                     <Row>
                       <Col>
-                        <h4>{type.title}</h4>
-                        <p style={{ margin: "5px" }}>
-                          Due {type.dueDate}
-                        </p>
+                        <h5>{type.title}</h5>
+                        <p style={{ margin: "5px" }}>Due {type.dueDate}</p>
                       </Col>
                       <Col
                         style={{
@@ -212,7 +206,7 @@ const Grades = ({ courseID }) => {
                               <b>Grade:</b> {type.pointsObtained}/
                               {type.totalPoints} (
                               {Math.round(
-                                (type.pointsObtained / type.totalPoints) * 100,
+                                (type.pointsObtained / type.totalPoints) * 100
                               )}
                               %)
                             </>
@@ -232,7 +226,11 @@ const Grades = ({ courseID }) => {
 
   return (
     <>
-      {courseGrade && <h2>Course Grade: {courseGrade.toFixed(2)}%</h2>}
+      {courseGrade && (
+        <h3>
+          <br></br>Course Grade: {courseGrade.toFixed(2)}%
+        </h3>
+      )}
       {user && thisUsersGrades && (
         <>
           {displaySectionDetails("assignments", assignmentsGrade)}
@@ -245,7 +243,10 @@ const Grades = ({ courseID }) => {
       {user && !thisUsersGrades && (
         <p>Sorry, no grades were found for you, {user}.</p>
       )}
-      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
     </>
   );
 };
