@@ -21,24 +21,22 @@ import ToDo from "./Pages/ToDo";
 
 function App() {
   return (
-    <>
-      <UserProvider>
-      <NavBar />
+    <UserProvider>
+      <Router>
+        <NavBar />
         <Container className="my-3">
-          <Router>
-            <Routes>
-              <Route index element={<Dashboard />} />
-              <Route path="/account" element={<Account />} />
-              <Route path="/announcements" element={<Announcements />} />
-              <Route path="/garden" element={<PlantComp isDashboard={false} />} />
-              <Route path="/todo" element={<ToDo />} />
-              <Route path="/course/:id" element={<Course />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route index element={<Dashboard />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/announcements" element={<Announcements />} />
+            <Route path="/garden" element={<PlantComp isDashboard={false} />} />
+            <Route path="/todo" element={<ToDo />} />
+            <Route path="/course/:id" element={<Course />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
         </Container>
-      </UserProvider>
-    </>
+      </Router>
+    </UserProvider>
   );
 }
 

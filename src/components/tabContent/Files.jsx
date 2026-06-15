@@ -84,28 +84,31 @@ function Files({ courseID }) {
     getUserData();
   }, [user]);
 
-  return (<>
-    <div className="flex flex-row">
-      {defaultExpanded && (
-        <DirectoryTree
-          height={500}
-          onSelect={onSelect}
-          treeData={treeData}
-          defaultExpandedKeys={[defaultExpanded]}
-          defaultSelectedKeys={[defaultExpanded]}
-          className="w-1/4"
+  return (
+    <>
+      <div className="flex flex-row">
+        {defaultExpanded && (
+          <DirectoryTree
+            height={500}
+            onSelect={onSelect}
+            treeData={treeData}
+            defaultExpandedKeys={[defaultExpanded]}
+            defaultSelectedKeys={[defaultExpanded]}
+            className="w-1/4"
+          />
+        )}
+        <Table
+          size="large"
+          className="w-full"
+          dataSource={dataSource}
+          columns={columns}
         />
-      )}
-      <Table
-        size="large"
-        className="w-full"
-        dataSource={dataSource}
-        columns={columns}
-      />
-
-    </div>
-    <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
-  </>
+      </div>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
+    </>
   );
 }
 

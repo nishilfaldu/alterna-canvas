@@ -11,8 +11,6 @@ const Syllabus = ({ courseID }) => {
   const { user } = useUser();
   const [gardenPic, setGardenPic] = useState();
 
-
-
   useEffect(() => {
     async function getUserData() {
       if (user) {
@@ -30,11 +28,12 @@ const Syllabus = ({ courseID }) => {
     getUserData();
   }, [user]);
 
-
   useEffect(() => {
     const fetchData = async () => {
       // Get the data from the file stored in S3
-      const fileData = await getFileContent(`courses/${courseID}/course_info/syllabus.html`);
+      const fileData = await getFileContent(
+        `courses/${courseID}/course_info/syllabus.html`,
+      );
 
       const div = document.getElementById("syllabusHTML");
 
@@ -53,10 +52,14 @@ const Syllabus = ({ courseID }) => {
     fetchData();
   }, [courseID]);
 
-  return (<>
-    <div id="syllabusHTML"></div>
-    <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
-  </>
+  return (
+    <>
+      <div id="syllabusHTML"></div>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
+    </>
   );
 };
 

@@ -14,8 +14,8 @@ const UploadFile = () => {
     setTimeout(() => {
       setUploading(false);
       message.success("File uploaded successfully");
-      }, 1000);  
-    };
+    }, 1000);
+  };
 
   const props = {
     onRemove: file => {

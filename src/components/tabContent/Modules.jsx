@@ -18,7 +18,6 @@ const Modules = ({ courseID }) => {
   const [modalFile, setModalFile] = useState(false);
   const [gardenPic, setGardenPic] = useState();
 
-
   useEffect(() => {
     async function getUserData() {
       if (user) {
@@ -36,7 +35,6 @@ const Modules = ({ courseID }) => {
     getUserData();
   }, [user]);
 
-
   const [presentations, setPresentations] = useState([]);
   useEffect(() => {
     async function fetchPresentationData() {
@@ -49,11 +47,11 @@ const Modules = ({ courseID }) => {
 
   const presentationList = presentations
     ? presentations.map((presentation, index) => ({
-      key: `${index}`,
-      header: `Week ${index + 1}: ${presentation}`,
-      title: `${presentation}`,
-      description: `Presentation ${index + 1}`,
-    }))
+        key: `${index}`,
+        header: `Week ${index + 1}: ${presentation}`,
+        title: `${presentation}`,
+        description: `Presentation ${index + 1}`,
+      }))
     : [];
 
   const [moduleData, setModuleData] = useState([]);
@@ -68,13 +66,12 @@ const Modules = ({ courseID }) => {
 
   const moduleList = moduleData
     ? moduleData.map((module, index) => ({
-      key: `${index}`,
-      header: `${module.replace(".html", "")}`,
-      title: `${module}`,
-      description: `Module ${index + 1}`,
-    }))
+        key: `${index}`,
+        header: `${module.replace(".html", "")}`,
+        title: `${module}`,
+        description: `Module ${index + 1}`,
+      }))
     : [];
-
 
   const openModuleModal = useCallback(filename => {
     setModalFile(filename);
@@ -118,7 +115,6 @@ const Modules = ({ courseID }) => {
 
     fetchData(modalFile);
   }, [courseID, modalFile]);
-
 
   return (
     <div className="flex flex-col gap-y-4">
@@ -209,9 +205,11 @@ const Modules = ({ courseID }) => {
       >
         <div id="modalHTML"></div>
       </Modal>
-      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
     </div>
-
   );
 };
 

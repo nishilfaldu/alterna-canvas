@@ -11,7 +11,6 @@ const Zoom = ({ courseName }) => {
   const { user } = useUser();
   const [gardenPic, setGardenPic] = useState();
 
-
   useEffect(() => {
     async function getUserData() {
       if (user) {
@@ -32,9 +31,15 @@ const Zoom = ({ courseName }) => {
   return (
     <>
       <h2>Join Zoom Meeting</h2>
-      <p>Click the button below to join the scheduled zoom meeting for your {courseName} course.</p>
+      <p>
+        Click the button below to join the scheduled zoom meeting for your{" "}
+        {courseName} course.
+      </p>
       <Button href="https://zoom.us/join">Join</Button>
-      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
     </>
   );
 };

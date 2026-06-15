@@ -7,6 +7,8 @@ import { MdOutlineWaterDrop } from "react-icons/md";
 import { useUser } from "./provider/useUser";
 import { getData, putData } from "../scripts/jsonHelpers";
 
+
+
 const GardenComp = ({ isDashboard }) => {
   const { user } = useUser();
   const [userData, setUserData] = useState(null);
@@ -18,7 +20,7 @@ const GardenComp = ({ isDashboard }) => {
         if (user) {
           const names = user.split(" ");
           const allUsersData = await getData(
-            `http://localhost:3030/students?name=${names[0]}+${names[1]}`
+            `http://localhost:3030/students?name=${names[0]}+${names[1]}`,
           );
           const thisUsersData = allUsersData[0];
 
@@ -27,7 +29,7 @@ const GardenComp = ({ isDashboard }) => {
           const today = new Date();
           const timeDifference = Math.abs(today - date);
           const daysDifference = Math.ceil(
-            timeDifference / (1000 * 60 * 60 * 24)
+            timeDifference / (1000 * 60 * 60 * 24),
           );
           const calculatedDaysToWilt = 14 - daysDifference;
 
@@ -36,7 +38,7 @@ const GardenComp = ({ isDashboard }) => {
             // Tell the user that their plant has wilted
             message.warning(
               "Your plant has wilted and your progress for this plant has reset. Be sure to water your plant at least once every 2 weeks!",
-              7
+              7,
             );
 
             const updatedPlantImage = `/plantImages/${
@@ -58,7 +60,7 @@ const GardenComp = ({ isDashboard }) => {
               };
               await putData(
                 `http://localhost:3030/students/${userData.id}/`,
-                newUserData
+                newUserData,
               );
             } catch (error) {
               console.error("Error saving to JSON file: ", error);
@@ -141,7 +143,7 @@ const GardenComp = ({ isDashboard }) => {
         try {
           const updatedData = await putData(
             `http://localhost:3030/students/${userData.id}/`,
-            newUserData
+            newUserData,
           );
 
           if (updatedData) {
@@ -154,7 +156,7 @@ const GardenComp = ({ isDashboard }) => {
         }
       } else {
         message.error(
-          "Out of water points. Please refill by submitting more assignments!"
+          "Out of water points. Please refill by submitting more assignments!",
         );
       }
     }

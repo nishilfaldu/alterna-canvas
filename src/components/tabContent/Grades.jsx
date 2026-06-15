@@ -5,6 +5,8 @@ import { ListGroup, Container, Row, Col } from "react-bootstrap";
 import { getData } from "../../scripts/jsonHelpers";
 import { useUser } from "../provider/useUser";
 
+
+
 const Grades = ({ courseID }) => {
   const { user } = useUser();
   const [thisUsersGrades, setThisUsersGrades] = useState(null);
@@ -22,7 +24,7 @@ const Grades = ({ courseID }) => {
         const firstName = names[0];
         const lastName = names[1];
         const userData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
         );
 
         setGardenPic(userData[0].currentGardenImage);
@@ -39,24 +41,24 @@ const Grades = ({ courseID }) => {
         const firstName = names[0];
         const lastName = names[1];
         const allGradesData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
         );
 
         setThisUsersGrades(
-          allGradesData[0].courses.find((course) => course.key === courseID)
-            .tabs.grades
+          allGradesData[0].courses.find(course => course.key === courseID)
+            .tabs.grades,
         );
       }
     };
 
     fetchData();
 
-    const calculateSectionGrade = (arrayOfGrades) => {
+    const calculateSectionGrade = arrayOfGrades => {
       let earnedPoints = 0;
       let totalPoints = 0;
       let nullValues = 0;
 
-      arrayOfGrades.forEach((grade) => {
+      arrayOfGrades.forEach(grade => {
         totalPoints += grade.totalPoints;
         if (grade.pointsObtained !== null) {
           earnedPoints += grade.pointsObtained;
@@ -82,7 +84,7 @@ const Grades = ({ courseID }) => {
       // Get the total Participation grade
       if (thisUsersGrades.participation) {
         setParticipationGrade(
-          calculateSectionGrade(thisUsersGrades.participation)
+          calculateSectionGrade(thisUsersGrades.participation),
         );
       }
       // Get the total Projects grade
@@ -116,19 +118,19 @@ const Grades = ({ courseID }) => {
     const calculateOverallGrade = () => {
       const assignmentPercents = getEarnedSectionPercentOfCourse(
         assignmentsGrade,
-        thisUsersGrades.assignmentWeightage
+        thisUsersGrades.assignmentWeightage,
       );
       const participationPercents = getEarnedSectionPercentOfCourse(
         participationGrade,
-        thisUsersGrades.participationWeightage
+        thisUsersGrades.participationWeightage,
       );
       const projectPercents = getEarnedSectionPercentOfCourse(
         projectsGrade,
-        thisUsersGrades.projectWeightage
+        thisUsersGrades.projectWeightage,
       );
       const examPercents = getEarnedSectionPercentOfCourse(
         examGrade,
-        thisUsersGrades.examWeightage
+        thisUsersGrades.examWeightage,
       );
 
       const earnedPercent =
@@ -206,7 +208,7 @@ const Grades = ({ courseID }) => {
                               <b>Grade:</b> {type.pointsObtained}/
                               {type.totalPoints} (
                               {Math.round(
-                                (type.pointsObtained / type.totalPoints) * 100
+                                (type.pointsObtained / type.totalPoints) * 100,
                               )}
                               %)
                             </>

@@ -1,11 +1,10 @@
 import PropTypes from "prop-types";
-import { createContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
+import { UserContext } from "./UserContext";
 
 
-// Create a context for the username
-export const UserContext = createContext();
-
-// Create a custom provider
+// Provides the current user's name to the app, hydrated from localStorage.
 export const UserProvider = ({ children }) => {
   const [user, setUser] = useState("");
 

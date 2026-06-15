@@ -8,6 +8,8 @@ import PlantComp from "../components/PlantComp";
 import { useUser } from "../components/provider/useUser";
 import { getData } from "../scripts/jsonHelpers";
 
+
+
 const Dashboard = () => {
   const { user } = useUser();
   const [gardenPic, setGardenPic] = useState();
@@ -20,7 +22,7 @@ const Dashboard = () => {
         const firstName = names[0];
         const lastName = names[1];
         const userData = await getData(
-          `http://localhost:3030/students?name=${firstName}+${lastName}`
+          `http://localhost:3030/students?name=${firstName}+${lastName}`,
         );
 
         setGardenPic(userData[0].currentGardenImage);

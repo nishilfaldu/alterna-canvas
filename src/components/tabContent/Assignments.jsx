@@ -60,7 +60,6 @@ const Assignments = ({ courseID }) => {
     fetchData();
   }, [user, courseID]);
 
-
   useEffect(() => {
     async function getUserData() {
       if (user) {
@@ -86,7 +85,6 @@ const Assignments = ({ courseID }) => {
       children: (
         <List
           itemLayout="horizontal"
-
           dataSource={[
             ...(assignments || []).map(assignment => ({ title: assignment })),
             ..._assignmentsSubmitted.map(assignment => ({
@@ -126,7 +124,6 @@ const Assignments = ({ courseID }) => {
         const names = user.split(" ");
         const firstName = names[0];
         const lastName = names[1];
-
 
         let data = await getData(
           `http://localhost:3030/students?name=${firstName}+${lastName}`,
@@ -245,7 +242,6 @@ const Assignments = ({ courseID }) => {
     ],
   );
 
-
   const assignmentsNotSubmitted = [
     {
       key: "1",
@@ -282,7 +278,6 @@ const Assignments = ({ courseID }) => {
           )}
         />
       ),
-
     },
   ];
 
@@ -300,7 +295,10 @@ const Assignments = ({ courseID }) => {
         items={assignmentsSubmitted}
       />
       {contextHolder}
-      <img src={gardenPic} style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}></img>
+      <img
+        src={gardenPic}
+        style={{ width: "40%", marginLeft: "auto", marginRight: "auto" }}
+      ></img>
     </div>
   );
 };
